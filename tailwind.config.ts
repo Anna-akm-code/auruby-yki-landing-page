@@ -28,8 +28,10 @@ const config: Config = {
           muted: "rgba(242,160,196,0.2)",
         },
         purple: {
-          DEFAULT: "#9B7FD4",
-          muted: "rgba(155,127,212,0.19)",
+          DEFAULT: "#7C5CFC",
+          light: "#EEEDFE",
+          deep: "#534AB7",
+          muted: "rgba(124,92,252,0.19)",
         },
         electric: {
           DEFAULT: "#4A8FE7",

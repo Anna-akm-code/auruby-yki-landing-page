@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { Trust } from "@/components/sections/Trust";
+import { Pricing } from "@/components/sections/Pricing";
 import { Waitlist } from "@/components/sections/Waitlist";
 import { ScrollTracker } from "@/components/ScrollTracker";
 import { VocabMock } from "@/components/mockups/VocabMock";
@@ -139,6 +140,7 @@ export default function Home() {
       />
 
       <Trust />
+      <Pricing />
       <Waitlist />
       <Footer />
       <ScrollTracker />

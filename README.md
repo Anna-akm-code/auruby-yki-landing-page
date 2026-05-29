@@ -90,15 +90,14 @@ order by email_at desc;
 
 ## Analytics events (PostHog)
 
-| Event                              | Where it fires                            |
-| ---------------------------------- | ----------------------------------------- |
-| `$pageview`                        | auto                                      |
-| `section_viewed` `{section}`       | 40% of a section in view                  |
-| `waitlist_step_hardest_submitted`  | step 1 — hardest-skill choice or skip     |
-| `waitlist_step_tried_submitted`    | step 2 — tools-tried submit or skip       |
-| `waitlist_step_email_submitted`    | step 3 — email submit (final conversion)  |
+| Event                              | Where it fires                                |
+| ---------------------------------- | --------------------------------------------- |
+| `$pageview`                        | auto                                          |
+| `section_viewed` `{section}`       | 40% of a section in view (incl. `pricing`)    |
+| `waitlist_step_email_submitted`    | email accepted by the API                     |
+| `waitlist_signup`                  | email accepted by the API (fires alongside)   |
 
-Each step event includes a `skipped: boolean` property where relevant. Build a PostHog funnel using the three `waitlist_step_*` events (in that order) to see drop-off between steps.
+Both `waitlist_*` events fire on a successful API write. Use `waitlist_signup` as the conversion event for funnels; `waitlist_step_email_submitted` is kept under its v2 name so historical reports continue to work.
 
 ## Deploy (Vercel)
 

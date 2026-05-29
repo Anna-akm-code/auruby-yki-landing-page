@@ -4,12 +4,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { PhoneFrame } from "@/components/PhoneFrame";
 import { DashboardMock } from "@/components/mockups/DashboardMock";
 
-const KEY_POINTS = [
-  "Vocabulary",
-  "Reading, listening, writing & speaking",
-  "AI evaluation",
-];
-
 export function Hero() {
   const reduce = useReducedMotion();
 
@@ -24,31 +18,21 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.21, 0.45, 0.27, 0.99] }}
         >
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-sand-warm px-3 py-1 font-sans text-xs font-medium text-anthracite-soft">
+            <span className="h-1.5 w-1.5 rounded-full bg-chartreuse" />
+            For the YKI keskitaso exam
+          </p>
           <h1 className="font-display text-4xl font-bold leading-[1.05] text-anthracite sm:text-5xl lg:text-[56px]">
-            All your YKI prep in one app
+            All your YKI keskitaso prep in one app
           </h1>
           <p className="mt-6 max-w-xl font-sans text-lg leading-relaxed text-anthracite-soft sm:text-xl">
-            Vocabulary, reading, listening, writing, and speaking — with AI
-            evaluation. For the YKI{" "}
-            <em className="italic">keskitaso</em> (intermediate level) exam.
+            Vocabulary, reading, listening, writing, and speaking — structured
+            by exam topics, tracked by AI, designed by a language teacher.
           </p>
-
-          <ul className="mt-7 flex flex-wrap gap-2">
-            {KEY_POINTS.map((point) => (
-              <li
-                key={point}
-                className="inline-flex items-center gap-2 rounded-full bg-sand-warm px-4 py-2 font-sans text-sm font-medium text-anthracite-soft"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-chartreuse" />
-                {point}
-              </li>
-            ))}
-          </ul>
-
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
               href="#waitlist"
-              className="rounded-full bg-purple px-8 py-4 font-sans text-base font-semibold text-cream shadow-[0_14px_36px_-12px_rgba(155,127,212,0.7)] transition hover:bg-purple/90 sm:text-lg"
+              className="rounded-full bg-purple px-8 py-4 font-sans text-base font-semibold text-white shadow-[0_14px_36px_-12px_rgba(124,92,252,0.7)] transition hover:bg-purple/90 sm:text-lg"
             >
               Join the waitlist
             </a>
