@@ -21,10 +21,22 @@ export function Hero() {
           <h1 className="font-display text-4xl font-bold leading-[1.05] text-anthracite sm:text-5xl lg:text-[56px]">
             All your YKI keskitaso prep in one app
           </h1>
-          <p className="mt-6 max-w-xl font-sans text-lg leading-relaxed text-anthracite-soft sm:text-xl">
-            Vocabulary, reading, listening, writing, and speaking — structured
-            by exam topics, tracked by AI, designed by a language teacher.
-          </p>
+          <ul className="mt-7 space-y-2.5">
+            {[
+              "Learn the key vocabulary",
+              "Practise reading, listening, writing, and speaking",
+              "Tracked by AI",
+              "Designed by language teachers",
+            ].map((point) => (
+              <li
+                key={point}
+                className="flex items-center gap-3 font-sans text-base text-anthracite-soft sm:text-lg"
+              >
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-chartreuse" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
               href="#waitlist"

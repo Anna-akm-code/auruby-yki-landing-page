@@ -30,11 +30,12 @@ export default function Home() {
             presented in short texts you can listen to.
           </>,
           <>
-            Highlight any unfamiliar word or phrase — it&apos;s added to your
-            personal vocabulary list with base form, translation, and context.
+            See an unfamiliar word? Highlight it to add it to your personal
+            vocabulary list — with base form, translation, and the full phrase
+            it appeared in.
           </>,
           <>
-            Practise three ways: find the translation, unscramble letters,
+            Practise in three ways: find the translation, unscramble letters,
             write from memory.
           </>,
         ]}
@@ -43,15 +44,18 @@ export default function Home() {
       <FeatureSection
         id="feature-reading"
         eyebrow="Reading"
-        title="Read like the real exam"
+        title="Read what you'll see on exam day"
         accent="electric"
         reverse
         mockup={<ReadingMock />}
         bullets={[
-          <>Practice texts at B1-B2 level, organised by YKI topics.</>,
           <>
-            True/false, multiple choice, and open-ended questions — the
-            formats you&apos;ll see on exam day.
+            Texts at two levels — A2/B1 to build confidence, B1/B2 to push
+            you. Yes, we made easier ones on purpose.
+          </>,
+          <>
+            True/false, multiple choice, and open-ended questions — exactly
+            the formats from the real test.
           </>,
           <>
             Highlight unfamiliar words in any text — they go straight to your
@@ -68,7 +72,9 @@ export default function Home() {
         mockup={<ListeningMock />}
         bullets={[
           <>Adjustable playback speed — slow down, then build up.</>,
-          <>Transcript available after you&apos;ve answered.</>,
+          <>
+            Check the transcript after you answer — no peeking before.
+          </>,
           <>
             Highlight new words in the transcript to add them to your
             vocabulary list.
@@ -79,7 +85,7 @@ export default function Home() {
       <FeatureSection
         id="feature-writing"
         eyebrow="Writing"
-        title="Write the tasks you'll actually see"
+        title="Write what you'll actually be asked"
         accent="neon-pink"
         reverse
         mockup={<WritingMock />}
@@ -89,7 +95,7 @@ export default function Home() {
             on official YKI requirements and the experience of Finnish
             language teachers.
           </>,
-          <>Model answers available to compare against yours.</>,
+          <>Model answers to compare against yours.</>,
           <>
             After each task, your top 3 grammar mistakes and top 3 vocabulary
             mistakes are added to your personal &quot;To fix&quot; list.
