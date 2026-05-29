@@ -32,7 +32,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
               href="#waitlist"
-              className="rounded-full bg-purple px-8 py-4 font-sans text-base font-semibold text-white shadow-[0_14px_36px_-12px_rgba(124,92,252,0.7)] transition hover:bg-purple/90 sm:text-lg"
+              className="rounded-full bg-[#C5E63C] px-8 py-4 font-sans text-base font-semibold text-[#1a1a1a] shadow-[0_14px_36px_-12px_rgba(197,230,60,0.55)] transition hover:bg-[#C5E63C]/90 sm:text-lg"
             >
               Join the waitlist
             </a>
