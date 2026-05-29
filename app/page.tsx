@@ -22,7 +22,6 @@ export default function Home() {
         id="feature-vocabulary"
         eyebrow="Vocabulary"
         title="Learn the words you need to pass"
-        background="warm"
         accent="chartreuse"
         mockup={<VocabMock />}
         bullets={[
@@ -45,7 +44,7 @@ export default function Home() {
         id="feature-reading"
         eyebrow="Reading"
         title="Read like the real exam"
-        accent="neon-pink"
+        accent="electric"
         reverse
         mockup={<ReadingMock />}
         bullets={[
@@ -65,8 +64,7 @@ export default function Home() {
         id="feature-listening"
         eyebrow="Listening"
         title="Train your ear with exam-format audio"
-        background="warm"
-        accent="chartreuse"
+        accent="orange"
         mockup={<ListeningMock />}
         bullets={[
           <>Adjustable playback speed — slow down, then build up.</>,
@@ -103,8 +101,7 @@ export default function Home() {
         id="feature-speaking"
         eyebrow="Speaking"
         title="Practise speaking with AI"
-        background="warm"
-        accent="chartreuse"
+        accent="purple"
         mockup={<SpeakingMock />}
         bullets={[
           <>
@@ -123,7 +120,7 @@ export default function Home() {
         id="feature-progress"
         eyebrow="Progress"
         title="Track your readiness, not just your streak"
-        accent="neon-pink"
+        accent="chartreuse"
         reverse
         mockup={<ProgressMock />}
         bullets={[

@@ -9,15 +9,24 @@ interface FeatureSectionProps {
   bullets: ReactNode[];
   mockup: ReactNode;
   reverse?: boolean;
-  accent?: "chartreuse" | "neon-pink" | "purple" | "electric";
+  accent?: "chartreuse" | "neon-pink" | "purple" | "electric" | "orange";
   background?: "sand" | "warm";
 }
 
 const accentDot = {
   chartreuse: "bg-chartreuse",
   "neon-pink": "bg-neon-pink",
-  purple: "bg-purple",
+  purple: "bg-[#9B7FD4]",
   electric: "bg-electric",
+  orange: "bg-orange",
+} as const;
+
+const accentHalo = {
+  chartreuse: "bg-chartreuse-glow",
+  "neon-pink": "bg-neon-pink-muted",
+  purple: "bg-[rgba(155,127,212,0.19)]",
+  electric: "bg-electric-muted",
+  orange: "bg-orange-muted",
 } as const;
 
 export function FeatureSection({
@@ -71,11 +80,7 @@ export function FeatureSection({
 
           <div className="relative flex justify-center">
             <div
-              className={`absolute -inset-6 -z-10 rounded-[60px] blur-2xl ${
-                accent === "chartreuse"
-                  ? "bg-chartreuse-glow"
-                  : "bg-neon-pink-muted"
-              }`}
+              className={`absolute -inset-6 -z-10 rounded-[60px] blur-2xl ${accentHalo[accent]}`}
             />
             <PhoneFrame>{mockup}</PhoneFrame>
           </div>

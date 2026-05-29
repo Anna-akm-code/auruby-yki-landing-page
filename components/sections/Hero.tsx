@@ -18,10 +18,6 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.21, 0.45, 0.27, 0.99] }}
         >
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-sand-warm px-3 py-1 font-sans text-xs font-medium text-anthracite-soft">
-            <span className="h-1.5 w-1.5 rounded-full bg-chartreuse" />
-            For the YKI keskitaso exam
-          </p>
           <h1 className="font-display text-4xl font-bold leading-[1.05] text-anthracite sm:text-5xl lg:text-[56px]">
             All your YKI keskitaso prep in one app
           </h1>

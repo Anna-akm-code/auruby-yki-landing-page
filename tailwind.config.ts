@@ -37,6 +37,10 @@ const config: Config = {
           DEFAULT: "#4A8FE7",
           muted: "rgba(74,143,231,0.15)",
         },
+        orange: {
+          DEFAULT: "#E5A31E",
+          muted: "rgba(229,163,30,0.18)",
+        },
         correct: {
           DEFAULT: "#4EA889",
           soft: "rgba(78,168,137,0.12)",
