@@ -4,6 +4,8 @@ import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { capture } from "@/components/PostHogProvider";
 
+const LIME = "#C5E63C";
+
 async function submitWaitlist(email: string): Promise<boolean> {
   try {
     const res = await fetch("/api/waitlist", {
@@ -51,17 +53,42 @@ export function Waitlist() {
   return (
     <section
       id="waitlist"
-      className="bg-anthracite px-9 py-9 text-cream sm:px-12 sm:py-12"
+      className="bg-anthracite px-8 pt-14 pb-12 text-cream sm:px-14 sm:pt-16 sm:pb-14"
     >
       <div className="mx-auto max-w-2xl">
-        <h2 className="font-display text-[24px] font-bold text-white">
-          Join the waitlist
-        </h2>
-        <p className="mt-3 font-sans text-[14px] text-[#aaa]">
-          Be first to know when Auruby opens. We&apos;ll only email about the
-          launch — no marketing spam.
-        </p>
+        {/* Early-bird pricing */}
+        <div className="text-center">
+          <p
+            className="font-sans text-[20px] font-semibold uppercase"
+            style={{ color: LIME, letterSpacing: "1.5px" }}
+          >
+            Waitlist exclusive
+          </p>
+          <h3 className="mt-3 font-display text-[28px] font-bold leading-tight text-white">
+            Early-bird pricing
+          </h3>
 
+          <div className="mt-5 flex items-baseline justify-center gap-3">
+            <span className="font-sans text-[28px] text-[#888] line-through">
+              €17.99
+            </span>
+            <span
+              className="font-sans text-[48px] font-bold leading-none"
+              style={{ color: LIME }}
+            >
+              €11.99
+              <span className="font-sans text-[18px] font-normal">/mo</span>
+            </span>
+          </div>
+
+          <p className="mt-4 font-sans text-[20px] text-[#aaa]">
+            for your first 6 months · then €17.99/mo
+          </p>
+        </div>
+
+        <hr className="my-9 h-px border-0 bg-[#444]" />
+
+        {/* Waitlist signup */}
         <AnimatePresence mode="wait">
           {done ? (
             <motion.div
@@ -69,7 +96,7 @@ export function Waitlist() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="mt-8 rounded-2xl bg-chartreuse-glow p-6"
+              className="rounded-2xl bg-chartreuse-glow p-6"
             >
               <p className="font-display text-xl font-semibold text-cream">
                 You&apos;re on the list 🎉
@@ -85,13 +112,13 @@ export function Waitlist() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="mt-8"
             >
-              <p className="mb-4 font-sans text-[16px] font-medium text-white">
-                Get notified when Auruby launches
+              <p className="text-center font-sans text-[20px] leading-snug text-[#aaa]">
+                Just your email. We&apos;ll only write about the launch —
+                nothing else.
               </p>
 
-              <div className="flex flex-col gap-3 sm:flex-row">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <input
                   type="email"
                   required
@@ -100,12 +127,16 @@ export function Waitlist() {
                   placeholder="you@example.com"
                   autoComplete="email"
                   aria-label="Email address"
-                  className="flex-1 rounded-[10px] border border-[#555] bg-[#3a3a3a] px-4 py-[13px] font-sans text-base text-white placeholder:text-[#888] focus:border-chartreuse focus:outline-none"
+                  className="flex-1 rounded-[10px] border bg-[#3a3a3a] px-4 py-[14px] font-sans text-[18px] text-white placeholder:text-[#888] focus:outline-none"
+                  style={{ borderColor: "#555" }}
+                  onFocus={(e) => (e.currentTarget.style.borderColor = LIME)}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = "#555")}
                 />
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="rounded-[10px] bg-chartreuse px-[22px] py-[13px] font-sans text-base font-semibold text-anthracite transition hover:bg-chartreuse/90 disabled:opacity-60"
+                  className="rounded-[10px] px-[22px] py-[14px] font-sans text-[18px] font-medium text-anthracite transition disabled:opacity-60"
+                  style={{ backgroundColor: LIME }}
                 >
                   {submitting ? "Saving…" : "Join the waitlist"}
                 </button>
@@ -115,7 +146,7 @@ export function Waitlist() {
                 <p className="mt-3 font-sans text-sm text-incorrect">{error}</p>
               )}
 
-              <p className="mt-4 font-sans text-[12px] text-[#777]">
+              <p className="mt-5 font-sans text-[16px] text-[#666]">
                 No payment now. Your €11.99/mo rate locks when you sign up.
               </p>
             </motion.form>

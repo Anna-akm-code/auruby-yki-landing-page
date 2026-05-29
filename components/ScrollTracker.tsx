@@ -12,7 +12,6 @@ const SECTION_IDS = [
   "feature-speaking",
   "feature-progress",
   "trust",
-  "pricing",
   "waitlist",
 ];
 
