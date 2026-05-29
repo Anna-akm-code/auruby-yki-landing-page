@@ -1,48 +1,56 @@
-export function DashboardMock() {
-  const skills = [
-    { name: "Vocabulary", percent: 30, accent: "chartreuse" },
-    { name: "Reading", percent: 43, accent: "neon-pink" },
-    { name: "Listening", percent: 41, accent: "chartreuse" },
-    { name: "Writing", percent: 33, accent: "neon-pink" },
-    { name: "Speaking", percent: 20, accent: "chartreuse" },
-  ] as const;
+const LIME = "#C5E63C";
 
+const skills = [
+  { name: "Vocabulary", percent: 45 },
+  { name: "Reading", percent: 50 },
+  { name: "Listening", percent: 42 },
+  { name: "Writing", percent: 33 },
+  { name: "Speaking", percent: 18 },
+];
+
+export function DashboardMock() {
   return (
     <div className="flex h-full flex-col px-4 py-3">
-      <div className="mb-4">
-        <p className="font-sans text-[9px] uppercase tracking-wider text-anthracite-muted">
-          Hi Anna
-        </p>
-        <h2 className="font-display text-[16px] font-semibold leading-tight text-anthracite">
-          Keep practising
-        </h2>
-      </div>
+      <p className="font-display text-[18px] font-medium text-anthracite">
+        Hi Anna
+      </p>
 
-      <div className="flex-1 space-y-2 overflow-hidden">
+      <p
+        className="mt-3 mb-2 font-sans text-[8px] font-semibold uppercase text-anthracite-muted"
+        style={{ letterSpacing: "1.2px" }}
+      >
+        Your YKI progress
+      </p>
+
+      <div className="space-y-2">
         {skills.map((skill) => (
-          <div
-            key={skill.name}
-            className="rounded-xl border border-sand-deep bg-cream px-3 py-2.5"
-          >
-            <div className="flex items-start justify-between gap-2">
-              <p className="font-display text-[12px] font-semibold text-anthracite">
+          <div key={skill.name}>
+            <div className="flex items-baseline justify-between">
+              <p className="font-sans text-[11px] font-medium text-anthracite">
                 {skill.name}
               </p>
-              <p className="shrink-0 font-sans text-[10px] font-semibold text-anthracite-soft">
+              <p className="font-sans text-[10px] font-medium text-anthracite-soft">
                 {skill.percent}%
               </p>
             </div>
-            <div className="mt-2 h-1 w-full rounded-full bg-sand-deep">
+            <div className="mt-1 h-[4px] w-full overflow-hidden rounded-full bg-sand-deep">
               <div
-                className={`h-full rounded-full ${
-                  skill.accent === "chartreuse" ? "bg-chartreuse" : "bg-neon-pink"
-                }`}
-                style={{ width: `${skill.percent}%` }}
+                className="h-full rounded-full"
+                style={{ width: `${skill.percent}%`, backgroundColor: LIME }}
               />
             </div>
           </div>
         ))}
       </div>
+
+      <hr className="my-4 h-px border-0 bg-sand-deep" />
+
+      <button
+        className="w-full rounded-[12px] py-2.5 text-center font-sans text-[13px] font-medium text-[#1a1a1a]"
+        style={{ backgroundColor: LIME }}
+      >
+        Go to practice!
+      </button>
     </div>
   );
 }

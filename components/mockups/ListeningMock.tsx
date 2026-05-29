@@ -1,9 +1,35 @@
+interface Question {
+  stem: string;
+  options: string[];
+  selected: number | null; // index of selected option, or null if unanswered
+}
+
+const questions: Question[] = [
+  {
+    stem: "Miksi potilas tuli lääkäriin?",
+    options: ["Päänsärky", "Selkäkipu", "Yskä"],
+    selected: 1,
+  },
+  {
+    stem: "Kuinka kauan oireet ovat kestäneet?",
+    options: ["Kaksi päivää", "Viikon", "Kuukauden"],
+    selected: 1,
+  },
+  {
+    stem: "Mitä lääkäri suositteli?",
+    options: ["Leikkausta", "Lepoa ja särkylääkettä", "Lisätutkimuksia"],
+    selected: null,
+  },
+];
+
+const LETTERS = ["a", "b", "c"];
+
 export function ListeningMock() {
   return (
     <div className="flex h-full flex-col px-4 py-3">
       <div className="mb-2 flex items-center justify-between">
-        <p className="font-sans text-[8px] uppercase tracking-wider text-anthracite-muted">
-          Health · At the doctor&apos;s
+        <p className="font-sans text-[10px] uppercase tracking-wider text-anthracite-muted">
+          6 · Health and wellbeing
         </p>
         <p className="font-sans text-[8px] font-semibold text-anthracite-soft">
           B1
@@ -54,20 +80,31 @@ export function ListeningMock() {
         </div>
       </div>
 
-      <p className="mb-2 font-display text-[10px] font-semibold text-anthracite">
-        Why did the patient visit the doctor?
-      </p>
-
-      <div className="space-y-1.5">
-        <button className="w-full rounded-xl border border-sand-deep bg-cream px-3 py-2 text-left font-sans text-[9.5px] text-anthracite-soft">
-          a) Päänsärky
-        </button>
-        <button className="w-full rounded-xl border-2 border-electric bg-electric-muted px-3 py-2 text-left font-sans text-[9.5px] font-semibold text-anthracite">
-          b) Selkäkipu
-        </button>
-        <button className="w-full rounded-xl border border-sand-deep bg-cream px-3 py-2 text-left font-sans text-[9.5px] text-anthracite-soft">
-          c) Yskä
-        </button>
+      <div className="space-y-2">
+        {questions.map((q, qi) => (
+          <div key={qi}>
+            <p className="mb-1 font-display text-[9.5px] font-semibold text-anthracite">
+              {qi + 1}. {q.stem}
+            </p>
+            <div className="space-y-1">
+              {q.options.map((opt, oi) => {
+                const isSelected = q.selected === oi;
+                return (
+                  <button
+                    key={oi}
+                    className={`w-full rounded-md px-2 py-1 text-left font-sans text-[9px] ${
+                      isSelected
+                        ? "border-2 border-electric bg-electric-muted font-semibold text-anthracite"
+                        : "border border-sand-deep bg-cream text-anthracite-muted"
+                    }`}
+                  >
+                    {LETTERS[oi]}) {opt}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

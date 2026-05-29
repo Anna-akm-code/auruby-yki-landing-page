@@ -1,94 +1,210 @@
-type Segment = "pass" | "weak" | "empty";
+type Segment = "pass" | "weak" | "fail" | "todo";
 
-const segmentClass: Record<Segment, string> = {
-  pass: "bg-correct",
-  weak: "bg-[#E8C547]",
-  empty: "bg-sand-deep",
+const segColor: Record<Segment, string> = {
+  pass: "bg-[#5B9A6B]",
+  weak: "bg-[#E8C84A]",
+  fail: "bg-[#D4735A]",
+  todo: "bg-[#DDD8CC]",
 };
+
+interface SubRow {
+  name: string;
+  segments: Segment[];
+}
 
 interface SkillRow {
   name: string;
   segments: Segment[];
+  expanded?: boolean;
+  subRows?: SubRow[];
 }
 
 const skills: SkillRow[] = [
   {
     name: "Vocabulary",
-    segments: ["pass", "pass", "pass", "weak", "empty", "empty"],
+    segments: [
+      "pass", "pass", "pass", "pass", "weak",
+      "todo", "todo", "todo", "todo",
+    ],
   },
   {
     name: "Reading",
-    segments: ["pass", "weak", "pass", "empty", "empty", "empty", "empty"],
+    segments: [
+      "pass", "pass", "weak",
+      "todo", "todo", "todo", "todo", "todo", "todo",
+    ],
+    expanded: true,
+    subRows: [
+      {
+        name: "True / false",
+        segments: [
+          "pass", "pass", "pass",
+          "todo", "todo", "todo", "todo", "todo", "todo",
+        ],
+      },
+      {
+        name: "Multiple choice",
+        segments: [
+          "pass", "weak",
+          "todo", "todo", "todo", "todo", "todo", "todo", "todo",
+        ],
+      },
+      {
+        name: "Open-ended",
+        segments: Array(9).fill("todo") as Segment[],
+      },
+    ],
   },
   {
     name: "Listening",
-    segments: ["pass", "empty", "empty", "empty", "empty"],
+    segments: [
+      "pass", "fail",
+      "todo", "todo", "todo", "todo", "todo", "todo", "todo",
+    ],
   },
   {
     name: "Writing",
-    segments: ["pass", "pass", "weak", "empty", "empty", "empty"],
+    segments: [
+      "pass", "pass", "weak",
+      "todo", "todo", "todo", "todo", "todo", "todo",
+    ],
   },
   {
     name: "Speaking",
-    segments: ["empty", "empty", "empty", "empty", "empty"],
+    segments: Array(9).fill("todo") as Segment[],
   },
 ];
 
 export function ProgressMock() {
   return (
     <div className="flex h-full flex-col px-4 py-3">
-      <div className="mb-3">
-        <p className="font-sans text-[8px] uppercase tracking-wider text-anthracite-muted">
-          Readiness
-        </p>
-        <h2 className="font-display text-[14px] font-semibold text-anthracite">
-          Your YKI status
-        </h2>
-      </div>
+      <p
+        className="font-sans text-[8px] font-semibold uppercase text-[#999]"
+        style={{ letterSpacing: "1.2px" }}
+      >
+        Readiness
+      </p>
+      <h2 className="mt-0.5 font-display text-[14px] font-medium text-anthracite">
+        Your YKI status
+      </h2>
 
-      <div className="mb-4 space-y-2">
+      <div className="mt-3 space-y-1.5">
         {skills.map((skill) => (
           <div key={skill.name}>
-            <p className="mb-1 font-sans text-[9.5px] font-medium text-anthracite-soft">
-              {skill.name}
-            </p>
-            <div className="flex gap-1">
-              {skill.segments.map((seg, i) => (
-                <div
-                  key={i}
-                  className={`h-2.5 flex-1 rounded-sm ${segmentClass[seg]}`}
-                />
-              ))}
+            <div className="flex items-center gap-2">
+              <p className="w-[58px] shrink-0 font-sans text-[9px] font-medium text-anthracite-soft">
+                {skill.name}
+              </p>
+              <div className="flex flex-1 gap-[3px]">
+                {skill.segments.map((seg, i) => (
+                  <div
+                    key={i}
+                    className={`h-[10px] flex-1 rounded-[2px] ${segColor[seg]}`}
+                  />
+                ))}
+              </div>
+              <span className="w-[8px] shrink-0 text-center font-sans text-[7px] text-anthracite-muted">
+                {skill.expanded ? "▼" : "▶"}
+              </span>
             </div>
+
+            {skill.expanded && skill.subRows && (
+              <div className="mt-1 ml-3 space-y-1 border-l border-sand-deep pl-2">
+                {skill.subRows.map((sub) => (
+                  <div
+                    key={sub.name}
+                    className="flex items-center gap-2"
+                  >
+                    <p className="w-[68px] shrink-0 font-sans text-[7.5px] text-anthracite-muted">
+                      {sub.name}
+                    </p>
+                    <div className="flex flex-1 gap-[2px]">
+                      {sub.segments.map((seg, i) => (
+                        <div
+                          key={i}
+                          className={`h-[7px] flex-1 rounded-[2px] ${segColor[seg]}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
 
-      <div className="mb-2 flex items-center gap-3 font-sans text-[7.5px] text-anthracite-muted">
+      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 font-sans text-[7.5px] text-anthracite-muted">
         <span className="flex items-center gap-1">
-          <span className="h-2 w-2 rounded-sm bg-correct" /> Pass
+          <span className="h-2 w-2 rounded-[2px] bg-[#5B9A6B]" /> Pass
         </span>
         <span className="flex items-center gap-1">
-          <span className="h-2 w-2 rounded-sm bg-[#E8C547]" /> Weak pass
+          <span className="h-2 w-2 rounded-[2px] bg-[#E8C84A]" /> Weak pass
         </span>
         <span className="flex items-center gap-1">
-          <span className="h-2 w-2 rounded-sm bg-sand-deep" /> To do
+          <span className="h-2 w-2 rounded-[2px] bg-[#D4735A]" /> Fail
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="h-2 w-2 rounded-[2px] bg-[#DDD8CC]" /> To do
         </span>
       </div>
 
-      <div className="mt-auto rounded-xl bg-sand-warm p-2.5">
-        <p className="mb-1 font-sans text-[7.5px] uppercase tracking-wider text-anthracite-muted">
-          To fix
+      <hr className="my-3 h-px border-0 bg-sand-deep" />
+
+      <div className="rounded-xl bg-[#F5F0E6] p-2.5">
+        <p
+          className="font-sans text-[7px] font-semibold uppercase text-anthracite-muted"
+          style={{ letterSpacing: "1px" }}
+        >
+          Grammar mistakes
         </p>
-        <ul className="space-y-0.5 font-sans text-[8.5px] text-anthracite-soft">
+        <ul className="mt-1 space-y-0.5 font-sans text-[8px] leading-snug text-anthracite-soft">
           <li>
             <span className="text-incorrect">minun nimi</span> →{" "}
-            <span className="text-correct">nimeni on</span>
+            <span className="text-correct">nimeni on</span>{" "}
+            <span className="italic text-anthracite-muted">
+              (possessive suffix)
+            </span>
           </li>
-          <li>partitive after ei</li>
           <li>
             <span className="text-incorrect">teidän talossa</span> →{" "}
-            <span className="text-correct">talossanne</span>
+            <span className="text-correct">talossanne</span>{" "}
+            <span className="italic text-anthracite-muted">
+              (possessive suffix)
+            </span>
+          </li>
+          <li>
+            <span className="text-incorrect">mä tykkään kahvia</span> →{" "}
+            <span className="text-correct">kahvista</span>{" "}
+            <span className="italic text-anthracite-muted">
+              (partitive vs elative with tykätä)
+            </span>
+          </li>
+        </ul>
+
+        <p
+          className="mt-2.5 font-sans text-[7px] font-semibold uppercase text-anthracite-muted"
+          style={{ letterSpacing: "1px" }}
+        >
+          Vocabulary mistakes
+        </p>
+        <ul className="mt-1 space-y-0.5 font-sans text-[8px] leading-snug text-anthracite-soft">
+          <li>
+            <span className="text-incorrect">ilmoittaa</span> →{" "}
+            <span className="text-correct">ilmoittautua</span>{" "}
+            <span className="italic text-anthracite-muted">
+              (to announce vs to register)
+            </span>
+          </li>
+          <li>
+            <span className="text-incorrect">
+              teidän työpaikkailmoituksesta
+            </span>{" "}
+            →{" "}
+            <span className="text-correct">avoimesta tehtävästä</span>{" "}
+            <span className="italic text-anthracite-muted">
+              (informal → formal)
+            </span>
           </li>
         </ul>
       </div>

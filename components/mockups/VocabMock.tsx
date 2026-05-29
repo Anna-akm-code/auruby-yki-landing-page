@@ -1,30 +1,34 @@
 export function VocabMock() {
   return (
     <div className="flex h-full flex-col px-4 py-3">
-      <div className="mb-2 flex items-center justify-between">
-        <p className="font-sans text-[8px] uppercase tracking-wider text-anthracite-muted">
-          Society · Elections
+      <div className="mb-2 flex items-start justify-between gap-2">
+        <p className="font-sans text-[10px] uppercase tracking-wider text-anthracite-muted">
+          9 · Society · Elections
         </p>
-        <span className="rounded-full bg-chartreuse px-1.5 py-0.5 font-sans text-[8px] font-semibold text-anthracite">
+        <span className="mt-1.5 shrink-0 rounded-full bg-chartreuse px-2 py-0.5 font-sans text-[10px] font-semibold text-anthracite">
           Listen
         </span>
       </div>
 
       <div className="mb-3 rounded-xl bg-sand-warm p-2.5">
         <p className="font-display text-[10.5px] leading-relaxed text-anthracite">
-          Suomessa{" "}
-          <strong className="font-semibold text-anthracite underline decoration-chartreuse decoration-2 underline-offset-2">
-            järjestetään vaalit
+          Suomessa järjestetään eduskunta
+          <strong className="font-semibold text-anthracite underline decoration-[#C5E63C] decoration-2 underline-offset-2">
+            vaalit
           </strong>{" "}
-          neljän vuoden välein. Äänestäminen on{" "}
-          <strong className="font-semibold text-anthracite underline decoration-chartreuse decoration-2 underline-offset-2">
-            tärkeä oikeus
+          neljän vuoden välein. Kansalaiset{" "}
+          <strong className="font-semibold text-anthracite underline decoration-[#C5E63C] decoration-2 underline-offset-2">
+            äänestävät
           </strong>{" "}
-          jokaiselle aikuiselle.{" "}
+          edustajia, jotka{" "}
           <span className="rounded bg-neon-pink-muted px-0.5 font-medium text-anthracite">
-            Muutin Suomeen
+            päättävät
           </span>{" "}
-          vuonna 2019.
+          laeista ja valtion budjetista. Äänestäminen on tärkeä{" "}
+          <strong className="font-semibold text-anthracite underline decoration-[#C5E63C] decoration-2 underline-offset-2">
+            oikeus
+          </strong>{" "}
+          jokaiselle aikuiselle.
         </p>
       </div>
 
@@ -49,7 +53,21 @@ export function VocabMock() {
           </div>
           <p className="font-sans text-[8.5px] text-anthracite-soft">election</p>
           <p className="mt-0.5 font-sans text-[8px] italic text-anthracite-muted">
-            järjestetään vaalit
+            eduskuntavaalit
+          </p>
+        </div>
+        <div className="rounded-lg border border-sand-deep bg-cream px-2.5 py-1.5">
+          <div className="flex items-baseline justify-between">
+            <p className="font-display text-[10px] font-semibold text-anthracite">
+              äänestää
+            </p>
+            <p className="font-sans text-[8px] italic text-anthracite-muted">
+              verb
+            </p>
+          </div>
+          <p className="font-sans text-[8.5px] text-anthracite-soft">to vote</p>
+          <p className="mt-0.5 font-sans text-[8px] italic text-anthracite-muted">
+            äänestävät edustajia
           </p>
         </div>
         <div className="rounded-lg border border-sand-deep bg-cream px-2.5 py-1.5">
@@ -80,15 +98,15 @@ export function VocabMock() {
       <div className="rounded-lg border border-sand-deep bg-cream px-2.5 py-1.5">
         <div className="flex items-baseline justify-between">
           <p className="font-display text-[10px] font-semibold text-anthracite">
-            muuttaa
+            päättää
           </p>
           <p className="font-sans text-[8px] italic text-anthracite-muted">
             verb
           </p>
         </div>
-        <p className="font-sans text-[8.5px] text-anthracite-soft">to move</p>
+        <p className="font-sans text-[8.5px] text-anthracite-soft">to decide</p>
         <p className="mt-0.5 font-sans text-[8px] italic text-anthracite-muted">
-          Muutin Suomeen
+          päättävät laeista
         </p>
       </div>
     </div>

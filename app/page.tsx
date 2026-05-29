@@ -111,14 +111,15 @@ export default function Home() {
         mockup={<SpeakingMock />}
         bullets={[
           <>
-            AI conversation partner for YKI-style speaking tasks — opinion
-            questions, everyday situations, storytelling.
+            AI conversation partner for YKI-style speaking tasks — role-plays,
+            semi-structured interviews and opinion questions.
           </>,
           <>
             Adjust the AI&apos;s speech speed when you need a moment to catch
             up.
           </>,
           <>Scored against YKI criteria — pass / weak pass / fail.</>,
+          <>Full conversation transcript available after each task.</>,
         ]}
       />
 
