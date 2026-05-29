@@ -9,7 +9,7 @@ const config: Config = {
     extend: {
       colors: {
         sand: {
-          DEFAULT: "#F5F1E8",
+          DEFAULT: "#EEEDFE",
           warm: "#EDE8DC",
           deep: "#E2DBCC",
         },
