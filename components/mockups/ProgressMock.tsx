@@ -79,20 +79,20 @@ export function ProgressMock() {
   return (
     <div className="flex h-full flex-col px-4 py-3">
       <p
-        className="font-sans text-[8px] font-semibold uppercase text-[#999]"
+        className="font-sans text-[12px] font-semibold uppercase text-[#999]"
         style={{ letterSpacing: "1.2px" }}
       >
         Readiness
       </p>
-      <h2 className="mt-0.5 font-display text-[14px] font-medium text-anthracite">
+      <h2 className="mt-0.5 font-display text-[19px] font-medium text-anthracite">
         Your YKI status
       </h2>
 
-      <div className="mt-3 space-y-1.5">
+      <div className="mt-2 space-y-1">
         {skills.map((skill) => (
           <div key={skill.name}>
             <div className="flex items-center gap-2">
-              <p className="w-[58px] shrink-0 font-sans text-[9px] font-medium text-anthracite-soft">
+              <p className="w-[64px] shrink-0 font-sans text-[13px] font-medium text-anthracite-soft">
                 {skill.name}
               </p>
               <div className="flex flex-1 gap-[3px]">
@@ -103,19 +103,19 @@ export function ProgressMock() {
                   />
                 ))}
               </div>
-              <span className="w-[8px] shrink-0 text-center font-sans text-[7px] text-anthracite-muted">
+              <span className="w-[8px] shrink-0 text-center font-sans text-[10.5px] text-anthracite-muted">
                 {skill.expanded ? "▼" : "▶"}
               </span>
             </div>
 
             {skill.expanded && skill.subRows && (
-              <div className="mt-1 ml-3 space-y-1 border-l border-sand-deep pl-2">
+              <div className="mt-0.5 ml-3 space-y-0.5 border-l border-sand-deep pl-2">
                 {skill.subRows.map((sub) => (
                   <div
                     key={sub.name}
                     className="flex items-center gap-2"
                   >
-                    <p className="w-[68px] shrink-0 font-sans text-[7.5px] text-anthracite-muted">
+                    <p className="w-[76px] shrink-0 font-sans text-[11px] text-anthracite-muted">
                       {sub.name}
                     </p>
                     <div className="flex flex-1 gap-[2px]">
@@ -134,7 +134,7 @@ export function ProgressMock() {
         ))}
       </div>
 
-      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 font-sans text-[7.5px] text-anthracite-muted">
+      <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5 font-sans text-[11.5px] text-anthracite-muted">
         <span className="flex items-center gap-1">
           <span className="h-2 w-2 rounded-[2px] bg-[#5B9A6B]" /> Pass
         </span>
@@ -149,16 +149,16 @@ export function ProgressMock() {
         </span>
       </div>
 
-      <hr className="my-3 h-px border-0 bg-sand-deep" />
+      <hr className="my-2.5 h-px border-0 bg-sand-deep" />
 
-      <div className="rounded-xl bg-[#F5F0E6] p-2.5">
+      <div className="rounded-xl bg-[#F5F0E6] p-2">
         <p
-          className="font-sans text-[7px] font-semibold uppercase text-anthracite-muted"
+          className="font-sans text-[11px] font-semibold uppercase text-anthracite-muted"
           style={{ letterSpacing: "1px" }}
         >
           Grammar mistakes
         </p>
-        <ul className="mt-1 space-y-0.5 font-sans text-[8px] leading-snug text-anthracite-soft">
+        <ul className="mt-0.5 space-y-0.5 font-sans text-[11.5px] leading-snug text-anthracite-soft">
           <li>
             <span className="text-incorrect">minun nimi</span> →{" "}
             <span className="text-correct">nimeni on</span>{" "}
@@ -173,22 +173,15 @@ export function ProgressMock() {
               (possessive suffix)
             </span>
           </li>
-          <li>
-            <span className="text-incorrect">mä tykkään kahvia</span> →{" "}
-            <span className="text-correct">kahvista</span>{" "}
-            <span className="italic text-anthracite-muted">
-              (partitive vs elative with tykätä)
-            </span>
-          </li>
         </ul>
 
         <p
-          className="mt-2.5 font-sans text-[7px] font-semibold uppercase text-anthracite-muted"
+          className="mt-2 font-sans text-[11px] font-semibold uppercase text-anthracite-muted"
           style={{ letterSpacing: "1px" }}
         >
           Vocabulary mistakes
         </p>
-        <ul className="mt-1 space-y-0.5 font-sans text-[8px] leading-snug text-anthracite-soft">
+        <ul className="mt-0.5 space-y-0.5 font-sans text-[11.5px] leading-snug text-anthracite-soft">
           <li>
             <span className="text-incorrect">ilmoittaa</span> →{" "}
             <span className="text-correct">ilmoittautua</span>{" "}

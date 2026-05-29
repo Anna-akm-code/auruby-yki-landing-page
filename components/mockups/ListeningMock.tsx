@@ -1,7 +1,7 @@
 interface Question {
   stem: string;
   options: string[];
-  selected: number | null; // index of selected option, or null if unanswered
+  selected: number | null;
 }
 
 const questions: Question[] = [
@@ -28,25 +28,25 @@ export function ListeningMock() {
   return (
     <div className="flex h-full flex-col px-4 py-3">
       <div className="mb-2 flex items-center justify-between">
-        <p className="font-sans text-[10px] uppercase tracking-wider text-anthracite-muted">
+        <p className="font-sans text-[14px] uppercase tracking-wider text-anthracite-muted">
           6 · Health and wellbeing
         </p>
-        <p className="font-sans text-[8px] font-semibold text-anthracite-soft">
+        <p className="font-sans text-[11.5px] font-semibold text-anthracite-soft">
           B1
         </p>
       </div>
 
-      <div className="mb-3 rounded-xl bg-anthracite p-3 text-cream">
-        <div className="mb-2 flex items-center justify-between">
-          <p className="font-sans text-[8px] uppercase tracking-wider opacity-60">
+      <div className="mb-2 rounded-xl bg-anthracite p-2 text-cream">
+        <div className="mb-1.5 flex items-center justify-between">
+          <p className="font-sans text-[11.5px] uppercase tracking-wider opacity-60">
             Audio 02:14
           </p>
-          <div className="rounded-full bg-cream/15 px-2 py-0.5 font-sans text-[8px] font-semibold">
+          <div className="rounded-full bg-cream/15 px-2 py-0.5 font-sans text-[11.5px] font-semibold">
             0.8×
           </div>
         </div>
 
-        <div className="mb-2 flex items-center gap-2">
+        <div className="mb-1.5 flex items-center gap-2">
           <div className="grid h-7 w-7 place-items-center rounded-full bg-chartreuse">
             <div className="ml-0.5 h-0 w-0 border-y-[5px] border-l-[7px] border-y-transparent border-l-anthracite" />
           </div>
@@ -57,7 +57,7 @@ export function ListeningMock() {
                 style={{ width: "42%" }}
               />
             </div>
-            <div className="mt-1 flex justify-between font-sans text-[7px] opacity-60">
+            <div className="mt-0.5 flex justify-between font-sans text-[10.5px] opacity-60">
               <span>00:56</span>
               <span>02:14</span>
             </div>
@@ -68,7 +68,7 @@ export function ListeningMock() {
           {["0.8×", "1.0×", "1.2×"].map((s, i) => (
             <button
               key={s}
-              className={`flex-1 rounded-md py-1 font-sans text-[8px] font-semibold ${
+              className={`flex-1 rounded-md py-0.5 font-sans text-[11.5px] font-semibold ${
                 i === 0
                   ? "bg-chartreuse text-anthracite"
                   : "bg-cream/10 text-cream/70"
@@ -80,19 +80,19 @@ export function ListeningMock() {
         </div>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-1.5">
         {questions.map((q, qi) => (
           <div key={qi}>
-            <p className="mb-1 font-display text-[9.5px] font-semibold text-anthracite">
+            <p className="mb-0.5 font-display text-[13.5px] font-semibold text-anthracite">
               {qi + 1}. {q.stem}
             </p>
-            <div className="space-y-1">
+            <div className="space-y-0.5">
               {q.options.map((opt, oi) => {
                 const isSelected = q.selected === oi;
                 return (
                   <button
                     key={oi}
-                    className={`w-full rounded-md px-2 py-1 text-left font-sans text-[9px] ${
+                    className={`w-full rounded-md px-2 py-0.5 text-left font-sans text-[12.5px] ${
                       isSelected
                         ? "border-2 border-electric bg-electric-muted font-semibold text-anthracite"
                         : "border border-sand-deep bg-cream text-anthracite-muted"
