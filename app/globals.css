@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-sand: #f5f1e8;
+  --color-anthracite: #2d2d2d;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Bumps the rem base to 18px so all rem-sized text scales up.
+     Mockup screens use absolute px so they stay phone-sized. */
+  font-size: 112.5%;
+}
+
+body {
+  background-color: var(--color-sand);
+  color: var(--color-anthracite);
+  font-family: var(--font-outfit), "Outfit", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #d6f549;
+  color: #2d2d2d;
+}
