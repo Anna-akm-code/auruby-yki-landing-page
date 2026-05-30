@@ -54,7 +54,7 @@ export function FeatureSection({
           }`}
         >
           <div>
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-cream px-2.5 py-0.5 font-sans text-[11px] font-medium text-anthracite-soft">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 font-sans text-base font-medium text-anthracite-soft">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${accentDot[accent]}`}
               />
