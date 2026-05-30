@@ -1,10 +1,9 @@
 import { ReactNode } from "react";
 
-// Mockup components render at this fixed reference size, then a uniform
-// CSS transform scales the whole layer to fill the cream area. The wider
-// 9:16 cream box (vs 9:19) gives content more horizontal room and shorter
-// vertical extent — paragraphs wrap less aggressively and the phone feels
-// less elongated.
+// Phone shrunk ~20%. Outer widths drop from 300/350 to 240/280; the
+// reference content stays at 260 wide, and the transform scale falls to
+// fit the smaller cream area — so everything inside the phone shrinks
+// proportionally with the frame.
 const REFERENCE_WIDTH = 260;
 const REFERENCE_HEIGHT = (REFERENCE_WIDTH * 16) / 9;
 
@@ -16,7 +15,7 @@ interface PhoneFrameProps {
 export function PhoneFrame({ children, className = "" }: PhoneFrameProps) {
   return (
     <div
-      className={`relative mx-auto w-[300px] sm:w-[350px] ${className}`}
+      className={`relative mx-auto w-[265px] sm:w-[310px] ${className}`}
       aria-hidden="true"
     >
       <div className="relative rounded-[44px] bg-anthracite p-[10px] shadow-[0_30px_60px_-25px_rgba(45,45,45,0.35)]">
@@ -24,7 +23,7 @@ export function PhoneFrame({ children, className = "" }: PhoneFrameProps) {
           <div className="absolute left-1/2 top-2 z-20 h-5 w-24 -translate-x-1/2 rounded-full bg-anthracite" />
           <div className="relative aspect-[9/16] w-full">
             <div
-              className="absolute left-0 top-0 origin-top-left scale-[1.077] sm:scale-[1.269]"
+              className="absolute left-0 top-0 origin-top-left scale-[0.942] sm:scale-[1.115]"
               style={{
                 width: `${REFERENCE_WIDTH}px`,
                 height: `${REFERENCE_HEIGHT}px`,

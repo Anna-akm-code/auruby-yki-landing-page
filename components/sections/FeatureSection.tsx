@@ -54,23 +54,23 @@ export function FeatureSection({
           }`}
         >
           <div>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1 font-sans text-xs font-medium text-anthracite-soft">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-cream px-2.5 py-0.5 font-sans text-[10px] font-medium text-anthracite-soft">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${accentDot[accent]}`}
               />
               {eyebrow}
             </p>
-            <h2 className="font-display text-3xl font-semibold text-anthracite sm:text-4xl">
+            <h2 className="font-display text-2xl font-semibold text-anthracite sm:text-3xl">
               {title}
             </h2>
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-5 space-y-3">
               {bullets.map((b, i) => (
                 <li
                   key={i}
-                  className="flex gap-3 font-sans text-lg leading-relaxed text-anthracite-soft"
+                  className="flex gap-3 font-sans text-sm leading-relaxed text-anthracite-soft"
                 >
                   <span
-                    className={`mt-[0.7rem] h-1.5 w-1.5 shrink-0 rounded-full ${accentDot[accent]}`}
+                    className={`mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full ${accentDot[accent]}`}
                   />
                   <span>{b}</span>
                 </li>

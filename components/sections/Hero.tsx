@@ -18,10 +18,10 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.21, 0.45, 0.27, 0.99] }}
         >
-          <h1 className="font-display text-4xl font-bold leading-[1.05] text-anthracite sm:text-5xl lg:text-[56px]">
+          <h1 className="font-display text-3xl font-bold leading-[1.05] text-anthracite sm:text-4xl lg:text-[48px]">
             All your YKI keskitaso prep in one app
           </h1>
-          <ul className="mt-7 space-y-2.5">
+          <ul className="mt-5 space-y-2">
             {[
               "Learn the key vocabulary",
               "Practise reading, listening, writing, and speaking",
@@ -30,23 +30,23 @@ export function Hero() {
             ].map((point) => (
               <li
                 key={point}
-                className="flex items-center gap-3 font-sans text-base text-anthracite-soft sm:text-lg"
+                className="flex items-center gap-3 font-sans text-sm text-anthracite-soft sm:text-base"
               >
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-chartreuse" />
                 <span>{point}</span>
               </li>
             ))}
           </ul>
-          <div className="mt-9 flex flex-wrap items-center gap-5">
+          <div className="mt-7 flex flex-wrap items-center gap-4">
             <a
               href="#waitlist"
-              className="rounded-full bg-[#C5E63C] px-8 py-4 font-sans text-base font-semibold text-[#1a1a1a] shadow-[0_14px_36px_-12px_rgba(197,230,60,0.55)] transition hover:bg-[#C5E63C]/90 sm:text-lg"
+              className="rounded-full bg-[#C5E63C] px-6 py-3 font-sans text-sm font-semibold text-[#1a1a1a] shadow-[0_14px_36px_-12px_rgba(197,230,60,0.55)] transition hover:bg-[#C5E63C]/90 sm:text-base"
             >
               Join the waitlist
             </a>
             <a
               href="#feature-vocabulary"
-              className="font-sans text-base font-medium text-anthracite-soft underline-offset-4 hover:underline"
+              className="font-sans text-sm font-medium text-anthracite-soft underline-offset-4 hover:underline"
             >
               See what&apos;s inside ↓
             </a>
