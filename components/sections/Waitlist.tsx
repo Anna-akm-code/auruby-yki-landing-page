@@ -59,29 +59,29 @@ export function Waitlist() {
         {/* Early-bird pricing */}
         <div className="text-center">
           <p
-            className="font-sans text-[14px] font-semibold uppercase"
+            className="font-sans text-[16px] font-semibold uppercase"
             style={{ color: LIME, letterSpacing: "1.5px" }}
           >
             Waitlist exclusive
           </p>
-          <h3 className="mt-2 font-display text-[21px] font-bold leading-tight text-white">
+          <h3 className="mt-2 font-display text-[24px] font-bold leading-tight text-white">
             Early-bird pricing
           </h3>
 
           <div className="mt-4 flex items-baseline justify-center gap-2.5">
-            <span className="font-sans text-[21px] text-[#888] line-through">
+            <span className="font-sans text-[24px] text-[#888] line-through">
               €22.99
             </span>
             <span
-              className="font-sans text-[36px] font-bold leading-none"
+              className="font-sans text-[41px] font-bold leading-none"
               style={{ color: LIME }}
             >
               €11.99
-              <span className="font-sans text-[14px] font-normal">/mo</span>
+              <span className="font-sans text-[16px] font-normal">/mo</span>
             </span>
           </div>
 
-          <p className="mt-3 font-sans text-[14px] text-[#aaa]">
+          <p className="mt-3 font-sans text-[16px] text-[#aaa]">
             for your first 6 months · then €22.99/mo
           </p>
         </div>
@@ -96,10 +96,10 @@ export function Waitlist() {
               transition={{ duration: 0.3 }}
               className="mt-8 rounded-2xl bg-chartreuse-glow p-6"
             >
-              <p className="font-display text-base font-semibold text-cream">
+              <p className="font-display text-lg font-semibold text-cream">
                 You&apos;re on the list 🎉
               </p>
-              <p className="mt-1.5 font-sans text-sm text-cream/70">
+              <p className="mt-1.5 font-sans text-base text-cream/70">
                 We&apos;ll email you when the app is ready. Kiitos!
               </p>
             </motion.div>
@@ -121,7 +121,7 @@ export function Waitlist() {
                   placeholder="you@example.com"
                   autoComplete="email"
                   aria-label="Email address"
-                  className="flex-1 rounded-[10px] border bg-[#3a3a3a] px-3.5 py-[10px] font-sans text-[14px] text-white placeholder:text-[#888] focus:outline-none"
+                  className="flex-1 rounded-[10px] border bg-[#3a3a3a] px-4 py-[12px] font-sans text-[16px] text-white placeholder:text-[#888] focus:outline-none"
                   style={{ borderColor: "#555" }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = LIME)}
                   onBlur={(e) => (e.currentTarget.style.borderColor = "#555")}
@@ -129,7 +129,7 @@ export function Waitlist() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="rounded-[10px] px-[18px] py-[10px] font-sans text-[14px] font-medium text-anthracite transition disabled:opacity-60"
+                  className="rounded-[10px] px-[20px] py-[12px] font-sans text-[16px] font-medium text-anthracite transition disabled:opacity-60"
                   style={{ backgroundColor: LIME }}
                 >
                   {submitting ? "Saving…" : "Join the waitlist"}
@@ -140,11 +140,11 @@ export function Waitlist() {
                 <p className="mt-3 font-sans text-sm text-incorrect">{error}</p>
               )}
 
-              <p className="mt-5 font-sans text-[12px] text-[#666]">
+              <p className="mt-5 font-sans text-[14px] text-[#666]">
                 No payment now. Your €11.99/mo rate locks when you join the
                 waitlist.
               </p>
-              <p className="mt-1 font-sans text-[12px] text-[#666]">
+              <p className="mt-1 font-sans text-[14px] text-[#666]">
                 We&apos;ll only write about the launch — nothing else.
               </p>
             </motion.form>

@@ -15,11 +15,11 @@ export function Trust() {
         </div>
 
         <div className="space-y-3">
-          <p className="font-display text-base font-semibold leading-snug text-anthracite sm:text-lg">
+          <p className="font-display text-lg font-semibold leading-snug text-anthracite sm:text-xl">
             Designed by a CELTA-certified language teacher with 8 years of
             experience.
           </p>
-          <p className="font-display text-base font-semibold leading-snug text-anthracite sm:text-lg">
+          <p className="font-display text-lg font-semibold leading-snug text-anthracite sm:text-xl">
             Content tested and reviewed by experienced Finnish language
             teachers.
           </p>

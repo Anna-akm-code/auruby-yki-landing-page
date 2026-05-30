@@ -40,13 +40,13 @@ export function Hero() {
           <div className="mt-7 flex flex-wrap items-center gap-4">
             <a
               href="#waitlist"
-              className="rounded-full bg-[#C5E63C] px-6 py-3 font-sans text-sm font-semibold text-[#1a1a1a] shadow-[0_14px_36px_-12px_rgba(197,230,60,0.55)] transition hover:bg-[#C5E63C]/90 sm:text-base"
+              className="rounded-full bg-[#C5E63C] px-7 py-3.5 font-sans text-base font-semibold text-[#1a1a1a] shadow-[0_14px_36px_-12px_rgba(197,230,60,0.55)] transition hover:bg-[#C5E63C]/90 sm:text-lg"
             >
               Join the waitlist
             </a>
             <a
               href="#feature-vocabulary"
-              className="font-sans text-sm font-medium text-anthracite-soft underline-offset-4 hover:underline"
+              className="font-sans text-base font-medium text-anthracite-soft underline-offset-4 hover:underline"
             >
               See what&apos;s inside ↓
             </a>
