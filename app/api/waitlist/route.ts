@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     .upsert(
       {
         email: body.email.toLowerCase().trim(),
-        email_at: new Date().toISOString(),
+        created_at: new Date().toISOString(),
       },
       { onConflict: "email" },
     );
