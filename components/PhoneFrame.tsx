@@ -15,7 +15,7 @@ interface PhoneFrameProps {
 export function PhoneFrame({ children, className = "" }: PhoneFrameProps) {
   return (
     <div
-      className={`relative mx-auto w-[265px] sm:w-[310px] ${className}`}
+      className={`relative mx-auto w-[246px] sm:w-[288px] ${className}`}
       aria-hidden="true"
     >
       <div className="relative rounded-[44px] bg-anthracite p-[10px] shadow-[0_30px_60px_-25px_rgba(45,45,45,0.35)]">
@@ -23,7 +23,7 @@ export function PhoneFrame({ children, className = "" }: PhoneFrameProps) {
           <div className="absolute left-1/2 top-2 z-20 h-5 w-24 -translate-x-1/2 rounded-full bg-anthracite" />
           <div className="relative aspect-[9/16] w-full">
             <div
-              className="absolute left-0 top-0 origin-top-left scale-[0.942] sm:scale-[1.115]"
+              className="absolute left-0 top-0 origin-top-left scale-[0.869] sm:scale-[1.031]"
               style={{
                 width: `${REFERENCE_WIDTH}px`,
                 height: `${REFERENCE_HEIGHT}px`,

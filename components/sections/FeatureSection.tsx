@@ -43,7 +43,7 @@ export function FeatureSection({
     <FadeIn
       as="section"
       id={id}
-      className={`px-6 py-20 sm:py-28 ${
+      className={`px-6 py-[4.5rem] sm:py-[6.3rem] ${
         background === "warm" ? "bg-sand-warm" : ""
       }`}
     >
@@ -54,23 +54,23 @@ export function FeatureSection({
           }`}
         >
           <div>
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 font-sans text-base font-medium text-anthracite-soft">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 font-sans text-[17px] font-medium text-anthracite-soft">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${accentDot[accent]}`}
               />
               {eyebrow}
             </p>
-            <h2 className="font-display text-3xl font-semibold text-anthracite sm:text-4xl">
+            <h2 className="font-display text-[32px] font-semibold text-anthracite sm:text-[38px]">
               {title}
             </h2>
-            <ul className="mt-5 space-y-3.5">
+            <ul className="mt-5 space-y-3">
               {bullets.map((b, i) => (
                 <li
                   key={i}
-                  className="flex gap-3 font-sans text-base leading-relaxed text-anthracite-soft"
+                  className="flex gap-3 font-sans text-[17px] leading-relaxed text-anthracite-soft"
                 >
                   <span
-                    className={`mt-[0.6rem] h-1.5 w-1.5 shrink-0 rounded-full ${accentDot[accent]}`}
+                    className={`mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full ${accentDot[accent]}`}
                   />
                   <span>{b}</span>
                 </li>
