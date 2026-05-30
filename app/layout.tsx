@@ -56,6 +56,11 @@ export const metadata: Metadata = {
       "All your YKI keskitaso prep in one app — vocabulary, reading, listening, writing, speaking.",
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/favicon.png", type: "image/png" }],
+  },
 };
 
 const faqJsonLd = {
