@@ -70,7 +70,7 @@ export function Waitlist() {
 
           <div className="mt-5 flex items-baseline justify-center gap-3">
             <span className="font-sans text-[28px] text-[#888] line-through">
-              €17.99
+              €22.99
             </span>
             <span
               className="font-sans text-[48px] font-bold leading-none"
@@ -82,11 +82,9 @@ export function Waitlist() {
           </div>
 
           <p className="mt-4 font-sans text-[20px] text-[#aaa]">
-            for your first 6 months · then €17.99/mo
+            for your first 6 months · then €22.99/mo
           </p>
         </div>
-
-        <hr className="my-9 h-px border-0 bg-[#444]" />
 
         {/* Waitlist signup */}
         <AnimatePresence mode="wait">
@@ -96,7 +94,7 @@ export function Waitlist() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="rounded-2xl bg-chartreuse-glow p-6"
+              className="mt-8 rounded-2xl bg-chartreuse-glow p-6"
             >
               <p className="font-display text-xl font-semibold text-cream">
                 You&apos;re on the list 🎉
@@ -112,13 +110,9 @@ export function Waitlist() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
+              className="mt-8"
             >
-              <p className="text-center font-sans text-[20px] leading-snug text-[#aaa]">
-                Just your email. We&apos;ll only write about the launch —
-                nothing else.
-              </p>
-
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 <input
                   type="email"
                   required
@@ -147,7 +141,11 @@ export function Waitlist() {
               )}
 
               <p className="mt-5 font-sans text-[16px] text-[#666]">
-                No payment now. Your €11.99/mo rate locks when you sign up.
+                No payment now. Your €11.99/mo rate locks when you join the
+                waitlist.
+              </p>
+              <p className="mt-1 font-sans text-[16px] text-[#666]">
+                We&apos;ll only write about the launch — nothing else.
               </p>
             </motion.form>
           )}

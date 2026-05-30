@@ -27,16 +27,16 @@ export default function Home() {
         bullets={[
           <>
             We suggest the key words you must know for each YKI topic —
-            presented in short texts you can listen to.
+            presented in short texts you can listen to
           </>,
           <>
             See an unfamiliar word? Highlight it to add it to your personal
             vocabulary list — with base form, translation, and the full phrase
-            it appeared in.
+            it appeared in
           </>,
           <>
             Practise in three ways: find the translation, unscramble letters,
-            write from memory.
+            write from memory
           </>,
         ]}
       />
@@ -51,15 +51,15 @@ export default function Home() {
         bullets={[
           <>
             Texts at two levels — A2/B1 to build confidence, B1/B2 to push
-            you. Yes, we made easier ones on purpose.
+            you. Yes, we made easier ones on purpose
           </>,
           <>
             True/false, multiple choice, and open-ended questions — exactly
-            the formats from the real test.
+            the formats from the real test
           </>,
           <>
             Highlight unfamiliar words in any text — they go straight to your
-            vocabulary list.
+            vocabulary list
           </>,
         ]}
       />
@@ -71,13 +71,13 @@ export default function Home() {
         accent="orange"
         mockup={<ListeningMock />}
         bullets={[
-          <>Adjustable playback speed — slow down, then build up.</>,
+          <>Adjustable playback speed — slow down, then build up</>,
           <>
-            Check the transcript after you answer — no peeking before.
+            Check the transcript after you answer — no peeking before
           </>,
           <>
             Highlight new words in the transcript to add them to your
-            vocabulary list.
+            vocabulary list
           </>,
         ]}
       />
@@ -93,12 +93,12 @@ export default function Home() {
           <>
             AI gives you an honest pass / weak pass / fail assessment — based
             on official YKI requirements and the experience of Finnish
-            language teachers.
+            language teachers
           </>,
-          <>Model answers to compare against yours.</>,
+          <>Model answers to compare against yours</>,
           <>
             After each task, your top 3 grammar mistakes and top 3 vocabulary
-            mistakes are added to your personal &quot;To fix&quot; list.
+            mistakes are added to your personal &quot;To fix&quot; list
           </>,
         ]}
       />
@@ -112,14 +112,14 @@ export default function Home() {
         bullets={[
           <>
             AI conversation partner for YKI-style speaking tasks — role-plays,
-            semi-structured interviews and opinion questions.
+            semi-structured interviews and opinion questions
           </>,
           <>
             Adjust the AI&apos;s speech speed when you need a moment to catch
-            up.
+            up
           </>,
-          <>Scored against YKI criteria — pass / weak pass / fail.</>,
-          <>Full conversation transcript available after each task.</>,
+          <>Scored against YKI criteria — pass / weak pass / fail</>,
+          <>Full conversation transcript available after each task</>,
         ]}
       />
 
@@ -133,11 +133,11 @@ export default function Home() {
         bullets={[
           <>
             See how you&apos;re doing at a glance — green for pass, yellow for
-            weak pass, and what&apos;s left to do.
+            weak pass, and what&apos;s left to do
           </>,
           <>
             Your &quot;To fix&quot; list: most common grammar and vocabulary
-            mistakes collected across all tasks.
+            mistakes collected across all tasks
           </>,
         ]}
       />

@@ -15,7 +15,7 @@ export function PromoBanner() {
             Lock in the early-bird price
           </span>{" "}
           <span className="line-through" style={{ opacity: 0.6 }}>
-            €17.99
+            €22.99
           </span>{" "}
           <span className="text-white">→</span>{" "}
           <span style={{ color: LIME, fontWeight: 700 }}>€11.99/mo</span>{" "}
