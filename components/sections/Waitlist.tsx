@@ -102,6 +102,9 @@ export function Waitlist() {
               <p className="mt-1.5 font-sans text-base text-cream/70">
                 We&apos;ll email you when the app is ready. Kiitos!
               </p>
+              <p className="mt-2 font-sans text-sm text-cream/50">
+                Check your inbox — we&apos;ve sent you a confirmation email.
+              </p>
             </motion.div>
           ) : (
             <motion.form
