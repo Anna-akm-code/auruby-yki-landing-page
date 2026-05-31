@@ -1,3 +1,7 @@
+"use client";
+
+import { capture } from "@/components/PostHogProvider";
+
 const LIME = "#C5E63C";
 
 export function PromoBanner() {
@@ -27,6 +31,7 @@ export function PromoBanner() {
         </div>
         <a
           href="#waitlist"
+          onClick={() => capture("cta_clicked", { location: "banner" })}
           className="justify-self-end rounded-3xl bg-[#C5E63C] px-[20px] py-[7px] font-sans text-[15px] font-semibold text-[#1a1a1a] transition hover:bg-[#C5E63C]/90"
         >
           Join the waitlist

@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { PhoneFrame } from "@/components/PhoneFrame";
 import { DashboardMock } from "@/components/mockups/DashboardMock";
+import { capture } from "@/components/PostHogProvider";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -40,12 +41,14 @@ export function Hero() {
           <div className="mt-7 flex flex-wrap items-center gap-4">
             <a
               href="#waitlist"
+              onClick={() => capture("cta_clicked", { location: "hero" })}
               className="rounded-full bg-[#C5E63C] px-7 py-3.5 font-sans text-base font-semibold text-[#1a1a1a] shadow-[0_14px_36px_-12px_rgba(197,230,60,0.55)] transition hover:bg-[#C5E63C]/90 sm:text-lg"
             >
               Join the waitlist
             </a>
             <a
               href="#feature-vocabulary"
+              onClick={() => capture("cta_clicked", { location: "see_inside" })}
               className="font-sans text-base font-medium text-anthracite-soft underline-offset-4 hover:underline"
             >
               See what&apos;s inside ↓
