@@ -9,6 +9,7 @@ import { VocabMock } from "@/components/mockups/VocabMock";
 import { ReadingMock } from "@/components/mockups/ReadingMock";
 import { ListeningMock } from "@/components/mockups/ListeningMock";
 import { WritingMock } from "@/components/mockups/WritingMock";
+import { WritingMockCorrections } from "@/components/mockups/WritingMockCorrections";
 import { SpeakingMock } from "@/components/mockups/SpeakingMock";
 import { ProgressMock } from "@/components/mockups/ProgressMock";
 
@@ -89,6 +90,7 @@ export default function Home() {
         accent="neon-pink"
         reverse
         mockup={<WritingMock />}
+        secondMockup={<WritingMockCorrections />}
         bullets={[
           <>
             AI gives you an honest pass / weak pass / fail assessment — based

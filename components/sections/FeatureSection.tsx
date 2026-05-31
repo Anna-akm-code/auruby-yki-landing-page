@@ -8,6 +8,7 @@ interface FeatureSectionProps {
   title: string;
   bullets: ReactNode[];
   mockup: ReactNode;
+  secondMockup?: ReactNode;
   reverse?: boolean;
   accent?: "chartreuse" | "neon-pink" | "purple" | "electric" | "orange";
   background?: "sand" | "warm";
@@ -35,6 +36,7 @@ export function FeatureSection({
   title,
   bullets,
   mockup,
+  secondMockup,
   reverse = false,
   accent = "chartreuse",
   background = "sand",
@@ -82,7 +84,20 @@ export function FeatureSection({
             <div
               className={`absolute -inset-6 -z-10 rounded-[60px] blur-2xl ${accentHalo[accent]}`}
             />
-            <PhoneFrame>{mockup}</PhoneFrame>
+            {secondMockup ? (
+              <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-4 lg:gap-6">
+                <PhoneFrame>{mockup}</PhoneFrame>
+                <span
+                  aria-hidden="true"
+                  className="hidden font-display text-2xl font-bold text-anthracite-muted md:inline"
+                >
+                  →
+                </span>
+                <PhoneFrame>{secondMockup}</PhoneFrame>
+              </div>
+            ) : (
+              <PhoneFrame>{mockup}</PhoneFrame>
+            )}
           </div>
         </div>
       </div>

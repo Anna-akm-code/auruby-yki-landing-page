@@ -89,6 +89,15 @@ export function SpeakingMock() {
         {turns.map((t, i) => (
           <div key={i} className="flex items-center gap-2">
             <span
+              className={`w-[20px] shrink-0 font-sans text-[9px] font-semibold ${
+                t.speaker === "ai"
+                  ? "text-anthracite-muted"
+                  : "text-anthracite"
+              }`}
+            >
+              {t.speaker === "ai" ? "AI" : "You"}
+            </span>
+            <span
               className={`h-2 w-2 shrink-0 rounded-full ${
                 t.speaker === "ai" ? "bg-[#bbb]" : "bg-[#2D2D2D]"
               }`}
@@ -105,7 +114,7 @@ export function SpeakingMock() {
       </div>
 
       <div className="mt-2 rounded-xl bg-[#EDF5E0] p-2">
-        <div className="mb-0.5 flex items-center justify-between">
+        <div className="mb-1 flex items-center justify-between">
           <p
             className="font-sans text-[11px] font-semibold uppercase text-anthracite-muted"
             style={{ letterSpacing: "1px" }}
@@ -116,10 +125,22 @@ export function SpeakingMock() {
             Pass
           </span>
         </div>
-        <p className="font-sans text-[12px] leading-snug text-anthracite-soft">
-          You handled the situation well — answered all parts and gave
-          relevant details.
+        <p className="font-sans text-[10px] font-semibold uppercase text-anthracite-muted">
+          Good use of:
         </p>
+        <ul className="mt-0.5 space-y-0 font-sans text-[10.5px] leading-snug text-anthracite-soft">
+          <li>· Partitive with tykätä (pidän työskentelystä)</li>
+          <li>· Past tense narration (opiskelin, asuin)</li>
+          <li>· Polite register (Ystävällisin terveisin)</li>
+        </ul>
+        <p className="mt-1.5 font-sans text-[10px] font-semibold uppercase text-anthracite-muted">
+          To reach a strong pass:
+        </p>
+        <ul className="mt-0.5 space-y-0 font-sans text-[10.5px] leading-snug text-anthracite-soft">
+          <li>· Try conditional (haluaisin instead of haluan)</li>
+          <li>· Use more connectors (lisäksi, toisaalta)</li>
+          <li>· Expand answers — one more detail per turn</li>
+        </ul>
       </div>
 
       <div className="mt-1.5 flex justify-center">
