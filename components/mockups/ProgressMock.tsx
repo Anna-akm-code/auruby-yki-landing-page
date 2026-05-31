@@ -87,8 +87,16 @@ export function ProgressMock() {
       <h2 className="mt-0.5 font-display text-[19px] font-medium text-anthracite">
         Your YKI status
       </h2>
+      <p className="mt-1 font-sans text-[10px] leading-snug text-anthracite-muted">
+        Each block = one YKI topic. Tap any skill to see your results by task
+        type.
+      </p>
 
-      <div className="mt-2 space-y-1">
+      <p className="mt-2 font-sans text-[10px] text-anthracite-muted">
+        5 skills · 9 topics each · 3–4 tasks per topic
+      </p>
+
+      <div className="mt-1.5 space-y-1">
         {skills.map((skill) => (
           <div key={skill.name}>
             <div className="flex items-center gap-2">
@@ -148,6 +156,9 @@ export function ProgressMock() {
           <span className="h-2 w-2 rounded-[2px] bg-[#DDD8CC]" /> To do
         </span>
       </div>
+      <p className="mt-1 font-sans text-[10px] italic text-anthracite-muted">
+        A topic turns green when all tasks in it are passed
+      </p>
 
       <hr className="my-2.5 h-px border-0 bg-sand-deep" />
 
