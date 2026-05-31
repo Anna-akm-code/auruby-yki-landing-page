@@ -129,17 +129,8 @@ export function SpeakingMock() {
           Good use of:
         </p>
         <ul className="mt-0.5 space-y-0 font-sans text-[10.5px] leading-snug text-anthracite-soft">
-          <li>· Partitive with tykätä (pidän työskentelystä)</li>
-          <li>· Past tense narration (opiskelin, asuin)</li>
-          <li>· Polite register (Ystävällisin terveisin)</li>
-        </ul>
-        <p className="mt-1.5 font-sans text-[10px] font-semibold uppercase text-anthracite-muted">
-          To reach a strong pass:
-        </p>
-        <ul className="mt-0.5 space-y-0 font-sans text-[10.5px] leading-snug text-anthracite-soft">
-          <li>· Try conditional (haluaisin instead of haluan)</li>
-          <li>· Use more connectors (lisäksi, toisaalta)</li>
-          <li>· Expand answers — one more detail per turn</li>
+          <li>· partitive: pidän työskentelystä</li>
+          <li>· past tense: opiskelin, asuin</li>
         </ul>
       </div>
 
