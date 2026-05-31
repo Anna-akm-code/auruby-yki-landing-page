@@ -16,20 +16,25 @@ const FROM = "Anna from Auruby <hello@auruby.io>";
 
 const CONFIRMATION_HTML = `<!doctype html>
 <html lang="en">
-  <body style="margin:0;padding:24px;background:#F5F1E8;font-family:Outfit,system-ui,-apple-system,sans-serif;color:#2D2D2D;">
-    <div style="max-width:480px;margin:0 auto;background:#FAF8F3;border-radius:14px;padding:28px;">
-      <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">Hi!</p>
-      <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">
-        You&rsquo;re on the Auruby waitlist. Your early-bird price of
-        <strong>&euro;11.99/mo</strong> (instead of
-        <span style="text-decoration:line-through;color:#8A8578;">&euro;22.99</span>)
-        is locked.
-      </p>
-      <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">
-        We&rsquo;ll email you when the app launches this summer. Nothing
-        else &mdash; no spam.
-      </p>
-      <p style="margin:24px 0 0;font-size:16px;line-height:1.6;">— Anna, Auruby</p>
+  <body style="margin:0;padding:32px 16px;background:#EEEDFE;font-family:'Josefin Sans','Outfit',system-ui,-apple-system,sans-serif;color:#2D2D2D;">
+    <div style="max-width:480px;margin:0 auto;">
+      <div style="background:#2D2D2D;border-radius:12px;padding:18px 24px;text-align:center;">
+        <span style="font-family:'Josefin Sans',system-ui,-apple-system,sans-serif;font-size:28px;font-weight:700;letter-spacing:0.5px;color:#C5E63C;">Auruby</span>
+      </div>
+      <div style="padding:28px 8px 0;font-family:Outfit,system-ui,-apple-system,sans-serif;">
+        <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">Hi!</p>
+        <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">
+          You&rsquo;re on the Auruby waitlist.
+        </p>
+        <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">
+          Your early-bird price of <strong>&euro;11.99/mo</strong>
+          (instead of <s>&euro;22.99</s>) is locked.
+        </p>
+        <p style="margin:0 0 24px;font-size:16px;line-height:1.6;">
+          We&rsquo;ll email you when the app launches. Have a great summer!
+        </p>
+        <p style="margin:0;font-size:16px;line-height:1.6;">— Anna, Auruby</p>
+      </div>
     </div>
   </body>
 </html>`;
