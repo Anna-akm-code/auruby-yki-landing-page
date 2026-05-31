@@ -59,8 +59,8 @@ export default function Home() {
             the formats from the real test
           </>,
           <>
-            Highlight unfamiliar words in any text — they go straight to your
-            vocabulary list
+            Spot a word you don&apos;t know? Highlight it — base form,
+            translation, and context are saved instantly
           </>,
         ]}
       />
@@ -72,13 +72,16 @@ export default function Home() {
         accent="orange"
         mockup={<ListeningMock />}
         bullets={[
-          <>Adjustable playback speed — slow down, then build up</>,
+          <>
+            Playback speed from 0.8× to 1.2× — start slow, build up as your
+            ear adjusts
+          </>,
           <>
             Check the transcript after you answer — no peeking before
           </>,
           <>
-            Highlight new words in the transcript to add them to your
-            vocabulary list
+            Highlight any word in the transcript to save it to your vocabulary
+            list for later practice
           </>,
         ]}
       />
@@ -93,14 +96,17 @@ export default function Home() {
         secondMockup={<WritingMockCorrections />}
         bullets={[
           <>
-            AI gives you an honest pass / weak pass / fail assessment — based
-            on official YKI requirements and the experience of Finnish
-            language teachers
+            Model answers at two levels — A2/B1 and B1/B2 — so you know what
+            good looks like before you write
           </>,
-          <>Model answers to compare against yours</>,
           <>
-            After each task, your top 3 grammar mistakes and top 3 vocabulary
-            mistakes are added to your personal &quot;To fix&quot; list
+            AI gives you an honest pass / weak pass / fail assessment with
+            specific corrections — not just &quot;write better,&quot; but
+            exactly what to fix and why
+          </>,
+          <>
+            Your top 3 grammar and vocabulary mistakes are added to your
+            personal &quot;To fix&quot; list after each task
           </>,
         ]}
       />
@@ -114,14 +120,16 @@ export default function Home() {
         bullets={[
           <>
             AI conversation partner for YKI-style speaking tasks — role-plays,
-            semi-structured interviews and opinion questions
+            semi-structured interviews, and opinion questions
           </>,
           <>
-            Adjust the AI&apos;s speech speed when you need a moment to catch
-            up
+            Adjust the AI&apos;s speech speed from 0.8× to 1.2× — slow it down
+            while learning, speed it up when you&apos;re ready
           </>,
-          <>Scored against YKI criteria — pass / weak pass / fail</>,
-          <>Full conversation transcript available after each task</>,
+          <>
+            Detailed feedback after each task: what you did well, what to
+            improve, and a full conversation transcript to review
+          </>,
         ]}
       />
 
