@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { Josefin_Sans, Outfit } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import {
+  SITE_URL,
+  organizationJsonLd,
+  websiteJsonLd,
+  softwareApplicationJsonLd,
+} from "@/lib/seo";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -18,10 +23,9 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://auruby.app";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   title:
     "YKI Keskitaso Prep App — Vocabulary, Reading, Writing, Listening, Speaking in One Place",
   description:
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
     description:
       "Vocabulary, reading, listening, writing, and speaking — structured by YKI exam topics, tracked by AI, designed by a language teacher.",
     type: "website",
-    url: siteUrl,
+    url: SITE_URL,
     siteName: "Auruby",
   },
   twitter: {
@@ -63,45 +67,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the YKI keskitaso exam?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "YKI keskitaso (intermediate level) is the Finnish National Certificate of Language Proficiency at CEFR levels B1–B2. It tests reading comprehension, listening comprehension, writing, and speaking in Finnish. Passing it is a common requirement for Finnish citizenship.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I prepare for YKI keskitaso?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Effective YKI keskitaso preparation covers five areas: vocabulary by exam topics (society, work, health, etc.), reading B1–B2 texts in exam format, listening with comprehension questions, writing exam-style tasks like complaint letters and emails, and practising spoken everyday situations. Auruby brings all five into one app structured by YKI themes.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What level is YKI keskitaso?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "YKI keskitaso corresponds to CEFR levels B1 and B2 — intermediate Finnish. You can understand the main ideas of clear standard speech and texts on familiar matters, and produce connected text on topics that are familiar or of personal interest.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who designed the Auruby YKI prep app?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Auruby is designed by a CELTA-certified language teacher with 8 years of teaching experience. All content is tested and reviewed by experienced Finnish language teachers.",
-      },
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -109,14 +74,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${josefin.variable} ${outfit.variable}`}>
+      <head>
+        {/* Server-rendered JSON-LD: present in the initial HTML, not injected
+            after hydration, so AI/search crawlers see it without running JS. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(softwareApplicationJsonLd),
+          }}
+        />
+      </head>
       <body>
         <PostHogProvider>{children}</PostHogProvider>
-        <Script
-          id="faq-jsonld"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
       </body>
     </html>
   );

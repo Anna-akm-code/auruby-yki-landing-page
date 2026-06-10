@@ -1,0 +1,18 @@
+# Auruby
+
+> Auruby is an app for preparing for the Finnish **YKI keskitaso** (intermediate, CEFR B1–B2) language exam. It brings vocabulary, reading, listening, writing, and speaking practice into one place, structured around the real exam's topics and formats, and assessed by AI. The content is designed by a CELTA-certified language teacher with eight years of experience and reviewed by experienced Finnish language teachers. Auruby is currently pre-launch with an early-bird waitlist.
+
+## Key sections
+
+- [Vocabulary](https://auruby.io/#feature-vocabulary): Key words for each YKI topic, presented in short audio texts; highlight any word to save it (base form, translation, context) and practise it three ways.
+- [Reading](https://auruby.io/#feature-reading): Exam-format texts at two levels (A2/B1 and B1/B2) with true/false, multiple-choice, and open-ended questions.
+- [Listening](https://auruby.io/#feature-listening): Exam-format audio with adjustable 0.8×–1.2× playback, comprehension questions, and transcripts.
+- [Writing](https://auruby.io/#feature-writing): Exam-style writing tasks with model answers and AI pass / weak pass / fail feedback plus specific corrections.
+- [Speaking](https://auruby.io/#feature-speaking): An AI conversation partner for YKI-style speaking tasks, with adjustable speech speed and detailed feedback.
+- [Progress](https://auruby.io/#feature-progress): Readiness tracking and a personal "To fix" list of your most common mistakes.
+- [FAQ](https://auruby.io/#faq): What the YKI keskitaso exam is, how to prepare, what level it is, and who designed Auruby.
+- [Waitlist](https://auruby.io/#waitlist): Join for early-bird pricing (€11.99/mo for the first 6 months, then €22.99/mo).
+
+## Contact
+
+- Email: hello@auruby.io

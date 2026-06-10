@@ -2,7 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000/ -o /tmp/auruby-home.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:3000/robots.txt)",
+      "Bash(curl -s http://localhost:3000/sitemap.xml)",
+      "Bash(curl -s -o /tmp/og.png -w \"HTTP %{http_code} | %{content_type} | %{size_download} bytes\\\\n\" http://localhost:3000/opengraph-image)",
+      "Bash(curl -s -o /tmp/tw.png -w \"HTTP %{http_code} | %{content_type} | %{size_download} bytes\\\\n\" http://localhost:3000/twitter-image)",
+      "Bash(curl -s http://localhost:3000/llms.txt)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"tsc exit: $?\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -f \"next-server\")"
     ]
   }
 }

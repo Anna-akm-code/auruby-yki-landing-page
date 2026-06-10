@@ -84,9 +84,9 @@ export function ProgressMock() {
       >
         Readiness
       </p>
-      <h2 className="mt-0.5 font-display text-[19px] font-medium text-anthracite">
+      <p className="mt-0.5 font-display text-[19px] font-medium text-anthracite">
         Your YKI status
-      </h2>
+      </p>
       <p className="mt-1 font-sans text-[10px] leading-snug text-anthracite-muted">
         Each block = one YKI topic. Tap any skill to see your results by task
         type.
