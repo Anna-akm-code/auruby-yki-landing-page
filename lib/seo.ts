@@ -893,10 +893,17 @@ export const organizationJsonLd = {
   email: "hello@auruby.io",
   description:
     "Auruby makes an app for preparing for the Finnish YKI keskitaso (intermediate, CEFR B1–B2) language exam, covering vocabulary, reading, listening, writing, and speaking.",
+  sameAs: ["https://www.facebook.com/AurubyYKI/"],
+  foundingDate: "2026-01",
   founder: {
     "@type": "Person",
-    name: "Anna",
+    name: "Anna Akimova",
     jobTitle: "CELTA-certified language teacher",
+    url: "https://www.linkedin.com/in/anna-akimova-/",
+    sameAs: [
+      "https://www.linkedin.com/in/anna-akimova-/",
+      "https://www.reddit.com/user/Any-Arm-8439/",
+    ],
   },
 };
 
