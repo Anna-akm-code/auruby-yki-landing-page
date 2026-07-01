@@ -14,7 +14,9 @@
       "Bash(npx tsc *)",
       "Bash(echo \"tsc exit: $?\")",
       "Bash(pkill -f \"next dev\")",
-      "Bash(pkill -f \"next-server\")"
+      "Bash(pkill -f \"next-server\")",
+      "PowerShell(npm run *)",
+      "Bash(curl *)"
     ]
   }
 }

@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 
-// Single-page landing site — one canonical URL.
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -9,6 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: `${SITE_URL}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }

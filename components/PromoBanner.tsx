@@ -30,7 +30,7 @@ export function PromoBanner() {
           </p>
         </div>
         <a
-          href="#waitlist"
+          href="/#waitlist"
           onClick={() => capture("cta_clicked", { location: "banner" })}
           className="justify-self-end rounded-3xl bg-[#C5E63C] px-[20px] py-[7px] font-sans text-[15px] font-semibold text-[#1a1a1a] transition hover:bg-[#C5E63C]/90"
         >
