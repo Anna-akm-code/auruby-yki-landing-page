@@ -897,6 +897,7 @@ export const organizationJsonLd = {
   foundingDate: "2026-01",
   founder: {
     "@type": "Person",
+    "@id": `${SITE_URL}/#anna`,
     name: "Anna Akimova",
     jobTitle: "CELTA-certified language teacher",
     url: "https://www.linkedin.com/in/anna-akimova-/",
@@ -945,4 +946,61 @@ export const softwareApplicationJsonLd = {
     description: "Early-bird waitlist pricing for the first 6 months.",
   },
   publisher: { "@id": `${SITE_URL}/#organization` },
+};
+
+// --- About page content ----------------------------------------------------
+// Single source for the /about page copy. Headings are preserved as written;
+// the page renders these paragraphs directly.
+
+export interface AboutSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+export const aboutContent: {
+  title: string;
+  intro: string[];
+  sections: AboutSection[];
+} = {
+  title: "About Auruby",
+  intro: [
+    "Auruby is a YKI keskitaso prep app — vocabulary, reading, listening, writing, and speaking practice in one place, structured around the real exam and assessed by AI. It's launching in summer 2026.",
+  ],
+  sections: [
+    {
+      heading: "Who's behind it",
+      paragraphs: [
+        "Auruby is built by Anna Akimova, a CELTA-certified language teacher with 8 years of tutoring experience. The idea came from a simple gap: people preparing for the YKI keskitaso exam juggle a flashcard app, random Finnish texts, a listening podcast, a document for writing, and a paid tutor for speaking — five tools, none of them built around the actual exam.",
+        "Anna is also sitting the YKI keskitaso exam herself in 2026. So the app isn't built from the outside looking in — the topics, the task formats, and the feedback come from teaching the language for years and preparing for this specific exam at the same time.",
+      ],
+    },
+    {
+      heading: "What we care about",
+      paragraphs: [
+        "Content that reflects how the exam actually works, not generic drills. AI feedback that's checkable — it points to the exact error, names the grammar rule, and shows you a corrected version, rather than a vague \"try again.\" And honesty about what an app can and can't do: no app replaces real practice with real feedback, so Auruby is built to be that practice.",
+      ],
+    },
+    {
+      heading: "Get in touch",
+      paragraphs: ["hello@auruby.io"],
+    },
+  ],
+};
+
+// AboutPage schema. References the existing Organization, WebSite, and founder
+// Person by @id (all shipped site-wide via app/layout.tsx) rather than
+// duplicating them, so this reinforces the same entity graph.
+export const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${SITE_URL}/about#webpage`,
+  url: `${SITE_URL}/about`,
+  name: "About Auruby",
+  description:
+    "About Auruby — a YKI keskitaso Finnish exam prep app built by Anna Akimova, a CELTA-certified language teacher.",
+  inLanguage: "en",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  about: { "@id": `${SITE_URL}/#organization` },
+  mainEntity: { "@id": `${SITE_URL}/#organization` },
+  mentions: { "@id": `${SITE_URL}/#anna` },
 };

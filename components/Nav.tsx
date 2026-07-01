@@ -18,6 +18,12 @@ export function Nav() {
           >
             FAQ
           </a>
+          <a
+            href="/about"
+            className="font-sans text-[15px] leading-none text-cream/70 transition hover:text-chartreuse"
+          >
+            About
+          </a>
         </div>
       </header>
     </div>

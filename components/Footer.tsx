@@ -10,6 +10,12 @@ export function Footer() {
           >
             FAQ
           </a>
+          <a
+            href="/about"
+            className="font-sans text-sm text-cream/60 transition hover:text-cream"
+          >
+            About
+          </a>
         </div>
         <p className="font-sans text-xs">
           © {new Date().getFullYear()} Auruby. YKI keskitaso prep, made with
