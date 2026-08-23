@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
+    "@tailwindcss/typography": "^0.5.20",
     "framer-motion": "^11.11.0",
+    "gray-matter": "^4.0.3",
     "next": "^15.1.7",
+    "next-mdx-remote": "^6.0.0",
     "posthog-js": "^1.181.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "reading-time": "^1.5.0",
     "resend": "^6.12.4"
   },
   "devDependencies": {

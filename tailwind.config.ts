@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -58,9 +59,38 @@ const config: Config = {
       borderRadius: {
         "2xl": "16px",
       },
+      typography: () => ({
+        auruby: {
+          css: {
+            "--tw-prose-body": "#2D2D2D",
+            "--tw-prose-headings": "#2D2D2D",
+            "--tw-prose-bold": "#2D2D2D",
+            "--tw-prose-links": "#7C5CFC",
+            "--tw-prose-quotes": "#2D2D2D",
+            "--tw-prose-quote-borders": "rgba(124,92,252,0.4)",
+            "--tw-prose-bullets": "#8A8578",
+            "--tw-prose-hr": "rgba(45,45,45,0.15)",
+            maxWidth: "700px",
+            fontFamily: 'var(--font-outfit), "Outfit", system-ui, sans-serif',
+            a: {
+              textDecoration: "underline",
+              textUnderlineOffset: "2px",
+              transition: "color 0.15s ease",
+            },
+            "a:hover": {
+              color: "#534AB7",
+            },
+            "h1, h2, h3, h4": {
+              fontFamily:
+                'var(--font-josefin), "Josefin Sans", sans-serif',
+              fontWeight: "600",
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [typography],
 };
 
 export default config;

@@ -24,6 +24,12 @@ export function Nav() {
           >
             About
           </a>
+          <a
+            href="/blog"
+            className="font-sans text-[15px] leading-none text-cream/70 transition hover:text-chartreuse"
+          >
+            Blog
+          </a>
         </div>
       </header>
     </div>
