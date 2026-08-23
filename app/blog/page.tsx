@@ -7,12 +7,12 @@ import { getAllPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog — Auruby",
   description:
-    "Notes on learning Finnish, preparing for YKI keskitaso, and teaching languages — by Anna Akimova.",
+    "Notes on learning Finnish, preparing for YKI keskitaso and learning languages — by Anna Akimova.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog — Auruby",
     description:
-      "Notes on learning Finnish, preparing for YKI keskitaso, and teaching languages — by Anna Akimova.",
+      "Notes on learning Finnish, preparing for YKI keskitaso and learning languages — by Anna Akimova.",
     type: "website",
     url: "/blog",
     siteName: "Auruby",

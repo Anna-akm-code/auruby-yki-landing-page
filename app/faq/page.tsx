@@ -26,6 +26,16 @@ export const metadata: Metadata = {
   },
 };
 
+// Turns a question into a stable slug for its anchor id, e.g.
+// "What levels does the YKI test have?" -> "what-levels-does-the-yki-test-have"
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
 // Renders one inline run: plain text, a bold/italic run, or a link.
 function renderInline(nodes: FaqInline[]) {
   return nodes.map((node, i) => {
@@ -165,6 +175,30 @@ export default function FaqPage() {
               2026 dates and fees, and how to prepare for all four sections.
             </p>
           </FadeIn>
+
+          <FadeIn as="div" className="mt-10">
+            <nav aria-label="Table of contents" className="space-y-6">
+              {faqSections.map((section) => (
+                <div key={section.title}>
+                  <p className="font-display text-[15px] font-semibold text-anthracite">
+                    {section.title}
+                  </p>
+                  <ul className="mt-2 space-y-1.5">
+                    {section.items.map((qa) => (
+                      <li key={qa.question}>
+                        <a
+                          href={`#${slugify(qa.question)}`}
+                          className="font-sans text-[14px] leading-relaxed text-anthracite-muted transition hover:text-purple"
+                        >
+                          {qa.question}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </nav>
+          </FadeIn>
         </div>
       </section>
 
@@ -202,7 +236,10 @@ export default function FaqPage() {
               <div className="mt-8 space-y-16">
                 {section.items.map((qa) => (
                   <div key={qa.question}>
-                    <h3 className="flex gap-2.5 font-display text-[20px] font-semibold text-anthracite sm:text-[22px]">
+                    <h3
+                      id={slugify(qa.question)}
+                      className="flex scroll-mt-24 gap-2.5 font-display text-[20px] font-semibold text-anthracite sm:scroll-mt-28 sm:text-[22px]"
+                    >
                       <span
                         aria-hidden="true"
                         className={`mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full ${
