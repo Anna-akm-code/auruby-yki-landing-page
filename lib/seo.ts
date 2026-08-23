@@ -387,17 +387,29 @@ export const faqSections: FaqSection[] = [
           },
           {
             type: "table",
-            headers: ["Level", "Date", "Subtests"],
+            headers: ["Level", "2026 test dates"],
             rows: [
-              [["Intermediate + Advanced"], ["29 Aug"], ["All"]],
               [
-                ["Intermediate (subtest day — pilot)"],
-                ["16 Sep"],
-                ["Writing + Listening only"],
+                ["Basic — ", { text: "perustaso", italic: true }],
+                ["19 Sep · 7 Nov"],
               ],
-              [["Basic"], ["19 Sep"], ["All"]],
-              [["Intermediate + Advanced"], ["2 Oct"], ["All"]],
-              [["Basic + Intermediate + Advanced"], ["7 Nov"], ["All"]],
+              [
+                ["Intermediate — ", { text: "keskitaso", italic: true }],
+                ["29 Aug · 16 Sep* · 2 Oct · 7 Nov"],
+              ],
+              [
+                ["Advanced — ", { text: "ylin taso", italic: true }],
+                ["29 Aug · 2 Oct · 7 Nov"],
+              ],
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              {
+                text: "* Subtest day — only specific subtests available. See details below.",
+                italic: true,
+              },
             ],
           },
           {
@@ -406,28 +418,29 @@ export const faqSections: FaqSection[] = [
           },
           {
             type: "table",
-            headers: ["Level", "Date", "Subtests"],
+            headers: ["Level", "Spring 2027 test dates"],
             rows: [
-              [["Intermediate + Advanced"], ["16 Jan"], ["All"]],
-              [["Basic + Intermediate"], ["13 Feb"], ["All"]],
               [
-                ["Intermediate (subtest day)"],
-                ["10 Mar"],
-                ["Speaking + Reading only"],
+                ["Basic — ", { text: "perustaso", italic: true }],
+                ["13 Feb · 24 Apr"],
               ],
-              [["Intermediate + Advanced"], ["10 Apr"], ["All"]],
-              [["Basic"], ["24 Apr"], ["All"]],
               [
-                ["Intermediate (subtest day)"],
-                ["12 May"],
-                ["Writing + Listening only"],
+                ["Intermediate — ", { text: "keskitaso", italic: true }],
+                ["16 Jan · 13 Feb · 10 Mar* · 10 Apr · 12 May* · 2 Jun*"],
               ],
-              [["Advanced"], ["22 May"], ["All"]],
               [
-                ["Intermediate (subtest day)"],
-                ["2 Jun"],
-                ["Speaking + Reading only"],
+                ["Advanced — ", { text: "ylin taso", italic: true }],
+                ["16 Jan · 10 Apr · 22 May"],
               ],
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              {
+                text: "* Subtest day — only specific subtests available. See details below.",
+                italic: true,
+              },
             ],
           },
           {
