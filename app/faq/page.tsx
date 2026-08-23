@@ -146,6 +146,10 @@ const sectionAccent: Record<string, { dot: string; halo: string }> = {
     dot: "bg-electric",
     halo: "bg-electric-muted",
   },
+  "New: citizenship test (from March 2027)": {
+    dot: "bg-purple",
+    halo: "bg-purple-muted",
+  },
   "Registration, dates, cost, and retakes": {
     dot: "bg-orange",
     halo: "bg-orange-muted",

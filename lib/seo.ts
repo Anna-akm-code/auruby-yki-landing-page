@@ -241,6 +241,133 @@ export const faqSections: FaqSection[] = [
     ],
   },
   {
+    title: "New: citizenship test (from March 2027)",
+    items: [
+      {
+        question: "Is there a citizenship test separate from YKI?",
+        answer: [
+          {
+            type: "p",
+            content: [
+              "Yes — starting ",
+              { text: "1 March 2027", bold: true },
+              '. Finland is introducing a mandatory citizenship test (sometimes called the "culture test" or "civic knowledge test") as a new requirement for citizenship, on top of the existing YKI language requirement. The law enters into force on ',
+              { text: "1 January 2027", bold: true },
+              ", but the new rules apply to applications submitted on or after ",
+              { text: "1 March 2027", bold: true },
+              ". Applications submitted before that date are processed under the old rules.",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              "The test covers Finnish legislation, fundamental and human rights, equality and gender equality, Finnish history and culture. It's a computer-based test taken in Finnish or Swedish.",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              "Source: ",
+              {
+                text: "Migri",
+                href: "https://migri.fi/en/-/finland-to-introduce-citizenship-test-as-changes-to-citizenship-act-take-effect-on-1-january-2027",
+              },
+              " and the ",
+              {
+                text: "Finnish Government",
+                href: "https://valtioneuvosto.fi/en/-/1410869/citizenship-test-to-be-introduced-in-early-2027",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        question: "Who has to take the citizenship test?",
+        answer: [
+          {
+            type: "p",
+            content: [
+              "Applicants aged 18–64 applying for Finnish citizenship. Exemptions may be granted for health, disability, or other very serious reasons.",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              "You do ",
+              { text: "not", bold: true },
+              " need to take the test if you have:",
+            ],
+          },
+          {
+            type: "ul",
+            items: [
+              [
+                "Completed a Finnish- or Swedish-language matriculation examination, or",
+              ],
+              [
+                "Earned a higher education degree in Finnish or Swedish in Finland",
+              ],
+            ],
+          },
+        ],
+      },
+      {
+        question: "How do I prepare for the citizenship test?",
+        answer: [
+          {
+            type: "p",
+            content: [
+              "Study materials will be published on the Migri website before the first test. The materials will be publicly available so everyone has equal access. The University of Helsinki is developing the test and the materials under a contract with Migri (approximately €800,000 allocated).",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              "The test will include multiple-choice and true/false questions. According to reporting, you'll need to answer roughly ",
+              { text: "70%", bold: true },
+              " correctly to pass. The exact format and fee have not been confirmed yet.",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              "As of August 2026, the materials have not been published yet. When they are, they'll appear on ",
+              { text: "migri.fi", href: "https://migri.fi/en" },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        question: "Do I still need YKI if there's a citizenship test?",
+        answer: [
+          {
+            type: "p",
+            content: [
+              "Yes. The citizenship test is a separate requirement — it does ",
+              { text: "not", bold: true },
+              " replace the YKI language requirement. For citizenship you will need both:",
+            ],
+          },
+          {
+            type: "ol",
+            items: [
+              [
+                { text: "YKI keskitaso grade 3", bold: true },
+                " in an accepted skill combination (this hasn't changed), and",
+              ],
+              [
+                { text: "The citizenship test", bold: true },
+                " (new from March 2027)",
+              ],
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: "Registration, dates, cost, and retakes",
     items: [
       {
@@ -248,36 +375,87 @@ export const faqSections: FaqSection[] = [
         answer: [
           {
             type: "p",
-            content: ["The 2026 Finnish-language test days are:"],
+            content: [
+              "Two sets of dates matter right now — the remaining 2026 test days, and the newly announced spring 2027 dates:",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              { text: "Remaining 2026 Finnish test dates", bold: true },
+            ],
           },
           {
             type: "table",
-            headers: ["Level", "2026 test dates (Finnish)"],
+            headers: ["Level", "Date", "Subtests"],
             rows: [
+              [["Intermediate + Advanced"], ["29 Aug"], ["All"]],
               [
-                ["Basic — ", { text: "perustaso", italic: true }],
-                ["25 Apr · 19 Sep · 7 Nov"],
+                ["Intermediate (subtest day — pilot)"],
+                ["16 Sep"],
+                ["Writing + Listening only"],
               ],
+              [["Basic"], ["19 Sep"], ["All"]],
+              [["Intermediate + Advanced"], ["2 Oct"], ["All"]],
+              [["Basic + Intermediate + Advanced"], ["7 Nov"], ["All"]],
+            ],
+          },
+          {
+            type: "p",
+            content: [{ text: "Spring 2027 Finnish test dates", bold: true }],
+          },
+          {
+            type: "table",
+            headers: ["Level", "Date", "Subtests"],
+            rows: [
+              [["Intermediate + Advanced"], ["16 Jan"], ["All"]],
+              [["Basic + Intermediate"], ["13 Feb"], ["All"]],
               [
-                ["Intermediate — ", { text: "keskitaso", italic: true }],
-                ["31 Jan · 28 Mar · 23 May · 29 Aug · 2 Oct · 7 Nov"],
+                ["Intermediate (subtest day)"],
+                ["10 Mar"],
+                ["Speaking + Reading only"],
               ],
+              [["Intermediate + Advanced"], ["10 Apr"], ["All"]],
+              [["Basic"], ["24 Apr"], ["All"]],
               [
-                ["Advanced — ", { text: "ylin taso", italic: true }],
-                ["31 Jan · 28 Mar · 29 Aug · 2 Oct · 7 Nov"],
+                ["Intermediate (subtest day)"],
+                ["12 May"],
+                ["Writing + Listening only"],
+              ],
+              [["Advanced"], ["22 May"], ["All"]],
+              [
+                ["Intermediate (subtest day)"],
+                ["2 Jun"],
+                ["Speaking + Reading only"],
               ],
             ],
           },
           {
             type: "p",
             content: [
-              "Dates, cities, and 2027 test days are on the official site: ",
+              "The 16 Sep 2026 date is a pilot: you can register for only writing and/or listening comprehension. It's intermediate level only. Registration: 17–31 Aug.",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              "In spring 2027, OPH is expanding subtest days beyond the pilot — three dates (10 Mar, 12 May, 2 Jun) let you take only specific subtests at intermediate level.",
+            ],
+          },
+          {
+            type: "p",
+            content: [
+              "Dates, cities, and registration windows are on the official site: ",
               {
                 text: "oph.fi — YKI test days",
                 href: "https://www.oph.fi/en/education-and-qualifications/selecting-right-yki-test-test-days",
               },
               ". Always check there before you plan around a date.",
             ],
+          },
+          {
+            type: "p",
+            content: [{ text: "Last updated: August 2026", italic: true }],
           },
         ],
       },
