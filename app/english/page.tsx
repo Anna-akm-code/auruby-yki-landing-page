@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MarqueeStrip } from "@/components/english/MarqueeStrip";
 import { GOOGLE_FORM_URL } from "@/lib/english";
 
@@ -48,11 +49,16 @@ export default function EnglishProductSelectorPage() {
               Английский, на котором думают, спорят и договариваются.
             </h1>
           </div>
-          <div className="flex aspect-[4/5] flex-col justify-end gap-1.5 rounded-[24px] border border-white/[0.22] bg-gradient-to-br from-white/[0.16] to-white/[0.06] p-5">
-            <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-white/60">
-              Фото Анны
-            </span>
-            <span className="font-body text-[13.5px] font-bold leading-[1.4] text-white/80">
+          <div className="relative flex aspect-[4/5] max-h-[320px] flex-col justify-end gap-1.5 overflow-hidden rounded-[24px] border border-white/[0.22] p-5">
+            <Image
+              src="/anna.jpg"
+              alt="Анна Николае"
+              fill
+              sizes="(min-width: 1024px) 30vw, 90vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-english-aubergine/85 via-english-aubergine/15 to-transparent" />
+            <span className="relative font-body text-[13.5px] font-bold leading-[1.4] text-white/80">
               CELTA · 8+ лет преподавания · <br />
               разработчик · AI-проекты
             </span>

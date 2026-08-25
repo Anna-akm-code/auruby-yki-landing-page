@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { value: "8+", label: "лет преподавания" },
   { value: "CELTA", label: "Cambridge" },
@@ -9,10 +11,14 @@ export function AnnaSection() {
   return (
     <section className="border-t border-english-aubergine/10 bg-white px-6 py-24 sm:px-12">
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-start gap-14 md:grid-cols-[0.72fr_1.28fr] md:gap-18">
-        <div className="flex aspect-[4/5] items-end rounded-[20px] border border-english-aubergine/10 bg-gradient-to-br from-english-lilac to-[#DDDBF6] p-6">
-          <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[#8B87BC]">
-            Фото Анны
-          </span>
+        <div className="relative aspect-[4/5] max-h-[400px] overflow-hidden rounded-[20px] border border-english-aubergine/10">
+          <Image
+            src="/anna.jpg"
+            alt="Анна"
+            fill
+            sizes="(min-width: 768px) 30vw, 90vw"
+            className="object-cover"
+          />
         </div>
         <div>
           <div className="mb-5 font-mono text-[11.5px] uppercase tracking-[0.16em] text-english-muted">
