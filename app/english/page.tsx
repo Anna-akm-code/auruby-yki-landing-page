@@ -5,11 +5,11 @@ import { GOOGLE_FORM_URL } from "@/lib/english";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/english" },
-  title: "Английский с Анной Николае — THE CLUB и THE PLAN",
+  title: "Английский с Анной — THE CLUB и THE PLAN",
   description:
     "Английский, на котором думают, спорят и договариваются. THE CLUB — сообщество для людей 13–17 лет. THE PLAN — индивидуальный английский с личным планом.",
   openGraph: {
-    title: "Английский с Анной Николае",
+    title: "Английский с Анной",
     description:
       "THE CLUB и THE PLAN — английский, на котором думают, спорят и договариваются.",
     type: "website",
@@ -43,7 +43,7 @@ export default function EnglishProductSelectorPage() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.35fr_0.65fr] lg:gap-16">
           <div>
             <div className="mb-7 font-mono text-[11.5px] uppercase tracking-[0.16em] text-english-chartreuse">
-              Английский с Анной Николае
+              Английский с Анной
             </div>
             <h1 className="max-w-[760px] font-heading text-[42px] font-semibold leading-[1.06] tracking-[-0.035em] sm:text-[64px]">
               Английский, на котором думают, спорят и договариваются.
@@ -52,7 +52,7 @@ export default function EnglishProductSelectorPage() {
           <div className="relative flex aspect-[4/5] max-h-[320px] flex-col justify-end gap-1.5 overflow-hidden rounded-[24px] border border-white/[0.22] p-5">
             <Image
               src="/anna.jpg"
-              alt="Анна Николае"
+              alt="Анна"
               fill
               sizes="(min-width: 1024px) 30vw, 90vw"
               className="object-cover"

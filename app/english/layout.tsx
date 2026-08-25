@@ -4,7 +4,7 @@ import { StickyHeader } from "@/components/english/StickyHeader";
 import { SiteFooter } from "@/components/english/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Английский с Анной Николае",
+  title: "Английский с Анной",
   description:
     "Английский, на котором думают, спорят и договариваются. THE CLUB — сообщество для людей 13–17 лет. THE PLAN — индивидуальный английский с планом.",
 };
