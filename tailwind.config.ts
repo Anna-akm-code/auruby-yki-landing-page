@@ -51,10 +51,25 @@ const config: Config = {
           soft: "rgba(232,68,58,0.12)",
         },
         cream: "#FAF8F3",
+        // English lessons landing pages (/, /english/*) — separate design
+        // system from the YKI palette above, namespaced to avoid collisions.
+        english: {
+          aubergine: "#3D3B5C",
+          chartreuse: "#D6F549",
+          "chartreuse-hover": "#E4FA7D",
+          lilac: "#EEEDFE",
+          bg: "#FAFAFF",
+          muted: "#6B67A0",
+          mid: "#4A4770",
+          dark: "#2A2940",
+        },
       },
       fontFamily: {
         display: ['var(--font-josefin)', '"Josefin Sans"', "sans-serif"],
         sans: ['var(--font-outfit)', "Outfit", "system-ui", "sans-serif"],
+        heading: ['var(--font-jost)', "Jost", "system-ui", "sans-serif"],
+        body: ['var(--font-manrope)', "Manrope", "system-ui", "sans-serif"],
+        mono: ['var(--font-jetbrains-mono)', '"JetBrains Mono"', "monospace"],
       },
       borderRadius: {
         "2xl": "16px",

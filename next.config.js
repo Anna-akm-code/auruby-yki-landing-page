@@ -4,6 +4,20 @@ const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   outputFileTracingRoot: path.join(__dirname),
+  async redirects() {
+    return [
+      {
+        source: "/english/teens",
+        destination: "/english/club",
+        permanent: true,
+      },
+      {
+        source: "/english/adults",
+        destination: "/english/plan",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

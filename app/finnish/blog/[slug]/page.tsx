@@ -23,12 +23,12 @@ export async function generateMetadata({
   return {
     title: `${post.title} — Auruby`,
     description: post.description,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `/finnish/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
-      url: `/blog/${post.slug}`,
+      url: `/finnish/blog/${post.slug}`,
       siteName: SITE_NAME,
       publishedTime: post.date,
       modifiedTime: post.updated,
@@ -66,7 +66,7 @@ export default async function BlogPostPage({
     isPartOf: { "@id": `${SITE_URL}/#website` },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_URL}/blog/${post.slug}`,
+      "@id": `${SITE_URL}/finnish/blog/${post.slug}`,
     },
   };
 
@@ -97,7 +97,7 @@ export default async function BlogPostPage({
           </FadeIn>
 
           <a
-            href="/blog"
+            href="/finnish/blog"
             className="mt-12 inline-block font-sans text-[15px] text-purple underline underline-offset-2 transition hover:text-purple-deep"
           >
             ← Back to blog

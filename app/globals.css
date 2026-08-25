@@ -26,3 +26,12 @@ body {
   background-color: #d6f549;
   color: #2d2d2d;
 }
+
+@keyframes marq {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

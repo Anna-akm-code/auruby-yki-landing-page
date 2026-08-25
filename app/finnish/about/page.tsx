@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   title: "About Auruby — YKI keskitaso prep by Anna Akimova",
   description:
     "Auruby is a YKI keskitaso Finnish exam prep app — vocabulary, reading, listening, writing, and speaking in one place, built by Anna Akimova, a CELTA-certified language teacher.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/finnish/about" },
   openGraph: {
     title: "About Auruby",
     description:
       "The YKI keskitaso prep app built by Anna Akimova, a CELTA-certified language teacher — one place for vocabulary, reading, listening, writing, and speaking.",
     type: "website",
-    url: "/about",
+    url: "/finnish/about",
     siteName: "Auruby",
   },
 };

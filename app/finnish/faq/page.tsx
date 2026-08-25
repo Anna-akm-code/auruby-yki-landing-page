@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     "YKI keskitaso FAQ — levels, citizenship, 2026 dates, cost, and how to prepare",
   description:
     "Answers about the YKI keskitaso Finnish exam: the levels and four skills, what you need for citizenship, 2026 test dates, fees, registration, retakes, and how to prepare for reading, listening, writing, and speaking.",
-  alternates: { canonical: "/faq" },
+  alternates: { canonical: "/finnish/faq" },
   openGraph: {
     title: "YKI keskitaso FAQ",
     description:
       "Levels, citizenship requirements, 2026 test dates, fees, registration, and how to prepare for the YKI keskitaso Finnish exam.",
     type: "website",
-    url: "/faq",
+    url: "/finnish/faq",
     siteName: "Auruby",
   },
 };

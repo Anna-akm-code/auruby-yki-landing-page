@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   title: "Blog — Auruby",
   description:
     "Notes on learning Finnish, preparing for YKI keskitaso and learning languages — by Anna Akimova.",
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "/finnish/blog" },
   openGraph: {
     title: "Blog — Auruby",
     description:
       "Notes on learning Finnish, preparing for YKI keskitaso and learning languages — by Anna Akimova.",
     type: "website",
-    url: "/blog",
+    url: "/finnish/blog",
     siteName: "Auruby",
   },
 };
@@ -49,7 +49,7 @@ export default function BlogIndexPage() {
           <div className="mt-12 space-y-10">
             {posts.map((post) => (
               <FadeIn as="article" key={post.slug}>
-                <a href={`/blog/${post.slug}`} className="group block">
+                <a href={`/finnish/blog/${post.slug}`} className="group block">
                   <h2 className="font-display text-[22px] font-semibold text-anthracite transition group-hover:text-purple sm:text-[24px]">
                     {post.title}
                   </h2>

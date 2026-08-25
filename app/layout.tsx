@@ -26,38 +26,29 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
-  title:
-    "YKI Keskitaso Prep App — Vocabulary, Reading, Writing, Listening, Speaking in One Place",
+  title: "Auruby — Finnish YKI prep and English lessons",
   description:
-    "Prepare for the YKI keskitaso Finnish language exam with one app. AI-powered vocabulary, reading, listening, writing, and speaking practice structured by exam topics.",
+    "Auruby: a YKI keskitaso Finnish exam prep app, and English lessons for teens and adults with Anna Nicolae.",
   keywords: [
     "YKI",
     "keskitaso",
     "Finnish language test",
-    "YKI prep",
-    "YKI practice",
-    "Finnish exam",
-    "B1 Finnish",
-    "B2 Finnish",
-    "Finnish vocabulary",
-    "Finnish reading comprehension",
-    "Finnish listening comprehension",
-    "Finnish writing",
-    "Finnish speaking practice",
+    "English lessons",
+    "English speaking club",
   ],
   openGraph: {
-    title: "YKI Keskitaso Prep App — all your Finnish exam prep in one place",
+    title: "Auruby — Finnish YKI prep and English lessons",
     description:
-      "Vocabulary, reading, listening, writing, and speaking — structured by YKI exam topics, tracked by AI, designed by a language teacher.",
+      "A YKI keskitaso Finnish exam prep app, and English lessons for teens and adults with Anna Nicolae.",
     type: "website",
     url: SITE_URL,
     siteName: "Auruby",
   },
   twitter: {
     card: "summary_large_image",
-    title: "YKI Keskitaso Prep App",
+    title: "Auruby",
     description:
-      "All your YKI keskitaso prep in one app — vocabulary, reading, listening, writing, speaking.",
+      "Finnish YKI keskitaso exam prep, and English lessons for teens and adults.",
   },
   robots: { index: true, follow: true },
   icons: {

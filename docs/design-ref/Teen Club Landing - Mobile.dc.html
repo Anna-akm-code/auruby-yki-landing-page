@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#DEDCF0;font-family:Manrope,system-ui,sans-serif;color:#3D3B5C}
+a{color:#3D3B5C;text-decoration:none}
+a:hover{color:#6B67A0}
+h1,h2,h3,h4{font-family:Jost,system-ui,sans-serif;margin:0;font-weight:600;letter-spacing:-0.02em}
+p{margin:0;text-wrap:pretty}
+</style>
+</helmet>
+
+<div style="min-height:100vh;padding:56px 40px 72px;display:flex;flex-direction:column;align-items:center;gap:36px">
+  <div style="text-align:center;max-width:560px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6B67A0;margin-bottom:12px">Мобильная версия · трафик из Instagram</div>
+    <h2 style="font-size:30px;letter-spacing:-0.03em">Три экрана: выбор → клуб → взрослые</h2>
+    <p style="margin-top:10px;font-size:14.5px;line-height:1.55;color:#5C5891">Карточки ведут на страницу программы, кнопки под ними — сразу на Google Form. Обе страницы заканчиваются блоком «Две программы. Выберите свою.».</p>
+  </div>
+
+  <div style="display:flex;gap:40px;flex-wrap:wrap;justify-content:center;align-items:flex-start">
+
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:center">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B67A0">Главная · выбор аудитории</div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 402 }}" height="{{ 860 }}" hint-size="402px,860px">
+        <div style="background:#3D3B5C;color:#fff;padding:62px 22px 40px;position:relative;overflow:hidden;min-height:100%">
+          <div style="position:absolute;top:-90px;right:-90px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(214,245,73,0.22),transparent 65%)"></div>
+          <div style="position:relative">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:36px">
+              <div style="display:flex;align-items:baseline;gap:7px"><span style="font-family:Jost,sans-serif;font-weight:600;font-size:19px">auruby</span><span style="width:6px;height:6px;border-radius:50%;background:#D6F549;display:block"></span></div>
+              <span style="width:26px;height:14px;display:flex;flex-direction:column;justify-content:space-between"><span style="height:1.5px;background:#EEEDFE;display:block"></span><span style="height:1.5px;background:#EEEDFE;display:block"></span><span style="height:1.5px;background:#D6F549;display:block;width:60%"></span></span>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#D6F549;margin-bottom:18px">Английский с Анной · онлайн</div>
+            <h1 style="font-size:31px;line-height:1.12;letter-spacing:-0.03em;font-weight:500">Язык — инструмент мышления, общения и связи с людьми.</h1>
+            <p style="margin-top:16px;font-size:15px;line-height:1.55;color:rgba(238,237,254,0.75)">Два формата, две отдельные программы. Выберите, что вам ближе.</p>
+            <div style="margin-top:28px;display:grid;gap:14px">
+              <a href="#" style="background:#EEEDFE;color:#3D3B5C;border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;gap:8px">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B67A0">Подросткам 13–17 · B1–C1</span>
+                <span style="font-family:Jost,sans-serif;font-size:25px;font-weight:600;line-height:1.06;letter-spacing:-0.03em">Разговорный клуб для подростков</span>
+                <span style="font-size:13.5px;line-height:1.5;color:#4A4770">Говорим по-английски о том, что реально интересно: технологии, ИИ, игры, наука, кино.</span>
+                <span style="margin-top:6px;display:grid;gap:6px;font-size:13.5px">
+                  <span style="display:flex;gap:9px"><span style="width:4px;height:4px;border-radius:50%;background:#3D3B5C;flex:none;margin-top:7px"></span>Группа 5–6 человек · 2 × 60 мин в неделю</span>
+                  <span style="display:flex;gap:9px;font-weight:600"><span style="width:4px;height:4px;border-radius:50%;background:#3D3B5C;flex:none;margin-top:7px"></span>€80/мес · первое занятие бесплатно</span>
+                </span>
+                <span style="margin-top:8px;display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:#6B67A0">Подробнее о клубе <span>→</span></span>
+              </a>
+              <a href="https://forms.gle/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#D6F549;color:#3D3B5C;padding:17px;border-radius:100px;font-size:16px;font-weight:700">Попробовать бесплатно <span>→</span></a>
+              <a href="#" style="background:rgba(238,237,254,0.08);border:1px solid rgba(238,237,254,0.26);color:#fff;border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;gap:8px;margin-top:10px">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#D6F549">Взрослым · 1:1</span>
+                <span style="font-family:Jost,sans-serif;font-size:25px;font-weight:600;line-height:1.06;letter-spacing:-0.03em">Английский для взрослых</span>
+                <span style="font-size:13.5px;line-height:1.5;color:rgba(238,237,254,0.75)">Speaking Reset: от «я всё понимаю» к «я могу это сказать».</span>
+                <span style="margin-top:6px;display:grid;gap:6px;font-size:13.5px;color:rgba(238,237,254,0.85)">
+                  <span style="display:flex;gap:9px"><span style="width:4px;height:4px;border-radius:50%;background:#EEEDFE;flex:none;margin-top:7px"></span>Индивидуально · 60–90 мин · A2–C1</span>
+                  <span style="display:flex;gap:9px;font-weight:600"><span style="width:4px;height:4px;border-radius:50%;background:#EEEDFE;flex:none;margin-top:7px"></span>Бесплатная диагностика · €40–60/час</span>
+                </span>
+                <span style="margin-top:8px;display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:rgba(238,237,254,0.7)">Подробнее о Speaking Reset <span>→</span></span>
+              </a>
+              <a href="https://forms.gle/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#EEEDFE;color:#3D3B5C;padding:17px;border-radius:100px;font-size:16px;font-weight:700">Записаться на диагностику <span>→</span></a>
+            </div>
+          </div>
+        </div>
+      </x-import>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:center">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B67A0">Страница 1 · подростки</div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 402 }}" height="{{ 860 }}" hint-size="402px,860px">
+
+        <div style="background:#3D3B5C;color:#fff;padding:62px 22px 26px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:-90px;right:-90px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(214,245,73,0.22),transparent 65%)"></div>
+          <div style="position:relative">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:30px">
+              <div style="display:flex;align-items:baseline;gap:7px"><span style="font-family:Jost,sans-serif;font-weight:600;font-size:19px">auruby</span><span style="width:6px;height:6px;border-radius:50%;background:#D6F549;display:block"></span></div>
+              <span style="width:26px;height:14px;display:flex;flex-direction:column;justify-content:space-between"><span style="height:1.5px;background:#EEEDFE;display:block"></span><span style="height:1.5px;background:#EEEDFE;display:block"></span><span style="height:1.5px;background:#D6F549;display:block;width:60%"></span></span>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#D6F549;margin-bottom:16px">Клуб для подростков · 13–17 · B1–C1</div>
+            <h1 style="font-size:44px;line-height:0.95;letter-spacing:-0.035em">Speak.<br>Think.<br>Connect.<br><span style="color:#D6F549">In English.</span></h1>
+            <p style="margin-top:20px;font-size:15.5px;line-height:1.55;color:rgba(238,237,254,0.82)">Клуб английского для подростков, которым интересно, как устроен мир: технологии, ИИ, игры, наука, кино. Английский — способ думать и говорить, а не предмет.</p>
+            <a href="#" style="margin-top:24px;display:flex;align-items:center;justify-content:center;gap:9px;background:#D6F549;color:#3D3B5C;padding:17px;border-radius:100px;font-size:16.5px;font-weight:700">Попробовать бесплатно →</a>
+            <div style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(238,237,254,0.16);display:grid;grid-template-columns:1fr 1fr;gap:14px 10px">
+              <div><div style="font-family:Jost,sans-serif;font-size:18px;font-weight:600">2 × 60 мин</div><div style="font-size:12px;color:rgba(238,237,254,0.6)">в неделю</div></div>
+              <div><div style="font-family:Jost,sans-serif;font-size:18px;font-weight:600">5–6 человек</div><div style="font-size:12px;color:rgba(238,237,254,0.6)">в группе</div></div>
+              <div><div style="font-family:Jost,sans-serif;font-size:18px;font-weight:600;color:#D6F549">€80/мес</div><div style="font-size:12px;color:rgba(238,237,254,0.6)">8 занятий</div></div>
+              <div><div style="font-family:Jost,sans-serif;font-size:18px;font-weight:600">Бесплатно</div><div style="font-size:12px;color:rgba(238,237,254,0.6)">первое занятие</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#FAFAFF;padding:40px 22px">
+          <div style="display:inline-flex;background:#D6F549;padding:6px 12px;border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;margin-bottom:16px">Разговорный клуб</div>
+          <h2 style="font-size:30px;line-height:1.06;letter-spacing:-0.035em">Разговорный клуб</h2>
+          <p style="margin-top:14px;font-size:15px;line-height:1.55;color:#6B67A0">Группа из пяти-шести человек, которые говорят по-английски о том, что им реально интересно, и учатся делать это уверенно. Нужен уровень примерно B1: понимаешь речь и можешь поддержать разговор, пусть с ошибками.</p>
+          <div style="margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(61,59,92,0.14);border-radius:14px;overflow:hidden">
+            <div style="background:#fff;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Уверенность в речи</div><p style="font-size:12.5px;line-height:1.45;color:#6B67A0">Говорить, не выстраивая фразу заранее в голове.</p></div>
+            <div style="background:#fff;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Своё мнение</div><p style="font-size:12.5px;line-height:1.45;color:#6B67A0">Сформулировать позицию и объяснить, почему она такая.</p></div>
+            <div style="background:#fff;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Аргументы</div><p style="font-size:12.5px;line-height:1.45;color:#6B67A0">Защищать идею и признавать сильный контраргумент.</p></div>
+            <div style="background:#D6F549;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Своя компания</div><p style="font-size:12.5px;line-height:1.45;color:#4A4770">Ровесники со схожими интересами.</p></div>
+          </div>
+          <h3 style="margin-top:32px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#6B67A0;font-weight:400">Как проходит занятие</h3>
+          <div style="margin-top:16px;display:grid;gap:10px">
+            <div style="background:#fff;border:1px solid rgba(61,59,92,0.12);border-radius:14px;padding:18px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:7px"><span style="font-family:Jost,sans-serif;font-size:12px;font-weight:600;color:#D6F549;background:#3D3B5C;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center">01</span><h4 style="font-size:18px">Материал</h4></div><p style="font-size:14px;line-height:1.5;color:#6B67A0">Видео, статья, интервью или геймплей — то, что ты и так смотришь.</p></div>
+            <div style="background:#fff;border:1px solid rgba(61,59,92,0.12);border-radius:14px;padding:18px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:7px"><span style="font-family:Jost,sans-serif;font-size:12px;font-weight:600;color:#D6F549;background:#3D3B5C;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center">02</span><h4 style="font-size:18px">Язык</h4></div><p style="font-size:14px;line-height:1.5;color:#6B67A0">Выражения для этой темы: как возразить, уточнить, согласиться наполовину.</p></div>
+            <div style="background:#fff;border:1px solid rgba(61,59,92,0.12);border-radius:14px;padding:18px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:7px"><span style="font-family:Jost,sans-serif;font-size:12px;font-weight:600;color:#D6F549;background:#3D3B5C;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center">03</span><h4 style="font-size:18px">Дискуссия</h4></div><p style="font-size:14px;line-height:1.5;color:#6B67A0">Мнения, аргументы, несогласие. Каждый говорит — в маленькой группе слышно всех.</p></div>
+            <div style="background:#3D3B5C;color:#fff;border-radius:14px;padding:18px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:7px"><span style="font-family:Jost,sans-serif;font-size:12px;font-weight:600;color:#3D3B5C;background:#D6F549;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center">04</span><h4 style="font-size:18px">Обратная связь</h4></div><p style="font-size:14px;line-height:1.5;color:rgba(238,237,254,0.75)">Что прозвучало хорошо, что можно сказать точнее.</p></div>
+          </div>
+        </div>
+
+        <div style="background:#3D3B5C;color:#fff;padding:40px 22px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#D6F549;margin-bottom:12px">О чём говорим</div>
+          <p style="font-size:14px;line-height:1.5;color:rgba(238,237,254,0.7)">Темы предлагает и группа. Если тебе интересно — это подходящий материал.</p>
+          <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+            <span style="border:1px solid rgba(238,237,254,0.28);border-radius:100px;padding:10px 16px;font-size:14px">Может ли ИИ быть автором?</span>
+            <span style="background:#D6F549;color:#3D3B5C;border-radius:100px;padding:10px 16px;font-size:14px;font-weight:600">Почему одни игры затягивают</span>
+            <span style="border:1px solid rgba(238,237,254,0.28);border-radius:100px;padding:10px 16px;font-size:14px">Приватность vs удобство</span>
+            <span style="border:1px solid rgba(238,237,254,0.28);border-radius:100px;padding:10px 16px;font-size:14px">Профессии, которых ещё нет</span>
+            <span style="background:#EEEDFE;color:#3D3B5C;border-radius:100px;padding:10px 16px;font-size:14px;font-weight:600">Алгоритмы и лента</span>
+            <span style="border:1px solid rgba(238,237,254,0.28);border-radius:100px;padding:10px 16px;font-size:14px">Мемы как язык</span>
+          </div>
+          <div style="margin-top:20px;padding:16px 18px;border:1px dashed rgba(214,245,73,0.4);border-radius:14px"><p style="font-size:13.5px;line-height:1.5;color:rgba(238,237,254,0.8)">Место под будущий интерактив: тема недели с примерами выражений.</p></div>
+        </div>
+
+        <div style="background:#EEEDFE;padding:40px 22px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#6B67A0;margin-bottom:18px">Формат и стоимость</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 12px">
+            <div><div style="font-family:Jost,sans-serif;font-size:20px;font-weight:600;letter-spacing:-0.025em">2 × 60 мин</div><div style="font-size:12.5px;color:#6B67A0">в неделю, онлайн</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:20px;font-weight:600;letter-spacing:-0.025em">5–6 человек</div><div style="font-size:12.5px;color:#6B67A0">в группе</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:20px;font-weight:600;letter-spacing:-0.025em">B1–C1</div><div style="font-size:12.5px;color:#6B67A0">уровень</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:20px;font-weight:600;letter-spacing:-0.025em">8 занятий</div><div style="font-size:12.5px;color:#6B67A0">в месяц</div></div>
+          </div>
+          <div style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(61,59,92,0.14);display:flex;align-items:baseline;justify-content:space-between">
+            <span style="font-family:Jost,sans-serif;font-size:40px;font-weight:600;letter-spacing:-0.03em;line-height:1">€80</span>
+            <span style="font-size:14px;color:#6B67A0;text-align:right">/ месяц<br>€10 за занятие</span>
+          </div>
+          <a href="#" style="margin-top:20px;background:#D6F549;color:#3D3B5C;border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:Jost,sans-serif;font-size:22px;font-weight:600;line-height:1.1;letter-spacing:-0.025em">Приходи на первое занятие бесплатно</span>
+            <span style="font-size:13.5px;color:#4A4770">Короткая заявка — я напишу и подберу группу по уровню.</span>
+            <span style="margin-top:6px;font-size:15px;font-weight:700">Записаться →</span>
+          </a>
+        </div>
+
+        <div style="background:#fff;border-top:1px solid rgba(61,59,92,0.12);padding:40px 22px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#6B67A0;margin-bottom:16px">Кто ведёт</div>
+          <div style="aspect-ratio:4/5;background:linear-gradient(160deg,#EEEDFE,#DDDBF6);border-radius:16px;display:flex;align-items:flex-end;padding:18px;border:1px solid rgba(61,59,92,0.1)"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#8B87BC">Фото Анны</span></div>
+          <h2 style="margin-top:22px;font-size:32px;letter-spacing:-0.035em">Анна</h2>
+          <p style="margin-top:4px;font-family:Jost,sans-serif;font-size:17px;color:#6B67A0">Преподаватель английского и разработчик</p>
+          <p style="margin-top:14px;font-size:15px;line-height:1.6">Преподаю с 2015 года, CELTA. Параллельно работаю в IT: разработка, продукт, AI-проекты. И сама учу языки — помню, каково это: понимать, но не мочь сказать.</p>
+          <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px 10px;padding-top:18px;border-top:1px solid rgba(61,59,92,0.14)">
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">8+</div><div style="font-size:12.5px;color:#6B67A0">лет преподавания</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">CELTA</div><div style="font-size:12.5px;color:#6B67A0">Cambridge</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">IT</div><div style="font-size:12.5px;color:#6B67A0">разработка и продукт</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">3</div><div style="font-size:12.5px;color:#6B67A0">языка учу сама</div></div>
+          </div>
+        </div>
+
+        <div style="background:#3D3B5C;color:#fff;padding:44px 22px 64px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#D6F549;margin-bottom:14px">Набор открыт</div>
+          <h2 style="font-size:30px;line-height:1.05;letter-spacing:-0.035em">Две программы. Выберите свою.</h2>
+          <div style="margin-top:22px;display:grid;gap:12px">
+            <a href="https://forms.gle/" target="_blank" rel="noopener" style="background:#D6F549;color:#3D3B5C;border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.65">Подросткам 13–17</span>
+              <span style="font-family:Jost,sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.025em">Разговорный клуб</span>
+              <span style="font-size:13.5px;color:#4A4770">Первое занятие бесплатно · €80/мес</span>
+              <span style="margin-top:6px;font-size:15px;font-weight:700">Заполнить заявку →</span>
+            </a>
+            <a href="https://forms.gle/" target="_blank" rel="noopener" style="background:rgba(238,237,254,0.08);border:1px solid rgba(238,237,254,0.24);color:#fff;border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#D6F549">Взрослым</span>
+              <span style="font-family:Jost,sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.025em">Speaking Reset</span>
+              <span style="font-size:13.5px;color:rgba(238,237,254,0.7)">Бесплатная диагностика · €40–60/час</span>
+              <span style="margin-top:6px;font-size:15px;font-weight:600;color:#D6F549">Заполнить заявку →</span>
+            </a>
+          </div>
+          <p style="margin-top:18px;font-size:12.5px;color:rgba(238,237,254,0.5)">Обе кнопки ведут на Google Form.</p>
+        </div>
+
+      </x-import>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:center">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B67A0">Страница 2 · взрослые</div>
+      <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 402 }}" height="{{ 860 }}" hint-size="402px,860px">
+
+        <div style="background:#3D3B5C;color:#fff;padding:62px 22px 26px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:-90px;right:-90px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(214,245,73,0.22),transparent 65%)"></div>
+          <div style="position:relative">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:30px">
+              <div style="display:flex;align-items:baseline;gap:7px"><span style="font-family:Jost,sans-serif;font-weight:600;font-size:19px">auruby</span><span style="width:6px;height:6px;border-radius:50%;background:#D6F549;display:block"></span></div>
+              <span style="width:26px;height:14px;display:flex;flex-direction:column;justify-content:space-between"><span style="height:1.5px;background:#EEEDFE;display:block"></span><span style="height:1.5px;background:#EEEDFE;display:block"></span><span style="height:1.5px;background:#D6F549;display:block;width:60%"></span></span>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#D6F549;margin-bottom:16px">Английский для взрослых · 1:1 · A2–C1</div>
+            <h1 style="font-size:44px;line-height:0.96;letter-spacing:-0.035em">Speaking<br><span style="color:#D6F549">Reset.</span></h1>
+            <p style="margin-top:16px;font-family:Jost,sans-serif;font-size:22px;line-height:1.22;letter-spacing:-0.02em;color:#EEEDFE">От «я всё понимаю» к «я могу это сказать».</p>
+            <p style="margin-top:16px;font-size:15.5px;line-height:1.55;color:rgba(238,237,254,0.8)">Вы понимаете сериалы и созвоны, но собрать мысль в речь — тяжело.</p>
+            <p style="margin-top:12px;font-size:14.5px;line-height:1.5;color:#D6F549">Разбираюсь в вашем запросе и готовлю индивидуальный план.</p>
+            <a href="#" style="margin-top:24px;display:flex;align-items:center;justify-content:center;gap:9px;background:#D6F549;color:#3D3B5C;padding:17px;border-radius:100px;font-size:16.5px;font-weight:700">Бесплатная диагностика →</a>
+            <div style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(238,237,254,0.16);display:grid;grid-template-columns:1fr 1fr;gap:14px 10px">
+              <div><div style="font-family:Jost,sans-serif;font-size:18px;font-weight:600">60–90 мин</div><div style="font-size:12px;color:rgba(238,237,254,0.6)">индивидуально, онлайн</div></div>
+              <div><div style="font-family:Jost,sans-serif;font-size:18px;font-weight:600;color:#D6F549">€40–60</div><div style="font-size:12px;color:rgba(238,237,254,0.6)">за час</div></div>
+              <div style="grid-column:1 / -1;font-family:Jost,sans-serif;font-size:16px;font-weight:500">Диагностика → план → работа по плану</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#FAFAFF;padding:40px 22px">
+          <div style="display:inline-flex;border:1px solid #3D3B5C;padding:6px 12px;border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px">Что это</div>
+          <h2 style="font-size:30px;line-height:1.06;letter-spacing:-0.035em">Не просто практика — движение к конкретной цели</h2>
+          <p style="margin-top:14px;font-size:15px;line-height:1.55;color:#6B67A0">На занятии говорите в основном вы. Берём вашу задачу — созвон, интервью, презентацию — и проговариваем её вслух: я даю точные формулировки и поправляю на ходу. Прогресс заметен по скорости: дольше держите речь, меньше времени тратите на подбор слов.</p>
+          <div style="margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(61,59,92,0.14);border-radius:14px;overflow:hidden">
+            <div style="background:#fff;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Речь без перевода</div><p style="font-size:12.5px;line-height:1.45;color:#6B67A0">Формулировать сразу.</p></div>
+            <div style="background:#fff;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Активный запас</div><p style="font-size:12.5px;line-height:1.45;color:#6B67A0">Слова начинают работать в речи.</p></div>
+            <div style="background:#fff;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Сложные мысли</div><p style="font-size:12.5px;line-height:1.45;color:#6B67A0">Объяснять непростое понятно.</p></div>
+            <div style="background:#D6F549;padding:16px 15px"><div style="font-family:Jost,sans-serif;font-size:15px;font-weight:600;margin-bottom:4px">Ваши ситуации</div><p style="font-size:12.5px;line-height:1.45;color:#4A4770">Рабочие встречи, интервью, жизнь за границей.</p></div>
+          </div>
+        </div>
+
+        <div style="background:#FAFAFF;padding:0 22px 40px">
+          <h3 style="font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#6B67A0;font-weight:400;margin-bottom:16px">Как проходит</h3>
+          <div style="background:#3D3B5C;color:#fff;border-radius:18px;padding:24px 20px">
+            <h3 style="font-size:24px;letter-spacing:-0.03em;margin-bottom:18px">Точка A → Точка B</h3>
+            <div style="background:rgba(238,237,254,0.08);border:1px solid rgba(238,237,254,0.18);border-radius:14px;padding:18px">
+              <div style="font-family:Jost,sans-serif;font-size:34px;font-weight:600;color:rgba(238,237,254,0.35);line-height:1">A</div>
+              <h4 style="font-size:17px;margin:8px 0 10px">Где вы сейчас</h4>
+              <div style="display:grid;gap:6px;font-size:13.5px;line-height:1.45;color:rgba(238,237,254,0.78)"><div>Сначала выстраиваю фразу, потом говорю</div><div>Нужное слово всплывает уже после разговора</div><div>На созвонах молчу, потом дописываю в чат</div></div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 0">
+              <div style="width:1px;height:16px;background:rgba(214,245,73,0.5)"></div>
+              <div style="width:44px;height:44px;border-radius:50%;background:#D6F549;color:#3D3B5C;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700">↓</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#D6F549">шаг за шагом</div>
+              <div style="width:1px;height:16px;background:rgba(214,245,73,0.5)"></div>
+            </div>
+            <div style="background:#D6F549;color:#3D3B5C;border-radius:14px;padding:18px">
+              <div style="font-family:Jost,sans-serif;font-size:34px;font-weight:600;color:rgba(61,59,92,0.35);line-height:1">B</div>
+              <h4 style="font-size:17px;margin:8px 0 10px">Куда приходите</h4>
+              <div style="display:grid;gap:6px;font-size:13.5px;line-height:1.45;color:#4A4770"><div>Начинаю говорить, не репетируя фразу</div><div>Нужные слова приходят по ходу разговора</div><div>Веду встречу и отвечаю на вопросы вживую</div></div>
+            </div>
+            <div style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(238,237,254,0.16)">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#D6F549;margin-bottom:8px">На входе вы получаете</div>
+              <h4 style="font-size:19px;letter-spacing:-0.025em;margin-bottom:12px">Личный план работы</h4>
+              <div style="display:grid;gap:7px;font-size:14px">
+                <div style="display:flex;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#D6F549">01</span><span>Диагностика: что работает, что мешает</span></div>
+                <div style="display:flex;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#D6F549">02</span><span>Приоритеты и измеримый результат</span></div>
+                <div style="display:flex;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#D6F549">03</span><span>Тренировка на ваших ситуациях</span></div>
+                <div style="display:flex;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#D6F549">04</span><span>Итог и продолжение</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#EEEDFE;padding:40px 22px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#6B67A0;margin-bottom:16px">Формат и стоимость</div>
+          <div style="padding-bottom:14px;border-bottom:1px solid rgba(61,59,92,0.14)">
+            <div style="font-family:Jost,sans-serif;font-size:17px;font-weight:600">Общий английский</div>
+            <div style="margin-top:8px;display:flex;gap:22px"><div style="display:flex;align-items:baseline;gap:6px"><span style="font-family:Jost,sans-serif;font-size:24px;font-weight:600;letter-spacing:-0.03em">€40</span><span style="font-size:12.5px;color:#6B67A0">/ 60 мин</span></div><div style="display:flex;align-items:baseline;gap:6px"><span style="font-family:Jost,sans-serif;font-size:24px;font-weight:600;letter-spacing:-0.03em">€60</span><span style="font-size:12.5px;color:#6B67A0">/ 90 мин</span></div></div>
+          </div>
+          <div style="padding-top:14px">
+            <div style="font-family:Jost,sans-serif;font-size:17px;font-weight:600;line-height:1.25">Интенсивная подготовка к интервью и презентациям</div>
+            <div style="margin-top:8px;display:flex;gap:22px"><div style="display:flex;align-items:baseline;gap:6px"><span style="font-family:Jost,sans-serif;font-size:24px;font-weight:600;letter-spacing:-0.03em">€60</span><span style="font-size:12.5px;color:#6B67A0">/ 60 мин</span></div><div style="display:flex;align-items:baseline;gap:6px"><span style="font-family:Jost,sans-serif;font-size:24px;font-weight:600;letter-spacing:-0.03em">€90</span><span style="font-size:12.5px;color:#6B67A0">/ 90 мин</span></div></div>
+          </div>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(61,59,92,0.14);font-size:13.5px;color:#6B67A0">Первая диагностика — бесплатно.</div>
+          <a href="#" style="margin-top:20px;background:#3D3B5C;color:#fff;border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:Jost,sans-serif;font-size:22px;font-weight:600;line-height:1.1;letter-spacing:-0.025em">Начните с бесплатной диагностики</span>
+            <span style="font-size:13.5px;color:rgba(238,237,254,0.78)">Полчаса разговора — и вы поймёте, подходит ли вам этот формат. Если да — составляем план и начинаем.</span>
+            <span style="margin-top:6px;font-size:15px;font-weight:700;color:#D6F549">Записаться →</span>
+          </a>
+        </div>
+
+        <div style="background:#fff;border-top:1px solid rgba(61,59,92,0.12);padding:40px 22px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#6B67A0;margin-bottom:16px">Кто ведёт</div>
+          <div style="aspect-ratio:4/5;background:linear-gradient(160deg,#EEEDFE,#DDDBF6);border-radius:16px;display:flex;align-items:flex-end;padding:18px;border:1px solid rgba(61,59,92,0.1)"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#8B87BC">Фото Анны</span></div>
+          <h2 style="margin-top:22px;font-size:32px;letter-spacing:-0.035em">Анна</h2>
+          <p style="margin-top:4px;font-family:Jost,sans-serif;font-size:17px;color:#6B67A0">Преподаватель английского и разработчик</p>
+          <p style="margin-top:14px;font-size:15px;line-height:1.6">Преподаю с 2015 года, CELTA. Параллельно работаю в IT: разработка, продукт, AI-проекты. И сама учу языки — помню, каково это: понимать, но не мочь сказать.</p>
+          <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px 10px;padding-top:18px;border-top:1px solid rgba(61,59,92,0.14)">
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">8+</div><div style="font-size:12.5px;color:#6B67A0">лет преподавания</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">CELTA</div><div style="font-size:12.5px;color:#6B67A0">Cambridge</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">IT</div><div style="font-size:12.5px;color:#6B67A0">разработка и продукт</div></div>
+            <div><div style="font-family:Jost,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.03em">3</div><div style="font-size:12.5px;color:#6B67A0">языка учу сама</div></div>
+          </div>
+        </div>
+
+        <div style="background:#3D3B5C;color:#fff;padding:44px 22px 64px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#D6F549;margin-bottom:14px">Набор открыт</div>
+          <h2 style="font-size:30px;line-height:1.05;letter-spacing:-0.035em">Две программы. Выберите свою.</h2>
+          <div style="margin-top:22px;display:grid;gap:12px">
+            <a href="https://forms.gle/" target="_blank" rel="noopener" style="background:#D6F549;color:#3D3B5C;border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.65">Подросткам 13–17</span>
+              <span style="font-family:Jost,sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.025em">Разговорный клуб</span>
+              <span style="font-size:13.5px;color:#4A4770">Первое занятие бесплатно · €80/мес</span>
+              <span style="margin-top:6px;font-size:15px;font-weight:700">Заполнить заявку →</span>
+            </a>
+            <a href="https://forms.gle/" target="_blank" rel="noopener" style="background:rgba(238,237,254,0.08);border:1px solid rgba(238,237,254,0.24);color:#fff;border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#D6F549">Взрослым</span>
+              <span style="font-family:Jost,sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.025em">Speaking Reset</span>
+              <span style="font-size:13.5px;color:rgba(238,237,254,0.7)">Бесплатная диагностика · €40–60/час</span>
+              <span style="margin-top:6px;font-size:15px;font-weight:600;color:#D6F549">Заполнить заявку →</span>
+            </a>
+          </div>
+          <p style="margin-top:18px;font-size:12.5px;color:rgba(238,237,254,0.5)">Обе кнопки ведут на Google Form.</p>
+        </div>
+
+      </x-import>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>

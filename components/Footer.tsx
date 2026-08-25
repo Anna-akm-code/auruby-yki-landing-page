@@ -5,13 +5,13 @@ export function Footer() {
         <div className="flex items-center gap-6">
           <p className="font-display text-lg font-semibold text-cream">Auruby</p>
           <a
-            href="/faq"
+            href="/finnish/faq"
             className="font-sans text-sm text-cream/60 transition hover:text-cream"
           >
             FAQ
           </a>
           <a
-            href="/about"
+            href="/finnish/about"
             className="font-sans text-sm text-cream/60 transition hover:text-cream"
           >
             About

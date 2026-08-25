@@ -1,161 +1,64 @@
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/sections/Hero";
-import { FeatureSection } from "@/components/sections/FeatureSection";
-import { Trust } from "@/components/sections/Trust";
-import { Waitlist } from "@/components/sections/Waitlist";
-import { ScrollTracker } from "@/components/ScrollTracker";
-import { VocabMock } from "@/components/mockups/VocabMock";
-import { ReadingMock } from "@/components/mockups/ReadingMock";
-import { ListeningMock } from "@/components/mockups/ListeningMock";
-import { WritingMock } from "@/components/mockups/WritingMock";
-import { WritingMockCorrections } from "@/components/mockups/WritingMockCorrections";
-import { SpeakingMock } from "@/components/mockups/SpeakingMock";
-import { ProgressMock } from "@/components/mockups/ProgressMock";
+import type { Metadata } from "next";
+import { englishFontVariables } from "@/lib/fonts";
 
-export default function Home() {
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  title: "auruby.io — Выберите язык",
+  description:
+    "Финский YKI keskitaso или английский с Анной Николае — выберите направление.",
+  robots: { index: true, follow: true },
+};
+
+export default function LanguageSelectorPage() {
   return (
-    <main>
-      <Nav />
-      <Hero />
+    <main
+      className={`${englishFontVariables} flex min-h-screen flex-col items-center justify-center bg-english-aubergine px-6 py-16 font-body text-white sm:px-12`}
+    >
+      <div className="flex items-baseline gap-[9px]">
+        <span className="font-heading text-[22px] font-semibold tracking-[-0.02em] text-white">
+          auruby
+        </span>
+        <span className="block h-[7px] w-[7px] rounded-full bg-english-chartreuse" />
+      </div>
 
-      <FeatureSection
-        id="feature-vocabulary"
-        eyebrow="Vocabulary"
-        title="Learn the words you need to pass"
-        accent="chartreuse"
-        mockup={<VocabMock />}
-        bullets={[
-          <>
-            We suggest the key words you must know for each YKI topic —
-            presented in short texts you can listen to
-          </>,
-          <>
-            See an unfamiliar word? Highlight it to add it to your personal
-            vocabulary list — with base form, translation, and the full phrase
-            it appeared in
-          </>,
-          <>
-            Practise in three ways: find the translation, unscramble letters,
-            write from memory
-          </>,
-        ]}
-      />
+      <div className="mt-3 font-mono text-[11px] uppercase tracking-[0.16em] text-white/50">
+        Выберите язык
+      </div>
 
-      <FeatureSection
-        id="feature-reading"
-        eyebrow="Reading"
-        title="Read what you'll see on exam day"
-        accent="electric"
-        reverse
-        mockup={<ReadingMock />}
-        bullets={[
-          <>
-            Texts at two levels — A2/B1 to build confidence, B1/B2 to push
-            you. Yes, we made easier ones on purpose
-          </>,
-          <>
-            True/false, multiple choice, and open-ended questions — exactly
-            the formats from the real test
-          </>,
-          <>
-            Spot a word you don&apos;t know? Highlight it — base form,
-            translation, and context are saved instantly
-          </>,
-        ]}
-      />
-
-      <FeatureSection
-        id="feature-listening"
-        eyebrow="Listening"
-        title="Train your ear with exam-format audio"
-        accent="orange"
-        mockup={<ListeningMock />}
-        bullets={[
-          <>
-            Playback speed from 0.8× to 1.2× — start slow, build up as your
-            ear adjusts
-          </>,
-          <>
-            Check the transcript after you answer — no peeking before
-          </>,
-          <>
-            Highlight any word in the transcript to save it to your vocabulary
-            list for later practice
-          </>,
-        ]}
-      />
-
-      <FeatureSection
-        id="feature-writing"
-        eyebrow="Writing"
-        title="Write what you'll actually be asked"
-        accent="neon-pink"
-        reverse
-        mockup={<WritingMock />}
-        secondMockup={<WritingMockCorrections />}
-        bullets={[
-          <>
-            Model answers at two levels — A2/B1 and B1/B2 — so you know what
-            good looks like before you write
-          </>,
-          <>
-            AI gives you an honest pass / weak pass / fail assessment with
-            specific corrections — not just &quot;write better,&quot; but
-            exactly what to fix and why
-          </>,
-          <>
-            Your top 3 grammar and vocabulary mistakes are added to your
-            personal &quot;To fix&quot; list after each task
-          </>,
-        ]}
-      />
-
-      <FeatureSection
-        id="feature-speaking"
-        eyebrow="Speaking"
-        title="Practise speaking with AI"
-        accent="purple"
-        mockup={<SpeakingMock />}
-        bullets={[
-          <>
-            AI conversation partner for YKI-style speaking tasks — role-plays,
-            semi-structured interviews, and opinion questions
-          </>,
-          <>
-            Adjust the AI&apos;s speech speed from 0.8× to 1.2× — slow it down
-            while learning, speed it up when you&apos;re ready
-          </>,
-          <>
-            Detailed feedback after each task: what you did well, what to
-            improve, and a full conversation transcript to review
-          </>,
-        ]}
-      />
-
-      <FeatureSection
-        id="feature-progress"
-        eyebrow="Progress"
-        title="Track your readiness, not just your streak"
-        accent="chartreuse"
-        reverse
-        mockup={<ProgressMock />}
-        bullets={[
-          <>
-            See how you&apos;re doing at a glance — green for pass, yellow for
-            weak pass, and what&apos;s left to do
-          </>,
-          <>
-            Your &quot;To fix&quot; list: most common grammar and vocabulary
-            mistakes collected across all tasks
-          </>,
-        ]}
-      />
-
-      <Trust />
-      <Waitlist />
-      <Footer />
-      <ScrollTracker />
+      <div className="mt-12 grid w-full max-w-[820px] grid-cols-1 gap-6 sm:grid-cols-2">
+        <a
+          href="/finnish"
+          className="flex flex-col justify-between gap-10 rounded-[24px] bg-english-lilac p-9 text-english-aubergine transition hover:bg-white"
+        >
+          <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-english-muted">
+            YKI keskitaso
+          </div>
+          <div>
+            <h2 className="font-heading text-[34px] leading-[1.04] tracking-[-0.03em]">
+              Финский
+            </h2>
+            <span className="mt-3 inline-flex items-center gap-2 font-body text-[14.5px] font-semibold text-english-muted">
+              Перейти <span>→</span>
+            </span>
+          </div>
+        </a>
+        <a
+          href="/english"
+          className="flex flex-col justify-between gap-10 rounded-[24px] bg-english-chartreuse p-9 text-english-aubergine transition hover:bg-english-chartreuse-hover"
+        >
+          <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-english-mid/70">
+            С Анной Николае
+          </div>
+          <div>
+            <h2 className="font-heading text-[34px] leading-[1.04] tracking-[-0.03em]">
+              Английский
+            </h2>
+            <span className="mt-3 inline-flex items-center gap-2 font-body text-[14.5px] font-semibold text-english-mid">
+              Перейти <span>→</span>
+            </span>
+          </div>
+        </a>
+      </div>
     </main>
   );
 }
