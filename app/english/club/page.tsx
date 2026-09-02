@@ -109,7 +109,7 @@ export default function ClubPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 rounded-full bg-english-chartreuse px-8 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
                 >
-                  Попробовать бесплатно
+                  Бесплатная консультация
                   <span className="text-[18px]">→</span>
                 </a>
               </div>
@@ -127,7 +127,6 @@ export default function ClubPage() {
                 priceLabel="Стоимость"
                 priceValue="€80"
                 priceUnit="/мес"
-                note="Ведёт Анна — преподаватель с CELTA и 8 годами практики. И разработчик: она из той индустрии, про которую вы говорите на занятиях."
               />
               <p className="mt-3 font-body text-[13.5px] text-white/60">
                 Следующий старт — середина сентября.
@@ -218,15 +217,15 @@ export default function ClubPage() {
             >
               <div>
                 <h3 className="font-heading text-[30px] leading-[1.08] tracking-[-0.03em] text-english-aubergine sm:text-[34px]">
-                  Приходи на первое занятие бесплатно
+                  Начни с бесплатной консультации
                 </h3>
                 <p className="mt-3.5 font-body text-[16px] leading-[1.55] text-english-mid">
-                  Заполни короткую заявку — я напишу, предложу время и
-                  подберу группу по уровню.
+                  За 20 минут разберём, подойдёт ли тебе группа, и я отвечу
+                  на вопросы о формате.
                 </p>
               </div>
               <span className="mt-8 flex items-center justify-between gap-4 font-body text-[18px] font-bold text-english-aubergine">
-                Записаться
+                Бесплатная консультация
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-english-aubergine text-[20px] text-english-chartreuse">
                   →
                 </span>

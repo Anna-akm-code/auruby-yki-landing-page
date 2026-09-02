@@ -31,7 +31,7 @@ export function FooterCTA() {
               THE CLUB
             </span>
             <span className="font-body text-[15px] text-english-mid">
-              Первое занятие бесплатно · €80/мес
+              €80/мес
             </span>
             <span className="mt-2.5 flex items-center gap-2 font-body text-[16px] font-bold">
               Заполнить заявку <span>→</span>
@@ -50,7 +50,7 @@ export function FooterCTA() {
               THE PLAN
             </span>
             <span className="font-body text-[15px] text-white/70">
-              Бесплатная диагностика · €40–60/час
+              8 × 60 мин / 4 недели · €320
             </span>
             <span className="mt-2.5 flex items-center gap-2 font-body text-[16px] font-semibold text-english-chartreuse">
               Заполнить заявку <span>→</span>

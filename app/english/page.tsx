@@ -81,7 +81,7 @@ export default function EnglishProductSelectorPage() {
                 Говорим. Думаем. Спорим. Вместе.
               </p>
               <p className="mt-2 max-w-[420px] font-body text-[16.5px] leading-[1.55] text-english-mid">
-                Англоязычное сообщество для людей 13–17 лет.
+                Разговорная группа для людей 13–17 лет.
               </p>
               <div className="mt-6 grid gap-2.5">
                 {[
@@ -97,7 +97,7 @@ export default function EnglishProductSelectorPage() {
                 ))}
                 <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
                   {bulletDot}
-                  €80/мес · первое занятие бесплатно
+                  €80/мес
                 </div>
               </div>
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
@@ -110,7 +110,7 @@ export default function EnglishProductSelectorPage() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2.5 rounded-full bg-english-chartreuse px-6 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
             >
-              Попробовать бесплатно
+              Бесплатная консультация
               <span className="text-[18px]">→</span>
             </a>
           </div>
@@ -134,7 +134,7 @@ export default function EnglishProductSelectorPage() {
                 результатом.
               </p>
               <div className="mt-6 grid gap-2.5">
-                {["13–∞", "Уровень A2–C1", "Индивидуально", "60–90 мин"].map(
+                {["13+", "Уровень A2–C1", "Индивидуально 1:1", "2 × 60 мин в неделю"].map(
                   (line) => (
                     <div key={line} className="flex items-baseline gap-2.5 font-body text-[15.5px]">
                       {bulletDot}
@@ -144,23 +144,11 @@ export default function EnglishProductSelectorPage() {
                 )}
                 <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
                   {bulletDot}
-                  Бесплатная диагностика
-                </div>
-                <div className="grid gap-[7px] pl-[15px] font-body text-[14.5px] text-english-mid">
-                  {[
-                    "Разбираемся, где вы сейчас и что мешает",
-                    "Определяем цель и сроки",
-                    "Составляем план: от вашей точки А к вашей точке Б",
-                  ].map((line) => (
-                    <div key={line} className="flex items-baseline gap-2.5">
-                      <span className="mt-[3px] block h-[1.5px] w-[5px] shrink-0 bg-english-muted/70" />
-                      {line}
-                    </div>
-                  ))}
+                  Бесплатная консультация
                 </div>
                 <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
                   {bulletDot}
-                  €40–60/час
+                  8 × 60 мин / 4 недели · €320
                 </div>
               </div>
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
@@ -173,7 +161,7 @@ export default function EnglishProductSelectorPage() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2.5 rounded-full bg-english-lilac px-6 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-white"
             >
-              Записаться на диагностику
+              Бесплатная консультация
               <span className="text-[18px]">→</span>
             </a>
           </div>

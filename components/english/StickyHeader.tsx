@@ -12,10 +12,9 @@ export function StickyHeader() {
       <div className="mx-auto flex h-[72px] max-w-[1240px] items-center justify-between gap-8 px-6 sm:px-12">
         <a
           href="/english"
-          className="flex items-baseline gap-[9px] font-heading text-[21px] font-semibold tracking-[-0.02em] text-english-aubergine"
+          className="font-display text-[27px] font-bold leading-none text-english-chartreuse sm:text-[31px]"
         >
-          auruby
-          <span className="block h-[7px] w-[7px] rounded-full bg-english-chartreuse" />
+          Auruby
         </a>
         <nav className="hidden items-center gap-8 font-body text-[15px] font-medium text-english-aubergine md:flex">
           <a href="/english/club" className="transition hover:text-english-muted">
@@ -30,7 +29,7 @@ export function StickyHeader() {
             href="#apply"
             className="inline-flex items-center gap-2 rounded-full bg-english-aubergine px-[22px] py-3 font-body text-[14.5px] font-semibold text-white transition hover:bg-english-dark hover:text-english-chartreuse"
           >
-            Записаться
+            Бесплатная консультация
           </a>
         ) : (
           <a
@@ -39,7 +38,7 @@ export function StickyHeader() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-english-aubergine px-[22px] py-3 font-body text-[14.5px] font-semibold text-white transition hover:bg-english-dark hover:text-english-chartreuse"
           >
-            Записаться
+            Бесплатная консультация
           </a>
         )}
       </div>

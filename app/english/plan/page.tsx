@@ -54,7 +54,7 @@ export default function PlanPage() {
           <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-18">
             <div>
               <div className="mb-8">
-                <span className="font-mono text-[11.5px] uppercase tracking-[0.14em] text-english-chartreuse">
+                <span className="font-mono text-[21px] uppercase tracking-[0.14em] text-english-chartreuse">
                   THE PLAN
                 </span>
               </div>
@@ -79,7 +79,7 @@ export default function PlanPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 rounded-full bg-english-chartreuse px-8 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
                 >
-                  Бесплатная диагностика
+                  Бесплатная консультация
                   <span className="text-[18px]">→</span>
                 </a>
               </div>
@@ -88,15 +88,14 @@ export default function PlanPage() {
             <HeroFormatPanel
               label="Программа"
               rows={[
-                { label: "Занятия", value: "60–90 мин, 1:1" },
+                { label: "Занятия", value: "2 × 60 мин в неделю, индивидуально 1:1" },
                 { label: "Уровень", value: "A2–C1" },
-                { label: "Возраст", value: "13–∞" },
-                { text: "Диагностика → план → работа по плану" },
+                { label: "Возраст", value: "13+" },
+                { text: "Цель → план → работа по плану" },
               ]}
               priceLabel="Стоимость"
-              priceValue="€40–60"
-              priceUnit="/час"
-              note="Сначала диагностика, потом план, потом отработка на ваших реальных ситуациях."
+              priceValue="€320"
+              priceUnit="/ 4 недели"
             />
           </div>
 
@@ -173,34 +172,18 @@ export default function PlanPage() {
                 Формат и стоимость
               </div>
               <div className="grid">
-                <div className="flex flex-col gap-2 border-b border-english-aubergine/[0.14] pb-[18px] sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                <div className="flex flex-col gap-2 pb-[18px] sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                   <span className="font-heading text-[20px] font-semibold">
-                    Разговорный английский
+                    8 × 60 мин / 4 недели
                   </span>
                   <span className="flex items-baseline gap-2 whitespace-nowrap">
                     <span className="font-heading text-[30px] font-semibold tracking-[-0.03em]">
-                      €40
-                    </span>
-                    <span className="font-body text-[14px] text-english-muted">
-                      /час
-                    </span>
-                  </span>
-                </div>
-                <div className="flex flex-col gap-2 pt-[18px] sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                  <span className="font-heading text-[20px] font-semibold">
-                    Интенсивная подготовка к интервью и презентациям
-                  </span>
-                  <span className="flex items-baseline gap-2 whitespace-nowrap">
-                    <span className="font-heading text-[30px] font-semibold tracking-[-0.03em]">
-                      €60
-                    </span>
-                    <span className="font-body text-[14px] text-english-muted">
-                      /час
+                      €320
                     </span>
                   </span>
                 </div>
                 <div className="mt-5 border-t border-english-aubergine/[0.14] pt-4 font-body text-[15px] text-english-muted">
-                  Первая диагностика — бесплатно.
+                  Начинаем с бесплатной консультации.
                 </div>
               </div>
             </div>
@@ -212,15 +195,15 @@ export default function PlanPage() {
             >
               <div>
                 <h3 className="font-heading text-[30px] leading-[1.08] tracking-[-0.03em] sm:text-[34px]">
-                  Начните с бесплатной диагностики
+                  Начните с бесплатной консультации
                 </h3>
                 <p className="mt-3.5 font-body text-[16px] leading-[1.55] text-white/[0.78]">
-                  Полчаса разговора — и вы поймёте, подходит ли вам этот
-                  формат. Если да — составляем план и начинаем.
+                  За 20 минут разберём, где вы сейчас, чего хотите достичь и
+                  подойдёт ли вам этот формат.
                 </p>
               </div>
               <span className="mt-8 flex items-center justify-between gap-4 font-body text-[18px] font-bold text-english-chartreuse">
-                Записаться
+                Бесплатная консультация
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-english-chartreuse text-[20px] text-english-aubergine">
                   →
                 </span>

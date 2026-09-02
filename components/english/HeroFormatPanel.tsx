@@ -6,14 +6,12 @@ export function HeroFormatPanel({
   priceLabel,
   priceValue,
   priceUnit,
-  note,
 }: {
   label: string;
   rows: Row[];
   priceLabel: string;
   priceValue: string;
   priceUnit: string;
-  note: string;
 }) {
   return (
     <div className="pt-2">
@@ -56,14 +54,6 @@ export function HeroFormatPanel({
             </span>
           </div>
         </div>
-      </div>
-      <div className="mt-[18px] flex items-center gap-[14px] rounded-2xl bg-[rgba(214,245,73,0.1)] px-[18px] py-4">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/[0.16] font-heading text-[15px] font-semibold text-english-lilac">
-          AR
-        </div>
-        <p className="font-body text-[13.5px] leading-[1.45] text-white/85">
-          {note}
-        </p>
       </div>
     </div>
   );
