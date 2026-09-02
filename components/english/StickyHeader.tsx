@@ -2,10 +2,18 @@
 
 import { usePathname } from "next/navigation";
 import { GOOGLE_FORM_URL } from "@/lib/english";
+import { capture } from "@/components/PostHogProvider";
+
+const HEADER_SOURCE_BY_PATH: Record<string, string> = {
+  "/english": "english_home_header",
+  "/english/plan": "plan_header",
+  "/english/club": "club_header",
+};
 
 export function StickyHeader() {
   const pathname = usePathname();
   const hasApplySection = pathname !== "/english";
+  const headerSource = HEADER_SOURCE_BY_PATH[pathname ?? ""] ?? "english_header";
 
   return (
     <div className="sticky top-0 z-50 border-b border-english-aubergine/10 bg-english-bg/90 backdrop-blur-md">
@@ -27,6 +35,9 @@ export function StickyHeader() {
         {hasApplySection ? (
           <a
             href="#apply"
+            onClick={() =>
+              capture("english_consultation_click", { source: headerSource })
+            }
             className="inline-flex items-center gap-2 rounded-full bg-english-aubergine px-[22px] py-3 font-body text-[14.5px] font-semibold text-white transition hover:bg-english-dark hover:text-english-chartreuse"
           >
             Бесплатная консультация
@@ -36,6 +47,9 @@ export function StickyHeader() {
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              capture("english_consultation_click", { source: headerSource })
+            }
             className="inline-flex items-center gap-2 rounded-full bg-english-aubergine px-[22px] py-3 font-body text-[14.5px] font-semibold text-white transition hover:bg-english-dark hover:text-english-chartreuse"
           >
             Бесплатная консультация

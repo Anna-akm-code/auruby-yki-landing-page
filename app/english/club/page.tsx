@@ -4,6 +4,7 @@ import { HeroFormatPanel } from "@/components/english/HeroFormatPanel";
 import { StepCard } from "@/components/english/StepCard";
 import { AnnaSection } from "@/components/english/AnnaSection";
 import { FooterCTA } from "@/components/english/FooterCTA";
+import { TrackedLink } from "@/components/english/TrackedLink";
 import { GOOGLE_FORM_URL } from "@/lib/english";
 
 export const metadata: Metadata = {
@@ -103,7 +104,9 @@ export default function ClubPage() {
                 договариваться.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3.5">
-                <a
+                <TrackedLink
+                  event="english_consultation_click"
+                  properties={{ source: "club_hero" }}
                   href={GOOGLE_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -111,7 +114,7 @@ export default function ClubPage() {
                 >
                   Бесплатная консультация
                   <span className="text-[18px]">→</span>
-                </a>
+                </TrackedLink>
               </div>
             </div>
 
@@ -209,7 +212,9 @@ export default function ClubPage() {
                 </div>
               </div>
             </div>
-            <a
+            <TrackedLink
+              event="english_consultation_click"
+              properties={{ source: "club_cta" }}
               href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -230,7 +235,7 @@ export default function ClubPage() {
                   →
                 </span>
               </span>
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </section>

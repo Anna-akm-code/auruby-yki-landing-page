@@ -3,6 +3,7 @@ import { MarqueeStrip } from "@/components/english/MarqueeStrip";
 import { HeroFormatPanel } from "@/components/english/HeroFormatPanel";
 import { AnnaSection } from "@/components/english/AnnaSection";
 import { FooterCTA } from "@/components/english/FooterCTA";
+import { TrackedLink } from "@/components/english/TrackedLink";
 import { GOOGLE_FORM_URL } from "@/lib/english";
 
 export const metadata: Metadata = {
@@ -73,7 +74,9 @@ export default function PlanPage() {
                 Разбираюсь в вашем запросе и готовлю индивидуальный план.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3.5">
-                <a
+                <TrackedLink
+                  event="english_consultation_click"
+                  properties={{ source: "plan_hero" }}
                   href={GOOGLE_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -81,7 +84,7 @@ export default function PlanPage() {
                 >
                   Бесплатная консультация
                   <span className="text-[18px]">→</span>
-                </a>
+                </TrackedLink>
               </div>
             </div>
 
@@ -187,7 +190,9 @@ export default function PlanPage() {
                 </div>
               </div>
             </div>
-            <a
+            <TrackedLink
+              event="english_consultation_click"
+              properties={{ source: "plan_cta" }}
               href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -208,7 +213,7 @@ export default function PlanPage() {
                   →
                 </span>
               </span>
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </section>

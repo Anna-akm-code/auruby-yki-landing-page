@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { MarqueeStrip } from "@/components/english/MarqueeStrip";
+import { TrackedLink } from "@/components/english/TrackedLink";
 import { GOOGLE_FORM_URL } from "@/lib/english";
 
 export const metadata: Metadata = {
@@ -67,7 +68,8 @@ export default function EnglishProductSelectorPage() {
 
         <div className="mt-12 grid grid-cols-1 gap-7 md:grid-cols-2">
           <div className="flex flex-col gap-4">
-            <a
+            <TrackedLink
+              event="english_club_click"
               href="/english/club"
               className="flex flex-1 flex-col rounded-[24px] bg-english-lilac p-9 text-english-aubergine transition hover:bg-white"
             >
@@ -103,8 +105,10 @@ export default function EnglishProductSelectorPage() {
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
                 Подробнее о клубе <span>→</span>
               </span>
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
+              event="english_consultation_click"
+              properties={{ source: "english_home_club" }}
               href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -112,11 +116,12 @@ export default function EnglishProductSelectorPage() {
             >
               Бесплатная консультация
               <span className="text-[18px]">→</span>
-            </a>
+            </TrackedLink>
           </div>
 
           <div className="flex flex-col gap-4">
-            <a
+            <TrackedLink
+              event="english_plan_click"
               href="/english/plan"
               className="flex flex-1 flex-col rounded-[24px] bg-english-lilac p-9 text-english-aubergine transition hover:bg-white"
             >
@@ -154,8 +159,10 @@ export default function EnglishProductSelectorPage() {
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
                 Подробнее о THE PLAN <span>→</span>
               </span>
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
+              event="english_consultation_click"
+              properties={{ source: "english_home_plan" }}
               href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -163,7 +170,7 @@ export default function EnglishProductSelectorPage() {
             >
               Бесплатная консультация
               <span className="text-[18px]">→</span>
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </div>

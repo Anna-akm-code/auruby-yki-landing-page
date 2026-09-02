@@ -1,4 +1,5 @@
 import { GOOGLE_FORM_URL } from "@/lib/english";
+import { TrackedLink } from "@/components/english/TrackedLink";
 
 export function FooterCTA() {
   return (
@@ -18,7 +19,9 @@ export function FooterCTA() {
         </div>
 
         <div className="mx-auto mt-11 grid max-w-[900px] grid-cols-1 gap-6 sm:grid-cols-2">
-          <a
+          <TrackedLink
+            event="english_consultation_click"
+            properties={{ source: "club_footer" }}
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -36,8 +39,10 @@ export function FooterCTA() {
             <span className="mt-2.5 flex items-center gap-2 font-body text-[16px] font-bold">
               Заполнить заявку <span>→</span>
             </span>
-          </a>
-          <a
+          </TrackedLink>
+          <TrackedLink
+            event="english_consultation_click"
+            properties={{ source: "plan_footer" }}
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -55,7 +60,7 @@ export function FooterCTA() {
             <span className="mt-2.5 flex items-center gap-2 font-body text-[16px] font-semibold text-english-chartreuse">
               Заполнить заявку <span>→</span>
             </span>
-          </a>
+          </TrackedLink>
         </div>
 
         <p className="mt-7 text-center font-body text-[13.5px] text-white/50">
