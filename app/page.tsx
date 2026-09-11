@@ -59,6 +59,14 @@ export default function LanguageSelectorPage() {
           </div>
         </a>
       </div>
+
+      <a
+        href="/young-founders"
+        className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-english-chartreuse px-7 py-[15px] font-body text-[15px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
+      >
+        THE CLUB: Young Founders (ages 10–16)
+        <span className="text-[16px]">→</span>
+      </a>
     </main>
   );
 }
