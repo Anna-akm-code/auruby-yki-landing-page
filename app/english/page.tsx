@@ -132,7 +132,7 @@ export default function EnglishProductSelectorPage() {
                 {youngerLearnerOffers.map((offer) => (
                   <div key={offer.title}>
                     <div className="flex items-baseline justify-between gap-3">
-                      <span className="font-body text-[15.5px] font-semibold">
+                      <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
                         {offer.title}
                       </span>
                       <span className="whitespace-nowrap font-body text-[18px] font-bold">
@@ -142,7 +142,7 @@ export default function EnglishProductSelectorPage() {
                         </span>
                       </span>
                     </div>
-                    <span className="mt-2 inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[12px] font-semibold text-english-aubergine">
+                    <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
                       {offer.format}
                     </span>
                     <div className="mt-2 grid gap-1">
@@ -192,7 +192,7 @@ export default function EnglishProductSelectorPage() {
                 {olderLearnerOffers.map((offer) => (
                   <div key={offer.title}>
                     <div className="flex items-baseline justify-between gap-3">
-                      <span className="font-body text-[15.5px] font-semibold">
+                      <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
                         {offer.title}
                       </span>
                       <span className="whitespace-nowrap font-body text-[18px] font-bold">
@@ -202,7 +202,7 @@ export default function EnglishProductSelectorPage() {
                         </span>
                       </span>
                     </div>
-                    <span className="mt-2 inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[12px] font-semibold text-english-aubergine">
+                    <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
                       {offer.format}
                     </span>
                     <div className="mt-2 grid gap-1">
