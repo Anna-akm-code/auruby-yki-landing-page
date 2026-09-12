@@ -392,8 +392,9 @@ export default function ClubPage() {
                   Начни с бесплатной консультации
                 </h3>
                 <p className="mt-3.5 font-body text-[16px] leading-[1.55] text-english-mid">
-                  За 20 минут разберём, подойдёт ли тебе группа, и я отвечу
-                  на вопросы о формате.
+                  За 20 минут разберём, какой формат тебе подходит — клуб,
+                  конкретная цель или регулярная практика — и отвечу на
+                  вопросы.
                 </p>
               </div>
               <span className="mt-8 flex items-center justify-between gap-4 font-body text-[18px] font-bold text-english-aubergine">

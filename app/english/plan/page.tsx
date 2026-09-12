@@ -291,8 +291,9 @@ export default function PlanPage() {
                   Начните с бесплатной консультации
                 </h3>
                 <p className="mt-3.5 font-body text-[16px] leading-[1.55] text-white/[0.78]">
-                  За 20 минут разберём, где вы сейчас, чего хотите достичь и
-                  подойдёт ли вам этот формат.
+                  За 20 минут разберём, какой формат тебе подходит —
+                  конкретная цель или регулярная практика — и отвечу на
+                  вопросы.
                 </p>
               </div>
               <span className="mt-8 flex items-center justify-between gap-4 font-body text-[18px] font-bold text-english-chartreuse">
