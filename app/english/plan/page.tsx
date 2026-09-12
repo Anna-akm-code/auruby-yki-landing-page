@@ -56,7 +56,7 @@ export default function PlanPage() {
             <div>
               <div className="mb-8">
                 <span className="font-mono text-[21px] uppercase tracking-[0.14em] text-english-chartreuse">
-                  THE PLAN
+                  Для старших учеников (17 – ∞)
                 </span>
               </div>
               <h1 className="font-heading text-[48px] font-semibold leading-[0.96] tracking-[-0.035em] sm:text-[76px]">
@@ -67,8 +67,10 @@ export default function PlanPage() {
                 От «я всё понимаю» к «я могу это сказать».
               </p>
               <p className="mt-6 max-w-[540px] font-body text-[18.5px] leading-[1.55] text-white/80">
-                Вы понимаете сериалы и созвоны, но собрать мысль в речь —
-                тяжело.
+                Индивидуальный английский с понятным маршрутом: под
+                конкретную цель в сжатый срок или для регулярной практики
+                над твоими постоянными трудностями. Понятный маршрут и
+                конкретный результат.
               </p>
               <p className="mt-3.5 max-w-[540px] font-body text-[16.5px] leading-[1.5] text-english-chartreuse">
                 Разбираюсь в вашем запросе и готовлю индивидуальный план.

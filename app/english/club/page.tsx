@@ -91,16 +91,17 @@ export default function ClubPage() {
           <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-18">
             <div>
               <h1 className="font-heading text-[52px] font-semibold leading-[0.94] tracking-[-0.035em] sm:text-[82px]">
-                THE CLUB
+                Для младших учеников (13–16 лет)
               </h1>
               <p className="mt-6 max-w-[560px] font-heading text-[24px] font-normal leading-[1.22] tracking-[-0.02em] text-english-lilac sm:text-[30px]">
                 Speak. Think. Connect.{" "}
                 <span className="text-english-chartreuse">In English.</span>
               </p>
               <p className="mt-6 max-w-[520px] font-body text-[19.5px] leading-[1.55] text-white/[0.82]">
-                Клуб английского для людей 13–17 лет, которым интересно, как
-                устроен мир: технологии, ИИ, игры, наука, кино, музыка. Здесь
-                английский — не предмет, а способ думать, спорить и
+                Разговорный клуб, занятия под конкретную цель или регулярная
+                практика — три формата для тех, кому интересно, как устроен
+                мир: технологии, ИИ, игры, наука, кино, музыка. Английский
+                здесь — не предмет, а способ думать, спорить и
                 договариваться.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3.5">
