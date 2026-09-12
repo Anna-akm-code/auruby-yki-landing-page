@@ -67,13 +67,6 @@ export default function YoungFoundersPage() {
                 Kids and teens aged 10–16 who have opinions about games, apps,
                 AI and robots — and want to say them out loud in English.
               </p>
-              <p className="mt-4 max-w-[480px] font-body text-[15.5px] leading-[1.55] text-white/[0.68]">
-                One real question from the world of tech each week. Should AI
-                do homework? Is this game actually good? Would you let an AI
-                pick your music? Everyone picks a side and defends it. Along
-                the way: how to disagree politely, ask a good question,
-                explain an idea so others get it.
-              </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 {founderFacts.map((fact) => (
                   <span
@@ -88,6 +81,20 @@ export default function YoungFoundersPage() {
                   </span>
                 ))}
               </div>
+              <p className="mt-7 max-w-[480px] font-body text-[15.5px] leading-[1.55] text-white/[0.68]">
+                One real question from the world of tech each week.
+              </p>
+              <p className="mt-4 max-w-[480px] font-body text-[15.5px] leading-[1.55] text-white/[0.68]">
+                Should AI do homework? Is this game actually good? Would you
+                let an AI pick your music?
+              </p>
+              <p className="mt-4 max-w-[480px] font-body text-[15.5px] leading-[1.55] text-white/[0.68]">
+                Pick a side. Build your argument. Defend it.
+              </p>
+              <p className="mt-4 max-w-[480px] font-body text-[15.5px] leading-[1.55] text-white/[0.68]">
+                Along the way: how to disagree politely, ask a good question,
+                explain an idea so others get it.
+              </p>
             </div>
 
             <div id="signup" className="order-3 scroll-mt-24 lg:order-2">
