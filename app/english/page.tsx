@@ -220,7 +220,7 @@ export default function EnglishProductSelectorPage() {
                 ))}
               </div>
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
-                Подробнее о THE PLAN <span>→</span>
+                Подробнее о занятиях <span>→</span>
               </span>
             </TrackedLink>
             <TrackedLink
