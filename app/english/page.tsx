@@ -95,7 +95,7 @@ export default function EnglishProductSelectorPage() {
             <div className="mb-7 font-mono text-[11.5px] uppercase tracking-[0.16em] text-english-chartreuse">
               Английский с Анной
             </div>
-            <h1 className="max-w-[760px] font-heading text-[42px] font-semibold leading-[1.06] tracking-[-0.035em] sm:text-[64px]">
+            <h1 className="max-w-[760px] font-heading text-[42px] font-semibold leading-[1.06] tracking-[-0.035em] sm:text-[60px]">
               Английский, на котором думают, спорят и договариваются.
             </h1>
           </div>
@@ -108,7 +108,7 @@ export default function EnglishProductSelectorPage() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-english-aubergine/85 via-english-aubergine/15 to-transparent" />
-            <span className="relative font-body text-[13.5px] font-bold leading-[1.4] text-white/80">
+            <span className="relative font-body text-[8.5px] font-bold leading-[1.4] text-white/80">
               CELTA · 8+ лет преподавания · <br />
               разработчик · AI-проекты
             </span>
