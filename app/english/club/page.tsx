@@ -60,6 +60,34 @@ const clubSteps = [
   },
 ];
 
+const planSteps = [
+  {
+    number: "01",
+    title: "Консультация",
+    description:
+      "Короткая встреча: разбираем, что уже получается, а что мешает, и определяем цель — конкретный результат (Focus) или регулярную практику (Regular).",
+  },
+  {
+    number: "02",
+    title: "План",
+    description:
+      "Собираю маршрут под твою цель: что тренируем, в каком порядке, на каком материале.",
+  },
+  {
+    number: "03",
+    title: "Практика",
+    description:
+      "На каждой встрече — реальная ситуация или задача, а не абстрактные упражнения: используешь язык, а не повторяешь его.",
+  },
+  {
+    number: "04",
+    title: "Обратная связь",
+    description:
+      "Что получилось, что подправить, что тренировать дальше — до следующей встречи и до конца маршрута.",
+    dark: true,
+  },
+];
+
 const topicTags: { text: string; variant?: "chartreuse" | "lilac" }[] = [
   { text: "Может ли ИИ быть автором?" },
   {
@@ -181,6 +209,17 @@ export default function ClubPage() {
             </h3>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {clubSteps.map((step) => (
+                <StepCard key={step.number} {...step} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
+              Как проходит — THE PLAN
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {planSteps.map((step) => (
                 <StepCard key={step.number} {...step} />
               ))}
             </div>

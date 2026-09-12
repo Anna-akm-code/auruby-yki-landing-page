@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MarqueeStrip } from "@/components/english/MarqueeStrip";
 import { HeroFormatPanel } from "@/components/english/HeroFormatPanel";
+import { StepCard } from "@/components/english/StepCard";
 import { AnnaSection } from "@/components/english/AnnaSection";
 import { FooterCTA } from "@/components/english/FooterCTA";
 import { TrackedLink } from "@/components/english/TrackedLink";
@@ -30,6 +31,34 @@ const marqueeTopics = [
   "Code review",
   "Negotiation",
   "Everyday life",
+];
+
+const planSteps = [
+  {
+    number: "01",
+    title: "Консультация",
+    description:
+      "Короткая встреча: разбираем, что уже получается, а что мешает, и определяем цель — конкретный результат (Focus) или регулярную практику (Regular).",
+  },
+  {
+    number: "02",
+    title: "План",
+    description:
+      "Собираю маршрут под твою цель: что тренируем, в каком порядке, на каком материале.",
+  },
+  {
+    number: "03",
+    title: "Практика",
+    description:
+      "На каждой встрече — реальная ситуация или задача, а не абстрактные упражнения: используешь язык, а не повторяешь его.",
+  },
+  {
+    number: "04",
+    title: "Обратная связь",
+    description:
+      "Что получилось, что подправить, что тренировать дальше — до следующей встречи и до конца маршрута.",
+    dark: true,
+  },
 ];
 
 export default function PlanPage() {
@@ -115,7 +144,18 @@ export default function PlanPage() {
 
       <section className="px-6 py-16 sm:px-12 sm:py-24">
         <div className="mx-auto max-w-[1240px]">
-          <div className="mt-8">
+          <div>
+            <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
+              Как проходит — THE PLAN
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {planSteps.map((step) => (
+                <StepCard key={step.number} {...step} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14">
             <TrackedLink
               event="english_consultation_click"
               properties={{ source: "plan_cta" }}
