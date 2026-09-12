@@ -33,7 +33,7 @@ const marqueeTopics = [
   "Privacy",
 ];
 
-const steps = [
+const clubSteps = [
   {
     number: "01",
     title: "Материал",
@@ -56,6 +56,58 @@ const steps = [
     number: "04",
     title: "Обратная связь",
     description: "Что прозвучало хорошо, что можно сказать точнее.",
+    dark: true,
+  },
+];
+
+const planFocusSteps = [
+  {
+    number: "01",
+    title: "Материал",
+    description:
+      "Видео, статья, отрывок интервью или ситуация, напрямую связанная с твоей целью.",
+  },
+  {
+    number: "02",
+    title: "Язык",
+    description:
+      "Выражения, которые нужны именно для твоей задачи: как объяснить, договориться, выступить.",
+  },
+  {
+    number: "03",
+    title: "Практика",
+    description:
+      "Отрабатываем ситуацию, к которой готовимся, пока она не зазвучит естественно.",
+  },
+  {
+    number: "04",
+    title: "Обратная связь",
+    description: "Что получилось хорошо, что подправить точнее к следующей встрече.",
+    dark: true,
+  },
+];
+
+const planRegularSteps = [
+  {
+    number: "01",
+    title: "Материал",
+    description:
+      "То, что ты сам читаешь или смотришь на английском, плюс разбор твоих текущих трудностей.",
+  },
+  {
+    number: "02",
+    title: "Язык",
+    description: "Конкретные слова и конструкции, которые пока не закрепились.",
+  },
+  {
+    number: "03",
+    title: "Практика",
+    description: "Используешь их в разговоре, а не просто повторяешь.",
+  },
+  {
+    number: "04",
+    title: "Обратная связь",
+    description: "Что стало лучше, над чем работаем дальше.",
     dark: true,
   },
 ];
@@ -179,10 +231,32 @@ export default function ClubPage() {
         <div className="mx-auto max-w-[1240px]">
           <div>
             <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
-              Как проходит занятие
+              Как проходит — THE CLUB
             </h3>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {steps.map((step) => (
+              {clubSteps.map((step) => (
+                <StepCard key={step.number} {...step} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
+              Как проходит — THE PLAN · FOCUS
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {planFocusSteps.map((step) => (
+                <StepCard key={step.number} {...step} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
+              Как проходит — THE PLAN · REGULAR
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {planRegularSteps.map((step) => (
                 <StepCard key={step.number} {...step} />
               ))}
             </div>

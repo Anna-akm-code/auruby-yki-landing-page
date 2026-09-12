@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MarqueeStrip } from "@/components/english/MarqueeStrip";
 import { HeroFormatPanel } from "@/components/english/HeroFormatPanel";
+import { StepCard } from "@/components/english/StepCard";
 import { AnnaSection } from "@/components/english/AnnaSection";
 import { FooterCTA } from "@/components/english/FooterCTA";
 import { TrackedLink } from "@/components/english/TrackedLink";
@@ -32,18 +33,56 @@ const marqueeTopics = [
   "Everyday life",
 ];
 
-const pointA = [
-  "Сначала выстраиваю фразу, потом говорю",
-  "Нужное слово всплывает уже после разговора",
-  "Сложная мысль упрощается до школьной фразы",
-  "На созвонах молчу, потом дописываю в чат",
+const planFocusSteps = [
+  {
+    number: "01",
+    title: "Материал",
+    description:
+      "Видео, статья, отрывок интервью или ситуация, напрямую связанная с твоей целью.",
+  },
+  {
+    number: "02",
+    title: "Язык",
+    description:
+      "Выражения, которые нужны именно для твоей задачи: как объяснить, договориться, выступить.",
+  },
+  {
+    number: "03",
+    title: "Практика",
+    description:
+      "Отрабатываем ситуацию, к которой готовимся, пока она не зазвучит естественно.",
+  },
+  {
+    number: "04",
+    title: "Обратная связь",
+    description: "Что получилось хорошо, что подправить точнее к следующей встрече.",
+    dark: true,
+  },
 ];
 
-const pointB = [
-  "Начинаю говорить, не репетируя фразу",
-  "Нужные слова приходят по ходу разговора",
-  "Объясняю сложное понятно",
-  "Веду встречу и отвечаю на вопросы вживую",
+const planRegularSteps = [
+  {
+    number: "01",
+    title: "Материал",
+    description:
+      "То, что ты сам читаешь или смотришь на английском, плюс разбор твоих текущих трудностей.",
+  },
+  {
+    number: "02",
+    title: "Язык",
+    description: "Конкретные слова и конструкции, которые пока не закрепились.",
+  },
+  {
+    number: "03",
+    title: "Практика",
+    description: "Используешь их в разговоре, а не просто повторяешь.",
+  },
+  {
+    number: "04",
+    title: "Обратная связь",
+    description: "Что стало лучше, над чем работаем дальше.",
+    dark: true,
+  },
 ];
 
 export default function PlanPage() {
@@ -132,60 +171,23 @@ export default function PlanPage() {
         <div className="mx-auto max-w-[1240px]">
           <div>
             <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
-              Как проходит
+              Как проходит — THE PLAN · FOCUS
             </h3>
-            <div className="rounded-[24px] bg-english-aubergine px-7 py-11 text-white sm:px-11">
-              <div className="mb-9 flex flex-wrap items-baseline gap-4">
-                <span className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-english-chartreuse">
-                  Метод
-                </span>
-                <h3 className="font-heading text-[28px] tracking-[-0.03em] sm:text-[34px]">
-                  Точка A → Точка B
-                </h3>
-              </div>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {planFocusSteps.map((step) => (
+                <StepCard key={step.number} {...step} />
+              ))}
+            </div>
+          </div>
 
-              <div className="grid grid-cols-1 items-stretch gap-9 lg:grid-cols-[1fr_auto_1fr]">
-                <div className="rounded-[18px] border border-white/[0.18] bg-white/[0.08] p-7">
-                  <div className="font-heading text-[64px] font-semibold leading-none tracking-[-0.04em] text-white/35">
-                    A
-                  </div>
-                  <h4 className="my-3.5 font-heading text-[22px]">
-                    Где вы сейчас
-                  </h4>
-                  <div className="grid gap-2.5 font-body text-[15px] leading-[1.5] text-white/[0.78]">
-                    {pointA.map((line) => (
-                      <div key={line}>{line}</div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex flex-row items-center justify-center gap-3 py-2 lg:flex-col lg:px-1">
-                  <div className="h-px w-full flex-1 bg-gradient-to-r from-english-aubergine to-english-chartreuse/50 lg:h-full lg:w-px lg:bg-gradient-to-b" />
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-english-chartreuse text-[26px] font-bold text-english-aubergine">
-                    →
-                  </div>
-                  <div className="max-w-[110px] text-center font-mono text-[10.5px] uppercase leading-[1.5] tracking-[0.14em] text-english-chartreuse">
-                    шаг
-                    <br />
-                    за шагом
-                  </div>
-                  <div className="h-px w-full flex-1 bg-gradient-to-r from-english-chartreuse/50 to-english-aubergine lg:h-full lg:w-px lg:bg-gradient-to-b" />
-                </div>
-
-                <div className="rounded-[18px] bg-english-chartreuse p-7 text-english-aubergine">
-                  <div className="font-heading text-[64px] font-semibold leading-none tracking-[-0.04em] text-english-aubergine/35">
-                    B
-                  </div>
-                  <h4 className="my-3.5 font-heading text-[22px]">
-                    Куда приходите
-                  </h4>
-                  <div className="grid gap-2.5 font-body text-[15px] leading-[1.5] text-english-mid">
-                    {pointB.map((line) => (
-                      <div key={line}>{line}</div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          <div className="mt-14">
+            <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
+              Как проходит — THE PLAN · REGULAR
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {planRegularSteps.map((step) => (
+                <StepCard key={step.number} {...step} />
+              ))}
             </div>
           </div>
 
