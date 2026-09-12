@@ -30,57 +30,56 @@ const marqueeTopics = [
   "Privacy",
 ];
 
-const bulletDot = (
-  <span className="mt-[7px] block h-[5px] w-[5px] shrink-0 rounded-full bg-english-aubergine" />
-);
-
 const subBulletDot = (
   <span className="mt-[6px] block h-[3px] w-[3px] shrink-0 rounded-full bg-english-muted" />
 );
 
-type OfferBullet = { title: string; details: string[] };
+type OfferBullet = {
+  title: string;
+  price: string;
+  priceUnit: string;
+  format: string;
+  details: string[];
+};
 
 const youngerLearnerOffers: OfferBullet[] = [
   {
     title: "THE PLAN · Focus",
-    details: [
-      "Индивидуально 1:1",
-      "Конкретная цель",
-      "Короткий срок (обычно < 6 месяцев)",
-      "€45 / 60 мин",
-    ],
+    price: "€45",
+    priceUnit: "/ 60 мин",
+    format: "Индивидуально 1:1",
+    details: ["Конкретная цель", "Короткий срок (обычно < 6 месяцев)"],
   },
   {
     title: "THE PLAN · Regular",
-    details: [
-      "Индивидуально 1:1",
-      "Регулярные занятия, разбор постоянных трудностей",
-      "€30 / 60 мин",
-    ],
+    price: "€30",
+    priceUnit: "/ 60 мин",
+    format: "Индивидуально 1:1",
+    details: ["Регулярные занятия, разбор постоянных трудностей"],
   },
   {
     title: "THE CLUB",
-    details: ["Группа до 6 человек", "2 × 60 мин в неделю", "€80 / месяц"],
+    price: "€80",
+    priceUnit: "/ месяц",
+    format: "Группа до 6 человек",
+    details: ["2 × 60 мин в неделю"],
   },
 ];
 
 const olderLearnerOffers: OfferBullet[] = [
   {
     title: "THE PLAN · Focus",
-    details: [
-      "Индивидуально 1:1",
-      "Конкретная цель",
-      "Короткий срок (обычно < 6 месяцев)",
-      "€45 / 60 мин",
-    ],
+    price: "€45",
+    priceUnit: "/ 60 мин",
+    format: "Индивидуально 1:1",
+    details: ["Конкретная цель", "Короткий срок (обычно < 6 месяцев)"],
   },
   {
     title: "THE PLAN · Regular",
-    details: [
-      "Индивидуально 1:1",
-      "Регулярные занятия, разбор постоянных трудностей",
-      "€30 / 60 мин",
-    ],
+    price: "€30",
+    priceUnit: "/ 60 мин",
+    format: "Индивидуально 1:1",
+    details: ["Регулярные занятия, разбор постоянных трудностей"],
   },
 ];
 
@@ -132,11 +131,21 @@ export default function EnglishProductSelectorPage() {
               <div className="mt-6 grid gap-4">
                 {youngerLearnerOffers.map((offer) => (
                   <div key={offer.title}>
-                    <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
-                      {bulletDot}
-                      {offer.title}
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="font-body text-[15.5px] font-semibold">
+                        {offer.title}
+                      </span>
+                      <span className="whitespace-nowrap font-body text-[18px] font-bold">
+                        {offer.price}
+                        <span className="ml-1 font-body text-[13px] font-normal text-english-muted">
+                          {offer.priceUnit}
+                        </span>
+                      </span>
                     </div>
-                    <div className="ml-[15px] mt-1.5 grid gap-1">
+                    <span className="mt-2 inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[12px] font-semibold text-english-aubergine">
+                      {offer.format}
+                    </span>
+                    <div className="mt-2 grid gap-1">
                       {offer.details.map((line) => (
                         <div
                           key={line}
@@ -182,11 +191,21 @@ export default function EnglishProductSelectorPage() {
               <div className="mt-6 grid gap-4">
                 {olderLearnerOffers.map((offer) => (
                   <div key={offer.title}>
-                    <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
-                      {bulletDot}
-                      {offer.title}
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="font-body text-[15.5px] font-semibold">
+                        {offer.title}
+                      </span>
+                      <span className="whitespace-nowrap font-body text-[18px] font-bold">
+                        {offer.price}
+                        <span className="ml-1 font-body text-[13px] font-normal text-english-muted">
+                          {offer.priceUnit}
+                        </span>
+                      </span>
                     </div>
-                    <div className="ml-[15px] mt-1.5 grid gap-1">
+                    <span className="mt-2 inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[12px] font-semibold text-english-aubergine">
+                      {offer.format}
+                    </span>
+                    <div className="mt-2 grid gap-1">
                       {offer.details.map((line) => (
                         <div
                           key={line}
