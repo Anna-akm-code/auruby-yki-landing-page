@@ -90,13 +90,6 @@ export default function ClubPage() {
                 Speak. Think. Connect.{" "}
                 <span className="text-english-chartreuse">In English.</span>
               </p>
-              <p className="mt-6 max-w-[520px] font-body text-[19.5px] leading-[1.55] text-white/[0.82]">
-                Разговорный клуб, занятия под конкретную цель или регулярная
-                практика — три формата для тех, кому интересно, как устроен
-                мир: технологии, ИИ, игры, наука, кино, музыка. Английский
-                здесь — не предмет, а способ думать, спорить и
-                договариваться.
-              </p>
               <div className="mt-10 flex flex-wrap items-center gap-3.5">
                 <TrackedLink
                   event="english_consultation_click"

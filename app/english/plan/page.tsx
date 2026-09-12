@@ -52,15 +52,6 @@ export default function PlanPage() {
               <p className="mt-6 max-w-[560px] font-heading text-[24px] font-normal leading-[1.22] tracking-[-0.02em] text-english-lilac sm:text-[30px]">
                 От «я всё понимаю» к «я могу это сказать».
               </p>
-              <p className="mt-6 max-w-[540px] font-body text-[18.5px] leading-[1.55] text-white/80">
-                Индивидуальный английский с понятным маршрутом: под
-                конкретную цель в сжатый срок или для регулярной практики
-                над твоими постоянными трудностями. Понятный маршрут и
-                конкретный результат.
-              </p>
-              <p className="mt-3.5 max-w-[540px] font-body text-[16.5px] leading-[1.5] text-english-chartreuse">
-                Разбираюсь в вашем запросе и готовлю индивидуальный план.
-              </p>
               <div className="mt-9 flex flex-wrap items-center gap-3.5">
                 <TrackedLink
                   event="english_consultation_click"
