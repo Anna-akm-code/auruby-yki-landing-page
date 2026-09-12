@@ -127,11 +127,53 @@ const topicTags: { text: string; variant?: "chartreuse" | "lilac" }[] = [
   { text: "Нужны ли школе оценки" },
 ];
 
-const formatStats = [
-  { value: "2 × 60 мин", label: "в неделю, онлайн" },
-  { value: "5–6 человек", label: "в группе" },
-  { value: "A2–C1", label: "уровень" },
-  { value: "8 занятий", label: "в месяц" },
+type ComparisonColumn = {
+  name: string;
+  format: string;
+  frequency: string;
+  goal: string;
+  level: string;
+  age: string;
+  price: string;
+};
+
+const comparisonRows: { label: string; key: keyof ComparisonColumn }[] = [
+  { label: "Формат", key: "format" },
+  { label: "Периодичность", key: "frequency" },
+  { label: "Цель", key: "goal" },
+  { label: "Уровень", key: "level" },
+  { label: "Возраст", key: "age" },
+  { label: "Стоимость", key: "price" },
+];
+
+const comparisonColumns: ComparisonColumn[] = [
+  {
+    name: "THE CLUB",
+    format: "Группа 5–6 чел",
+    frequency: "2 × 60 мин/нед",
+    goal: "Разговорная практика",
+    level: "A2–C1",
+    age: "13–16",
+    price: "€80/мес",
+  },
+  {
+    name: "THE PLAN · Focus",
+    format: "Индивидуально 1:1",
+    frequency: "По согласованию",
+    goal: "Конкретная цель, короткий срок (<6 мес)",
+    level: "A2–C1",
+    age: "13–16",
+    price: "€45 / 60 мин",
+  },
+  {
+    name: "THE PLAN · Regular",
+    format: "Индивидуально 1:1",
+    frequency: "60 мин/сессия",
+    goal: "Регулярная практика, постоянные трудности",
+    level: "A2–C1",
+    age: "13–16",
+    price: "€30 / 60 мин",
+  },
 ];
 
 export default function ClubPage() {
@@ -295,27 +337,46 @@ export default function ClubPage() {
               <div className="mb-6 font-mono text-[11px] uppercase tracking-[0.16em] text-english-muted">
                 Формат и стоимость
               </div>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-6">
-                {formatStats.map((stat) => (
-                  <div key={stat.value}>
-                    <div className="font-heading text-[26px] font-semibold tracking-[-0.025em]">
-                      {stat.value}
-                    </div>
-                    <div className="mt-1 font-body text-[14px] text-english-muted">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-auto flex flex-wrap items-end justify-between gap-6 border-t border-english-aubergine/[0.14] pt-8">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-heading text-[52px] font-semibold leading-none tracking-[-0.03em]">
-                    €80
-                  </span>
-                  <span className="font-body text-[16px] text-english-muted">
-                    / месяц · €10 за занятие
-                  </span>
-                </div>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[560px] border-collapse">
+                  <thead>
+                    <tr>
+                      <th className="pb-4 pr-6 text-left" />
+                      {comparisonColumns.map((col) => (
+                        <th
+                          key={col.name}
+                          className="pb-4 pl-4 text-left font-heading text-[16px] font-semibold leading-[1.2]"
+                        >
+                          {col.name}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparisonRows.map((row) => (
+                      <tr
+                        key={row.key}
+                        className="border-t border-english-aubergine/[0.14]"
+                      >
+                        <td className="whitespace-nowrap py-3 pr-6 font-body text-[13.5px] text-english-muted">
+                          {row.label}
+                        </td>
+                        {comparisonColumns.map((col) => (
+                          <td
+                            key={col.name}
+                            className={
+                              row.key === "price"
+                                ? "py-3 pl-4 font-heading text-[20px] font-semibold"
+                                : "py-3 pl-4 font-body text-[14.5px]"
+                            }
+                          >
+                            {col[row.key]}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
             <TrackedLink
