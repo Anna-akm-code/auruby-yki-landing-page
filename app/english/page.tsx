@@ -34,6 +34,56 @@ const bulletDot = (
   <span className="mt-[7px] block h-[5px] w-[5px] shrink-0 rounded-full bg-english-aubergine" />
 );
 
+const subBulletDot = (
+  <span className="mt-[6px] block h-[3px] w-[3px] shrink-0 rounded-full bg-english-muted" />
+);
+
+type OfferBullet = { title: string; details: string[] };
+
+const youngerLearnerOffers: OfferBullet[] = [
+  {
+    title: "THE PLAN · Focus",
+    details: [
+      "Индивидуально 1:1",
+      "Конкретная цель",
+      "Короткий срок (обычно < 6 месяцев)",
+      "€45 / 60 мин",
+    ],
+  },
+  {
+    title: "THE PLAN · Regular",
+    details: [
+      "Индивидуально 1:1",
+      "Регулярные занятия, разбор постоянных трудностей",
+      "€30 / 60 мин",
+    ],
+  },
+  {
+    title: "THE CLUB",
+    details: ["Группа до 6 человек", "2 × 60 мин в неделю", "€80 / месяц"],
+  },
+];
+
+const olderLearnerOffers: OfferBullet[] = [
+  {
+    title: "THE PLAN · Focus",
+    details: [
+      "Индивидуально 1:1",
+      "Конкретная цель",
+      "Короткий срок (обычно < 6 месяцев)",
+      "€45 / 60 мин",
+    ],
+  },
+  {
+    title: "THE PLAN · Regular",
+    details: [
+      "Индивидуально 1:1",
+      "Регулярные занятия, разбор постоянных трудностей",
+      "€30 / 60 мин",
+    ],
+  },
+];
+
 export default function EnglishProductSelectorPage() {
   return (
     <section className="relative flex min-h-[calc(100vh-72px)] flex-col overflow-hidden bg-english-aubergine text-white">
@@ -77,27 +127,31 @@ export default function EnglishProductSelectorPage() {
                 Набор в сентябрьские группы открыт
               </div>
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
-                THE CLUB
+                Для младших учеников (13–16 лет)
               </h2>
-              <div className="mt-6 grid gap-2.5">
-                {[
-                  "13–17 лет",
-                  "Уровень A2–C1",
-                  "Группа 5–6 человек",
-                  "2 × 60 мин в неделю",
-                ].map((line) => (
-                  <div key={line} className="flex items-baseline gap-2.5 font-body text-[15.5px]">
-                    {bulletDot}
-                    {line}
+              <div className="mt-6 grid gap-4">
+                {youngerLearnerOffers.map((offer) => (
+                  <div key={offer.title}>
+                    <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
+                      {bulletDot}
+                      {offer.title}
+                    </div>
+                    <div className="ml-[15px] mt-1.5 grid gap-1">
+                      {offer.details.map((line) => (
+                        <div
+                          key={line}
+                          className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
+                        >
+                          {subBulletDot}
+                          {line}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
-                <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
-                  {bulletDot}
-                  €80/мес
-                </div>
               </div>
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
-                Подробнее о клубе <span>→</span>
+                Подробнее о занятиях <span>→</span>
               </span>
             </TrackedLink>
             <TrackedLink
@@ -123,33 +177,28 @@ export default function EnglishProductSelectorPage() {
                 Запись открыта
               </div>
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
-                THE PLAN
+                Для старших учеников (17 – ∞)
               </h2>
-              <div className="mt-6 grid gap-2.5">
-                {["13+", "Уровень A2–C1", "Индивидуально 1:1"].map(
-                  (line) => (
-                    <div key={line} className="flex items-baseline gap-2.5 font-body text-[15.5px]">
+              <div className="mt-6 grid gap-4">
+                {olderLearnerOffers.map((offer) => (
+                  <div key={offer.title}>
+                    <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
                       {bulletDot}
-                      {line}
+                      {offer.title}
                     </div>
-                  ),
-                )}
-                <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
-                  {bulletDot}
-                  Бесплатная консультация
-                </div>
-                <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
-                  {bulletDot}
-                  Конкретная цель
-                </div>
-                <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
-                  {bulletDot}
-                  Короткий срок (обычно &lt; 6 месяцев)
-                </div>
-                <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
-                  {bulletDot}
-                  €30 / 60 мин
-                </div>
+                    <div className="ml-[15px] mt-1.5 grid gap-1">
+                      {offer.details.map((line) => (
+                        <div
+                          key={line}
+                          className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
+                        >
+                          {subBulletDot}
+                          {line}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
                 Подробнее о THE PLAN <span>→</span>
