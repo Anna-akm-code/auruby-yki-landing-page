@@ -22,7 +22,7 @@ const founderFacts: { text: string; variant?: "chartreuse" }[] = [
   { text: "Online" },
   { text: "2 × 60 min/week" },
   { text: "Max 6 per group" },
-  { text: "Two groups: 10–12 and 13–16" },
+  { text: "Two groups: 10–13 and 14–16" },
   { text: "Starts 21 Sept 2026" },
   { text: "€80/month" },
   { text: "First session free", variant: "chartreuse" },
