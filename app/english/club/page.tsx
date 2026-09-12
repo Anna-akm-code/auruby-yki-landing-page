@@ -86,18 +86,18 @@ export default function ClubPage() {
               <h1 className="font-heading text-[52px] font-semibold leading-[0.94] tracking-[-0.035em] sm:text-[82px]">
                 Для младших учеников (13–16 лет)
               </h1>
-              <p className="mt-6 max-w-[560px] font-heading text-[24px] font-normal leading-[1.22] tracking-[-0.02em] text-english-lilac sm:text-[30px]">
-                Speak. Think. Connect.{" "}
-                <span className="text-english-chartreuse">In English.</span>
-              </p>
-              <div className="mt-10 flex flex-wrap items-center gap-3.5">
+              <div className="mt-6 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <p className="max-w-[560px] font-heading text-[24px] font-normal leading-[1.22] tracking-[-0.02em] text-english-lilac sm:text-[30px]">
+                  Speak. Think. Connect.{" "}
+                  <span className="text-english-chartreuse">In English.</span>
+                </p>
                 <TrackedLink
                   event="english_consultation_click"
                   properties={{ source: "club_hero" }}
                   href={GOOGLE_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-english-chartreuse px-8 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
+                  className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-english-chartreuse px-8 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
                 >
                   Бесплатная консультация
                   <span className="text-[18px]">→</span>

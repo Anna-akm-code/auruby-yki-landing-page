@@ -49,17 +49,17 @@ export default function PlanPage() {
                 <span className="block">Точка A.</span>
                 <span className="block text-english-chartreuse">Точка B.</span>
               </h1>
-              <p className="mt-6 max-w-[560px] font-heading text-[24px] font-normal leading-[1.22] tracking-[-0.02em] text-english-lilac sm:text-[30px]">
-                От «я всё понимаю» к «я могу это сказать».
-              </p>
-              <div className="mt-9 flex flex-wrap items-center gap-3.5">
+              <div className="mt-6 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <p className="max-w-[560px] font-heading text-[24px] font-normal leading-[1.22] tracking-[-0.02em] text-english-lilac sm:text-[30px]">
+                  От «я всё понимаю» к «я могу это сказать».
+                </p>
                 <TrackedLink
                   event="english_consultation_click"
                   properties={{ source: "plan_hero" }}
                   href={GOOGLE_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-english-chartreuse px-8 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
+                  className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-english-chartreuse px-8 py-[18px] font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
                 >
                   Бесплатная консультация
                   <span className="text-[18px]">→</span>
