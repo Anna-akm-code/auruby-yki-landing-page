@@ -20,7 +20,7 @@ export function StickyHeader() {
       <div className="mx-auto flex h-[72px] max-w-[1240px] items-center justify-between gap-8 px-6 sm:px-12">
         <a
           href="/english"
-          className="font-display text-[27px] font-bold leading-none text-english-chartreuse sm:text-[31px]"
+          className="inline-flex items-center rounded-full bg-english-aubergine px-4 py-1.5 font-display text-[27px] font-bold leading-none text-english-chartreuse sm:text-[31px]"
         >
           Auruby
         </a>
