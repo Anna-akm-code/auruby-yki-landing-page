@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 
 const founderFacts: { text: string; variant?: "chartreuse" }[] = [
   { text: "Online" },
-  { text: "1 × 60 min/week" },
+  { text: "2 × 60 min/week" },
   { text: "Max 6 per group" },
   { text: "Two groups: 10–12 and 13–16" },
   { text: "Starts 21 Sept 2026" },
-  { text: "€45/month" },
+  { text: "€80/month" },
   { text: "First session free", variant: "chartreuse" },
 ];
 
