@@ -26,10 +26,10 @@ export function StickyHeader() {
         </a>
         <nav className="hidden items-center gap-8 font-body text-[15px] font-medium text-english-aubergine md:flex">
           <a href="/english/club" className="transition hover:text-english-muted">
-            13–16
+            THE SPARK · 13–16 лет
           </a>
           <a href="/english/plan" className="transition hover:text-english-muted">
-            17+
+            THE STAKES · 17 – ∞ лет
           </a>
         </nav>
         {hasApplySection ? (
