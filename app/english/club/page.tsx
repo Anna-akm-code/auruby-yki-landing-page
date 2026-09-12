@@ -200,7 +200,7 @@ export default function ClubPage() {
           <div className="mt-14 rounded-[24px] bg-english-aubergine px-7 py-11 text-white sm:px-11">
             <div className="mb-7">
               <span className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-english-chartreuse">
-                О чём говорим
+                О чём говорим в THE CLUB
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
