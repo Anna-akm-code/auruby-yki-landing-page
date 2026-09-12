@@ -79,12 +79,6 @@ export default function EnglishProductSelectorPage() {
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
                 THE CLUB
               </h2>
-              <p className="mt-4 font-heading text-[19px] leading-[1.3] tracking-[-0.01em]">
-                Говорим. Думаем. Спорим. Вместе.
-              </p>
-              <p className="mt-2 max-w-[420px] font-body text-[16.5px] leading-[1.55] text-english-mid">
-                Разговорная группа для людей 13–17 лет.
-              </p>
               <div className="mt-6 grid gap-2.5">
                 {[
                   "13–17 лет",
@@ -131,15 +125,8 @@ export default function EnglishProductSelectorPage() {
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
                 THE PLAN
               </h2>
-              <p className="mt-4 font-heading text-[19px] leading-[1.3] tracking-[-0.01em]">
-                Твоя точка А → твоя точка Б.
-              </p>
-              <p className="mt-2 max-w-[420px] font-body text-[16.5px] leading-[1.55] text-english-mid">
-                Индивидуальный английский с понятным маршрутом и конкретным
-                результатом.
-              </p>
               <div className="mt-6 grid gap-2.5">
-                {["13+", "Уровень A2–C1", "Индивидуально 1:1", "2 × 60 мин в неделю"].map(
+                {["13+", "Уровень A2–C1", "Индивидуально 1:1"].map(
                   (line) => (
                     <div key={line} className="flex items-baseline gap-2.5 font-body text-[15.5px]">
                       {bulletDot}
@@ -153,7 +140,15 @@ export default function EnglishProductSelectorPage() {
                 </div>
                 <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
                   {bulletDot}
-                  8 × 60 мин / 4 недели · €320
+                  Конкретная цель
+                </div>
+                <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
+                  {bulletDot}
+                  Короткий срок (обычно &lt; 6 месяцев)
+                </div>
+                <div className="flex items-baseline gap-2.5 font-body text-[15.5px] font-semibold">
+                  {bulletDot}
+                  €30 / 60 мин
                 </div>
               </div>
               <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
