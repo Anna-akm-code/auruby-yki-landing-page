@@ -25,7 +25,7 @@ export default function LanguageSelectorPage() {
         Выберите язык
       </div>
 
-      <div className="mt-12 grid w-full max-w-[820px] grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="mt-12 grid w-full max-w-[1240px] grid-cols-1 gap-6 sm:grid-cols-3">
         <a
           href="/finnish"
           className="flex flex-col justify-between gap-10 rounded-[24px] bg-english-lilac p-9 text-english-aubergine transition hover:bg-white"
@@ -58,15 +58,20 @@ export default function LanguageSelectorPage() {
             </span>
           </div>
         </a>
+        <a
+          href="/young-founders"
+          className="flex flex-col justify-end gap-10 rounded-[24px] bg-neon-pink p-9 text-english-aubergine transition hover:opacity-90"
+        >
+          <div>
+            <h2 className="font-heading text-[34px] leading-[1.04] tracking-[-0.03em]">
+              English Young Founders ages 10–16
+            </h2>
+            <span className="mt-3 inline-flex items-center gap-2 font-body text-[14.5px] font-semibold text-english-mid">
+              Перейти <span>→</span>
+            </span>
+          </div>
+        </a>
       </div>
-
-      <a
-        href="/young-founders"
-        className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-english-chartreuse px-7 py-[15px] font-body text-[15px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
-      >
-        THE CLUB: Young Founders (ages 10–16)
-        <span className="text-[16px]">→</span>
-      </a>
     </main>
   );
 }
