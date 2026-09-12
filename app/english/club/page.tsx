@@ -127,55 +127,6 @@ const topicTags: { text: string; variant?: "chartreuse" | "lilac" }[] = [
   { text: "Нужны ли школе оценки" },
 ];
 
-type ComparisonColumn = {
-  name: string;
-  format: string;
-  frequency: string;
-  goal: string;
-  level: string;
-  age: string;
-  price: string;
-};
-
-const comparisonRows: { label: string; key: keyof ComparisonColumn }[] = [
-  { label: "Формат", key: "format" },
-  { label: "Периодичность", key: "frequency" },
-  { label: "Цель", key: "goal" },
-  { label: "Уровень", key: "level" },
-  { label: "Возраст", key: "age" },
-  { label: "Стоимость", key: "price" },
-];
-
-const comparisonColumns: ComparisonColumn[] = [
-  {
-    name: "THE CLUB",
-    format: "Группа 5–6 чел",
-    frequency: "2 × 60 мин/нед",
-    goal: "Разговорная практика",
-    level: "A2–C1",
-    age: "13–16",
-    price: "€80/мес",
-  },
-  {
-    name: "THE PLAN · Focus",
-    format: "Индивидуально 1:1",
-    frequency: "По согласованию",
-    goal: "Конкретная цель, короткий срок (<6 мес)",
-    level: "A2–C1",
-    age: "13–16",
-    price: "€45 / 60 мин",
-  },
-  {
-    name: "THE PLAN · Regular",
-    format: "Индивидуально 1:1",
-    frequency: "60 мин/сессия",
-    goal: "Регулярная практика, постоянные трудности",
-    level: "A2–C1",
-    age: "13–16",
-    price: "€30 / 60 мин",
-  },
-];
-
 export default function ClubPage() {
   return (
     <>
@@ -332,53 +283,7 @@ export default function ClubPage() {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 items-stretch gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="flex flex-col rounded-[24px] bg-english-lilac p-9 sm:p-10">
-              <div className="mb-6 font-mono text-[11px] uppercase tracking-[0.16em] text-english-muted">
-                Формат и стоимость
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[560px] border-collapse">
-                  <thead>
-                    <tr>
-                      <th className="pb-4 pr-6 text-left" />
-                      {comparisonColumns.map((col) => (
-                        <th
-                          key={col.name}
-                          className="pb-4 pl-4 text-left font-heading text-[16px] font-semibold leading-[1.2]"
-                        >
-                          {col.name}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {comparisonRows.map((row) => (
-                      <tr
-                        key={row.key}
-                        className="border-t border-english-aubergine/[0.14]"
-                      >
-                        <td className="whitespace-nowrap py-3 pr-6 font-body text-[13.5px] text-english-muted">
-                          {row.label}
-                        </td>
-                        {comparisonColumns.map((col) => (
-                          <td
-                            key={col.name}
-                            className={
-                              row.key === "price"
-                                ? "py-3 pl-4 font-heading text-[20px] font-semibold"
-                                : "py-3 pl-4 font-body text-[14.5px]"
-                            }
-                          >
-                            {col[row.key]}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          <div className="mt-8">
             <TrackedLink
               event="english_consultation_click"
               properties={{ source: "club_cta" }}
