@@ -151,6 +151,22 @@ export default function ClubPage() {
             />
           </div>
 
+          <div className="mt-8 font-body text-[14px] leading-[1.6] text-white/70">
+            <p className="font-semibold text-white/85">Как выбрать:</p>
+            <p>
+              — THE CLUB — интересно разговаривать и спорить в компании, а
+              не один на один.
+            </p>
+            <p>
+              — THE PLAN · Focus — есть конкретная цель и срок, к которому
+              нужно подготовиться.
+            </p>
+            <p>
+              — THE PLAN · Regular — нужна регулярная практика и разбор
+              постоянных сложностей, без жёсткого дедлайна.
+            </p>
+          </div>
+
           <div className="mt-14 border-t border-white/[0.15] py-5 sm:mt-[76px]">
             <MarqueeStrip items={marqueeTopics} />
           </div>
