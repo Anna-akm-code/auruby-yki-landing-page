@@ -90,18 +90,36 @@ export default function PlanPage() {
               </div>
             </div>
 
-            <HeroFormatPanel
-              label="Программа"
-              rows={[
-                { label: "Занятия", value: "2 × 60 мин в неделю, индивидуально 1:1" },
-                { label: "Уровень", value: "A2–C1" },
-                { label: "Возраст", value: "13+" },
-                { text: "Цель → план → работа по плану" },
-              ]}
-              priceLabel="Стоимость"
-              priceValue="€320"
-              priceUnit="/ 4 недели"
-            />
+            <div>
+              <HeroFormatPanel
+                label="THE PLAN · FOCUS"
+                rows={[
+                  { label: "Формат", value: "Индивидуально 1:1" },
+                  { label: "Цель", value: "Конкретная цель" },
+                  { label: "Срок", value: "Короткий, обычно < 6 месяцев" },
+                  { label: "Уровень", value: "A2–C1" },
+                  { label: "Возраст", value: "17+" },
+                ]}
+                priceLabel="Стоимость"
+                priceValue="€45"
+                priceUnit="/ 60 мин"
+              />
+
+              <div className="mt-6">
+                <HeroFormatPanel
+                  label="THE PLAN · REGULAR"
+                  rows={[
+                    { label: "Формат", value: "Индивидуально 1:1" },
+                    { text: "Регулярная практика, разбор постоянных трудностей" },
+                    { label: "Уровень", value: "A2–C1" },
+                    { label: "Возраст", value: "17+" },
+                  ]}
+                  priceLabel="Стоимость"
+                  priceValue="€30"
+                  priceUnit="/ 60 мин"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="mt-14 border-t border-white/[0.15] py-5 sm:mt-[76px]">
