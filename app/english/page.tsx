@@ -126,8 +126,11 @@ export default function EnglishProductSelectorPage() {
                 Набор в сентябрьские группы открыт
               </div>
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
-                Для младших учеников (13–16 лет)
+                THE SPARK
               </h2>
+              <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
+                Для младших учеников: 13–16 лет
+              </span>
               <div className="mt-6 grid gap-4">
                 {youngerLearnerOffers.map((offer) => (
                   <div key={offer.title}>
@@ -186,8 +189,11 @@ export default function EnglishProductSelectorPage() {
                 Запись открыта
               </div>
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
-                Для старших учеников (17 – ∞)
+                THE STAKES
               </h2>
+              <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
+                Для старших учеников: 17 – ∞ лет
+              </span>
               <div className="mt-6 grid gap-4">
                 {olderLearnerOffers.map((offer) => (
                   <div key={offer.title}>
