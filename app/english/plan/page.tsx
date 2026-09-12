@@ -158,6 +158,18 @@ export default function PlanPage() {
                   priceUnit="/ 60 мин"
                 />
               </div>
+
+              <div className="mt-6 font-body text-[14px] leading-[1.6] text-white/70">
+                <p className="font-semibold text-white/85">Как выбрать:</p>
+                <p>
+                  — THE PLAN · Focus — есть конкретная цель и срок, к
+                  которому нужно подготовиться.
+                </p>
+                <p>
+                  — THE PLAN · Regular — нужна регулярная практика и разбор
+                  постоянных сложностей, без жёсткого дедлайна.
+                </p>
+              </div>
             </div>
           </div>
 

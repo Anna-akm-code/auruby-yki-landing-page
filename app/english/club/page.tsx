@@ -211,6 +211,22 @@ export default function ClubPage() {
                   priceUnit="/ 60 мин"
                 />
               </div>
+
+              <div className="mt-6 font-body text-[14px] leading-[1.6] text-white/70">
+                <p className="font-semibold text-white/85">Как выбрать:</p>
+                <p>
+                  — THE CLUB — интересно разговаривать и спорить в компании,
+                  а не один на один.
+                </p>
+                <p>
+                  — THE PLAN · Focus — есть конкретная цель и срок, к
+                  которому нужно подготовиться.
+                </p>
+                <p>
+                  — THE PLAN · Regular — нужна регулярная практика и разбор
+                  постоянных сложностей, без жёсткого дедлайна.
+                </p>
+              </div>
             </div>
           </div>
 
