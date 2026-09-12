@@ -100,12 +100,12 @@ export default function EnglishProductSelectorPage() {
               Английский, на котором думают, спорят и договариваются.
             </h1>
           </div>
-          <div className="relative flex aspect-[4/5] max-h-[320px] flex-col justify-end gap-1.5 overflow-hidden rounded-[24px] border border-white/[0.22] p-5">
+          <div className="relative flex aspect-[4/5] max-h-[224px] max-w-[179px] flex-col justify-end gap-1.5 overflow-hidden rounded-[24px] border border-white/[0.22] p-5">
             <Image
               src="/anna.jpg"
               alt="Анна"
               fill
-              sizes="(min-width: 1024px) 30vw, 90vw"
+              sizes="(min-width: 1024px) 179px, 90vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-english-aubergine/85 via-english-aubergine/15 to-transparent" />
