@@ -14,7 +14,7 @@ export function FooterCTA() {
             Набор открыт
           </div>
           <h2 className="font-heading text-[38px] leading-[1.03] tracking-[-0.035em] sm:text-[58px]">
-            Две программы. Выберите свою.
+            Для кого эти занятия. Выберите свою группу.
           </h2>
         </div>
 
@@ -28,13 +28,13 @@ export function FooterCTA() {
             className="flex flex-col gap-2.5 rounded-[20px] bg-english-chartreuse p-8 text-english-aubergine transition hover:bg-english-chartreuse-hover"
           >
             <span className="font-mono text-[11px] uppercase tracking-[0.14em] opacity-65">
-              THE CLUB
+              13–16
             </span>
             <span className="font-heading text-[28px] font-semibold tracking-[-0.025em]">
-              THE CLUB
+              Для младших учеников
             </span>
             <span className="font-body text-[15px] text-english-mid">
-              €80/мес
+              3 формата · от €30
             </span>
             <span className="mt-2.5 flex items-center gap-2 font-body text-[16px] font-bold">
               Заполнить заявку <span>→</span>
@@ -49,13 +49,13 @@ export function FooterCTA() {
             className="flex flex-col gap-2.5 rounded-[20px] border border-white/25 bg-white/[0.08] p-8 text-white transition hover:border-english-chartreuse"
           >
             <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-english-chartreuse">
-              THE PLAN
+              17+
             </span>
             <span className="font-heading text-[28px] font-semibold tracking-[-0.025em]">
-              THE PLAN
+              Для старших учеников
             </span>
             <span className="font-body text-[15px] text-white/70">
-              8 × 60 мин / 4 недели · €320
+              2 формата · от €30
             </span>
             <span className="mt-2.5 flex items-center gap-2 font-body text-[16px] font-semibold text-english-chartreuse">
               Заполнить заявку <span>→</span>
