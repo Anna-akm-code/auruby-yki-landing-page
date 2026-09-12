@@ -16,7 +16,7 @@ export default function LanguageSelectorPage() {
     >
       <div className="flex items-baseline gap-[9px]">
         <span className="font-heading text-[22px] font-semibold tracking-[-0.02em] text-white">
-          auruby
+          Auruby
         </span>
         <span className="block h-[7px] w-[7px] rounded-full bg-english-chartreuse" />
       </div>
