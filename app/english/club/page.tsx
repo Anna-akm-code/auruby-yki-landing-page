@@ -198,17 +198,6 @@ export default function ClubPage() {
             </div>
           </div>
 
-          <div className="mt-14">
-            <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
-              Как проходит — THE PLAN
-            </h3>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {planSteps.map((step) => (
-                <StepCard key={step.number} {...step} />
-              ))}
-            </div>
-          </div>
-
           <div className="mt-14 rounded-[24px] bg-english-aubergine px-7 py-11 text-white sm:px-11">
             <div className="mb-7">
               <span className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-english-chartreuse">
@@ -235,6 +224,17 @@ export default function ClubPage() {
               Темы предлагает и группа. Если тебе интересно — это подходящий
               материал.
             </p>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="mb-9 font-mono text-[14px] font-normal uppercase tracking-[0.16em] text-english-muted">
+              Как проходит — THE PLAN
+            </h3>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {planSteps.map((step) => (
+                <StepCard key={step.number} {...step} />
+              ))}
+            </div>
           </div>
 
           <div className="mt-8">
