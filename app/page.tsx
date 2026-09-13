@@ -64,10 +64,14 @@ export default function LanguageSelectorPage() {
         >
           <div>
             <h2 className="font-heading text-[34px] leading-[1.04] tracking-[-0.03em]">
-              English Young Founders ages 10–16
+              English
+              <br />
+              Young Founders
+              <br />
+              ages 10–16
             </h2>
             <span className="mt-3 inline-flex items-center gap-2 font-body text-[14.5px] font-semibold text-english-mid">
-              Перейти <span>→</span>
+              Go <span>→</span>
             </span>
           </div>
         </a>
