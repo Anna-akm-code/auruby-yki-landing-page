@@ -112,7 +112,6 @@ const olderLearnerOffers: OfferBullet[] = [
     format: "Группа до 6 человек",
     details: [
       "Формат: онлайн, 1 встреча в неделю, 90 минут",
-      "Стоимость: €60 за 4 встречи",
       "Цель: регулярная практика, новая лексика и сообщество, где приятно провести время",
     ],
     description:
@@ -129,7 +128,7 @@ const olderLearnerOffers: OfferBullet[] = [
     ],
   },
   {
-    title: "THE LAB",
+    title: "THE CLUB · Рабочий спринт",
     price: "€60",
     priceUnit: "/ 4 встречи",
     format: "Группа до 6 человек",
@@ -137,7 +136,6 @@ const olderLearnerOffers: OfferBullet[] = [
       "Курс: 8 недель",
       "Группа: до 6 человек",
       "Формат: онлайн, 1 встреча в неделю, 90 минут",
-      "Стоимость: €60 за 4 встречи",
       "Цель: регулярная практика, новая лексика и сообщество людей, с которыми можно говорить о работе и карьере",
     ],
     description:
@@ -284,15 +282,24 @@ export default function EnglishProductSelectorPage() {
                       {offer.format}
                     </span>
                     <div className="mt-2 grid gap-1">
-                      {offer.details.map((line) => (
-                        <div
-                          key={line}
-                          className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
-                        >
-                          {subBulletDot}
-                          {line}
-                        </div>
-                      ))}
+                      {offer.details.map((line) => {
+                        const label = line.match(/^(Формат|Цель|Курс|Группа):/);
+
+                        return label ? (
+                          <p key={line} className="font-body text-[14px] text-english-muted">
+                            <strong className="font-bold">{label[1]}</strong>
+                            {line.slice(label[1].length)}
+                          </p>
+                        ) : (
+                          <div
+                            key={line}
+                            className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
+                          >
+                            {subBulletDot}
+                            {line}
+                          </div>
+                        );
+                      })}
                     </div>
                     {offer.description && (
                       <p className="mt-3 font-body text-[14px] text-english-muted">
