@@ -40,6 +40,10 @@ type OfferBullet = {
   priceUnit: string;
   format: string;
   details: string[];
+  description?: string;
+  topics?: string[];
+  scheduleLabel?: string;
+  schedule?: string[];
 };
 
 const youngerLearnerOffers: OfferBullet[] = [
@@ -101,6 +105,54 @@ const olderLearnerOffers: OfferBullet[] = [
       "Срок: ориентир — около года, в зависимости от ваших целей и уровня.",
     ],
   },
+  {
+    title: "THE CLUB · Разговорный клуб",
+    price: "€60",
+    priceUnit: "/ 4 встречи",
+    format: "Группа до 6 человек",
+    details: [
+      "Формат: онлайн, 1 встреча в неделю, 90 минут",
+      "Стоимость: €60 за 4 встречи",
+      "Цель: регулярная практика, новая лексика и сообщество, где приятно провести время",
+    ],
+    description:
+      "Продуманная программа с темами, выбранными по вашим интересам, и так, чтобы шаг за шагом расширять словарный запас в самых разных областях:",
+    topics: [
+      "обсуждаем, заменит ли ИИ вашу профессию",
+      "учимся настойчиво добиваться своего от страховой",
+      "делимся идеями, куда поехать в отпуск",
+    ],
+    scheduleLabel: "Варианты занятий:",
+    schedule: [
+      "Уровень B1/B2: среда 18:00 или воскресенье 14:00 (по Хельсинки)",
+      "Уровень B2/C1: вторник 13:00 или воскресенье 12:00 (по Хельсинки)",
+    ],
+  },
+  {
+    title: "THE LAB",
+    price: "€60",
+    priceUnit: "/ 4 встречи",
+    format: "Группа до 6 человек",
+    details: [
+      "Курс: 8 недель",
+      "Группа: до 6 человек",
+      "Формат: онлайн, 1 встреча в неделю, 90 минут",
+      "Стоимость: €60 за 4 встречи",
+      "Цель: регулярная практика, новая лексика и сообщество людей, с которыми можно говорить о работе и карьере",
+    ],
+    description:
+      "Продуманная программа с темами, выбранными под ваши рабочие ситуации. Вы научитесь и отполируете навыки:",
+    topics: [
+      "уверенно участвовать в созвонах: вступать в разговор, задавать вопросы, подводить итоги",
+      "поддерживать small talk с коллегами без неловких пауз",
+      "быстро и уверенно отвечать на неожиданные вопросы",
+      "вежливо не соглашаться и отстаивать свою позицию",
+      "коротко и интересно рассказывать о своей работе",
+    ],
+    schedule: [
+      "Уровень B2: понедельник 13:00 или вторник 17:00 (по Хельсинки)",
+    ],
+  },
 ];
 
 export default function EnglishProductSelectorPage() {
@@ -154,7 +206,7 @@ export default function EnglishProductSelectorPage() {
               <div className="mt-6 grid gap-4">
                 {youngerLearnerOffers.map((offer) => (
                   <div key={offer.title}>
-                    <div className="flex items-baseline justify-between gap-3">
+                    <div className="flex flex-wrap items-baseline justify-between gap-3">
                       <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
                         {offer.title}
                       </span>
@@ -182,7 +234,7 @@ export default function EnglishProductSelectorPage() {
                   </div>
                 ))}
               </div>
-              <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
+              <span className="mt-auto inline-flex items-center gap-[7px] pt-5 font-body text-[14.5px] font-semibold text-english-muted">
                 Подробнее о занятиях <span>→</span>
               </span>
             </TrackedLink>
@@ -217,7 +269,7 @@ export default function EnglishProductSelectorPage() {
               <div className="mt-6 grid gap-4">
                 {olderLearnerOffers.map((offer) => (
                   <div key={offer.title}>
-                    <div className="flex items-baseline justify-between gap-3">
+                    <div className="flex flex-wrap items-baseline justify-between gap-3">
                       <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
                         {offer.title}
                       </span>
@@ -242,10 +294,32 @@ export default function EnglishProductSelectorPage() {
                         </div>
                       ))}
                     </div>
+                    {offer.description && (
+                      <p className="mt-3 font-body text-[14px] text-english-muted">
+                        {offer.description}
+                      </p>
+                    )}
+                    {offer.topics && (
+                      <ul className="mt-2 list-disc space-y-1 pl-4 font-body text-[14px] text-english-muted marker:text-english-muted">
+                        {offer.topics.map((topic) => (
+                          <li key={topic}>{topic}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {offer.schedule && (
+                      <div className="mt-3 grid gap-2 font-body text-[14px] text-english-muted">
+                        {offer.scheduleLabel && (
+                          <p className="font-semibold">{offer.scheduleLabel}</p>
+                        )}
+                        {offer.schedule.map((slot) => (
+                          <p key={slot}>{slot}</p>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
-              <span className="mt-5 inline-flex items-center gap-[7px] font-body text-[14.5px] font-semibold text-english-muted">
+              <span className="mt-auto inline-flex items-center gap-[7px] pt-5 font-body text-[14.5px] font-semibold text-english-muted">
                 Подробнее о занятиях <span>→</span>
               </span>
             </TrackedLink>

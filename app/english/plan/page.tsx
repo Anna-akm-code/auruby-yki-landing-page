@@ -44,13 +44,13 @@ const planSteps = [
     number: "02",
     title: "План",
     description:
-      "Собираю маршрут под твою цель: что тренируем, в каком порядке, на каком материале.",
+      "Собираю маршрут под вашу цель: что тренируем, в каком порядке, на каком материале.",
   },
   {
     number: "03",
     title: "Практика",
     description:
-      "На каждой встрече — реальная ситуация или задача, а не абстрактные упражнения: используешь язык, а не повторяешь его.",
+      "На каждой встрече — реальная ситуация или задача, а не абстрактные упражнения: используете язык, а не повторяете его.",
   },
   {
     number: "04",
@@ -58,6 +58,57 @@ const planSteps = [
     description:
       "Что получилось, что подправить, что тренировать дальше — до следующей встречи и до конца маршрута.",
     dark: true,
+  },
+];
+
+const groupOffers = [
+  {
+    label: "РАЗГОВОРНЫЙ КЛУБ",
+    source: "plan_conversation_group",
+    rows: [
+      { label: "Группа", value: "до 6 человек" },
+      { label: "Формат", value: "онлайн, 1 встреча в неделю, 90 минут" },
+      {
+        label: "Цель",
+        value: "регулярная практика, новая лексика и сообщество, где приятно провести время",
+      },
+    ],
+    description:
+      "Продуманная программа с темами, выбранными по вашим интересам, и так, чтобы шаг за шагом расширять словарный запас в самых разных областях:",
+    topics: [
+      "обсуждаем, заменит ли ИИ вашу профессию",
+      "учимся настойчиво добиваться своего от страховой",
+      "делимся идеями, куда поехать в отпуск",
+    ],
+    schedule: [
+      "Разговорный клуб уровень B1/B2: среда 18:00 или воскресенье 14:00 (по Хельсинки).",
+      "Разговорный клуб уровень B2/C1: вторник 13:00 или воскресенье 12:00 (по Хельсинки).",
+    ],
+  },
+  {
+    label: "РАБОЧИЙ СПРИНТ",
+    source: "plan_work_sprint_group",
+    rows: [
+      { label: "Курс", value: "8 недель" },
+      { label: "Группа", value: "до 6 человек" },
+      { label: "Формат", value: "онлайн, 1 встреча в неделю, 90 минут" },
+      {
+        label: "Цель",
+        value: "регулярная практика, новая лексика и сообщество людей, с которыми можно говорить о работе и карьере",
+      },
+    ],
+    description:
+      "Продуманная программа с темами, выбранными под ваши рабочие ситуации. Вы научитесь и отполируете навыки:",
+    topics: [
+      "уверенно участвовать в созвонах: вступать в разговор, задавать вопросы, подводить итоги",
+      "поддерживать small talk с коллегами без неловких пауз",
+      "быстро и уверенно отвечать на неожиданные вопросы",
+      "вежливо не соглашаться и отстаивать свою позицию",
+      "коротко и интересно рассказывать о своей работе",
+    ],
+    schedule: [
+      "Рабочий спринт уровень B2: понедельник 13:00 или вторник 17:00 (по Хельсинки).",
+    ],
   },
 ];
 
@@ -95,7 +146,10 @@ export default function PlanPage() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <h2 className="mt-10 font-heading text-[38px] leading-[1.03] tracking-[-0.035em] sm:text-[48px]">
+            Индивидуально
+          </h2>
+          <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
             <HeroFormatPanel
               label="THE PLAN · FOCUS"
               rows={[
@@ -123,6 +177,55 @@ export default function PlanPage() {
               priceUnit="/ 60 мин"
             />
           </div>
+
+          <section aria-labelledby="groups-heading" className="mt-14">
+            <h2
+              id="groups-heading"
+              className="font-heading text-[38px] leading-[1.03] tracking-[-0.035em] sm:text-[48px]"
+            >
+              Группы
+            </h2>
+            <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+              {groupOffers.map((group) => (
+                <HeroFormatPanel
+                  key={group.source}
+                  label={group.label}
+                  rows={group.rows}
+                  priceLabel="Стоимость"
+                  priceValue="€60"
+                  priceUnit=" / 4 встречи"
+                  action={
+                    <TrackedLink
+                      event="english_consultation_click"
+                      properties={{ source: group.source }}
+                      href={GOOGLE_FORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center justify-center gap-2.5 rounded-full bg-english-chartreuse px-6 py-[18px] text-center font-body text-[16.5px] font-bold text-english-aubergine transition hover:bg-english-chartreuse-hover"
+                    >
+                      Записаться в группу <span>→</span>
+                    </TrackedLink>
+                  }
+                >
+                  <div className="py-6 font-body text-[15.5px] leading-[1.55] text-white/[0.78]">
+                    <p>{group.description}</p>
+                    <ul className="mt-4 list-disc space-y-2 pl-5 marker:text-english-chartreuse">
+                      {group.topics.map((topic) => (
+                        <li key={topic}>{topic}</li>
+                      ))}
+                    </ul>
+                    <div className="mt-6 space-y-3">
+                      <p className="font-semibold text-white">Расписание:</p>
+                      {group.schedule.map((slot) => (
+                        <p key={slot}>{slot}</p>
+                      ))}
+                      <p>Напишите, какой вариант удобен вам.</p>
+                    </div>
+                  </div>
+                </HeroFormatPanel>
+              ))}
+            </div>
+          </section>
 
           <div className="mt-14 border-t border-white/[0.15] py-5 sm:mt-[76px]">
             <MarqueeStrip items={marqueeTopics} />
@@ -157,9 +260,7 @@ export default function PlanPage() {
                   Начните с бесплатной консультации
                 </h3>
                 <p className="mt-3.5 font-body text-[16px] leading-[1.55] text-white/[0.78]">
-                  За 20 минут разберём, какой формат тебе подходит —
-                  конкретная цель или регулярная практика — и отвечу на
-                  вопросы.
+                  За 20 минут разберём, какой формат вам подходит — индивидуальные занятия или группа — и я отвечу на вопросы.
                 </p>
               </div>
               <span className="mt-8 flex items-center justify-between gap-4 font-body text-[18px] font-bold text-english-chartreuse">

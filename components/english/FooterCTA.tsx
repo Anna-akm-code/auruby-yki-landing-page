@@ -55,7 +55,7 @@ export function FooterCTA() {
               Для старших учеников
             </span>
             <span className="font-body text-[15px] text-white/70">
-              2 формата · от €30
+              4 формата
             </span>
             <span className="mt-2.5 flex items-center gap-2 font-body text-[16px] font-semibold text-english-chartreuse">
               Заполнить заявку <span>→</span>
