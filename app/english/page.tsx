@@ -34,121 +34,162 @@ const subBulletDot = (
   <span className="mt-[6px] block h-[3px] w-[3px] shrink-0 rounded-full bg-english-muted" />
 );
 
+type ScheduleOption = {
+  level: string;
+  firstMeeting: string;
+  alternative?: string;
+};
+
 type OfferBullet = {
   title: string;
   price: string;
   priceUnit: string;
-  format: string;
+  format?: string;
   details: string[];
   description?: string;
   topics?: string[];
-  scheduleLabel?: string;
-  schedule?: string[];
+  scheduleNote?: string;
+  scheduleOptions?: ScheduleOption[];
 };
 
-const youngerLearnerOffers: OfferBullet[] = [
+type OfferSection = {
+  heading: string;
+  offers: OfferBullet[];
+};
+
+const youngerLearnerSections: OfferSection[] = [
   {
-    title: "THE PLAN · Focus",
-    price: "€45",
-    priceUnit: "/ 60 мин",
-    format: "Индивидуально 1:1",
-    details: [
-      "Готовимся к ближайшему экзамену по английскому, школьному выступлению или собеседованию для поступления.",
-      "Изучаю ваш контекст и материалы, разрабатываю задания и сценарии репетиций.",
-      "Репетируем, разбираем трудности и отрабатываем ответы на вопросы.",
-      "Срок: обычно до 3–4 месяцев, под вашу задачу и дедлайн.",
+    heading: "ИНДИВИДУАЛЬНО",
+    offers: [
+      // ВРЕМЕННО СКРЫТО: THE PLAN · Focus для младших учеников.
+      // Чтобы вернуть предложение, раскомментируйте объект ниже.
+      // {
+      //   title: "THE PLAN · Focus",
+      //   price: "€45",
+      //   priceUnit: "/ 60 мин",
+      //   format: "Индивидуально 1:1",
+      //   details: [
+      //     "Готовимся к ближайшему экзамену по английскому, школьному выступлению или собеседованию для поступления.",
+      //     "Изучаю ваш контекст и материалы, разрабатываю задания и сценарии репетиций.",
+      //     "Репетируем, разбираем трудности и отрабатываем ответы на вопросы.",
+      //     "Срок: обычно до 3–4 месяцев, под вашу задачу и дедлайн.",
+      //   ],
+      // },
+      {
+        title: "THE PLAN · Regular",
+        price: "€30",
+        priceUnit: "/ 60 мин",
+        details: [
+          "Практикуем английский для учёбы, поездок и общения с ребятами из других стран.",
+          "Расширяем словарный запас и разбираем грамматику для этих ситуаций.",
+          "Тренируем понимание речи на слух и учимся ясно выражать свои мысли.",
+          "Срок: ориентир — около года, в зависимости от ваших целей и уровня.",
+        ],
+      },
     ],
   },
-  {
-    title: "THE PLAN · Regular",
-    price: "€30",
-    priceUnit: "/ 60 мин",
-    format: "Индивидуально 1:1",
-    details: [
-      "Практикуем английский для учёбы, поездок и общения с ребятами из других стран.",
-      "Расширяем словарный запас и разбираем грамматику для этих ситуаций.",
-      "Тренируем понимание речи на слух и учимся ясно выражать свои мысли.",
-      "Срок: ориентир — около года, в зависимости от ваших целей и уровня.",
-    ],
-  },
-  {
-    title: "THE CLUB",
-    price: "€80",
-    priceUnit: "/ месяц",
-    format: "Группа до 6 человек",
-    details: ["2 × 60 мин в неделю"],
-  },
+  // ВРЕМЕННО СКРЫТО: группа THE CLUB для младших учеников вместе с заголовком
+  // «В ГРУППЕ». Чтобы вернуть раздел, раскомментируйте объект ниже.
+  // {
+  //   heading: "В ГРУППЕ",
+  //   offers: [
+  //     {
+  //       title: "THE CLUB",
+  //       price: "€80",
+  //       priceUnit: "/ месяц",
+  //       format: "Группа до 6 человек",
+  //       details: ["2 × 60 мин в неделю"],
+  //     },
+  //   ],
+  // },
 ];
 
-const olderLearnerOffers: OfferBullet[] = [
+const olderLearnerSections: OfferSection[] = [
   {
-    title: "THE PLAN · Focus",
-    price: "€45",
-    priceUnit: "/ 60 мин",
-    format: "Индивидуально 1:1",
-    details: [
-      "Готовимся к конкретной ситуации: собеседованию, презентации, конференции или встрече с клиентом.",
-      "Изучаю ваш контекст и материалы, разрабатываю задания и сценарии репетиций.",
-      "Репетируем, разбираем трудности и отрабатываем ответы на вопросы.",
-      "Срок: обычно до 3–4 месяцев, под вашу задачу и дедлайн.",
+    heading: "В ГРУППЕ",
+    offers: [
+      {
+        title: "THE CLUB · Разговорный клуб",
+        price: "€60",
+        priceUnit: "/ 4 встречи",
+        format: "До 6 человек · онлайн, 90 минут в неделю",
+        details: [
+          "Цель: регулярная практика, новая лексика и сообщество, где приятно провести время",
+        ],
+        description:
+          "Продуманная программа с темами, выбранными по вашим интересам, и так, чтобы шаг за шагом расширять словарный запас в самых разных областях:",
+        topics: [
+          "обсуждаем, заменит ли ИИ вашу профессию",
+          "учимся настойчиво добиваться своего от страховой",
+          "делимся идеями, куда поехать в отпуск",
+        ],
+        scheduleNote: "Время — по Хельсинки.",
+        scheduleOptions: [
+          {
+            level: "Уровень B1/B2",
+            firstMeeting: "среда, 18 ноября, 18:00",
+            alternative: "или воскресенье, 22 ноября, 14:00",
+          },
+          {
+            level: "Уровень B2/C1",
+            firstMeeting: "вторник, 17 ноября, 13:00",
+            alternative: "или воскресенье, 22 ноября, 12:00",
+          },
+        ],
+      },
+      // ВРЕМЕННО СКРЫТО: THE CLUB · Рабочий спринт.
+      // Чтобы вернуть предложение, раскомментируйте объект ниже.
+      // {
+      //   title: "THE CLUB · Рабочий спринт",
+      //   price: "€60",
+      //   priceUnit: "/ 4 встречи",
+      //   format: "Группа до 6 человек",
+      //   details: [
+      //     "Курс: 8 недель",
+      //     "Группа: до 6 человек",
+      //     "Формат: онлайн, 1 встреча в неделю, 90 минут",
+      //     "Цель: регулярная практика, новая лексика и сообщество людей, с которыми можно говорить о работе и карьере",
+      //   ],
+      //   description:
+      //     "Продуманная программа с темами, выбранными под ваши рабочие ситуации. Вы научитесь и отполируете навыки:",
+      //   topics: [
+      //     "уверенно участвовать в созвонах: вступать в разговор, задавать вопросы, подводить итоги",
+      //     "поддерживать small talk с коллегами без неловких пауз",
+      //     "быстро и уверенно отвечать на неожиданные вопросы",
+      //     "вежливо не соглашаться и отстаивать свою позицию",
+      //     "коротко и интересно рассказывать о своей работе",
+      //   ],
+      //   schedule: [
+      //     "Уровень B2: понедельник 13:00 или вторник 17:00 (по Хельсинки)",
+      //   ],
+      // },
     ],
   },
   {
-    title: "THE PLAN · Regular",
-    price: "€30",
-    priceUnit: "/ 60 мин",
-    format: "Индивидуально 1:1",
-    details: [
-      "Последовательно работаем с разными ситуациями: рабочие обсуждения, путешествия и повседневные бытовые задачи.",
-      "Расширяем словарный запас и разбираем грамматику для этих ситуаций.",
-      "Тренируем понимание речи на слух и учимся ясно выражать свои мысли.",
-      "Срок: ориентир — около года, в зависимости от ваших целей и уровня.",
-    ],
-  },
-  {
-    title: "THE CLUB · Разговорный клуб",
-    price: "€60",
-    priceUnit: "/ 4 встречи",
-    format: "Группа до 6 человек",
-    details: [
-      "Формат: онлайн, 1 встреча в неделю, 90 минут",
-      "Цель: регулярная практика, новая лексика и сообщество, где приятно провести время",
-    ],
-    description:
-      "Продуманная программа с темами, выбранными по вашим интересам, и так, чтобы шаг за шагом расширять словарный запас в самых разных областях:",
-    topics: [
-      "обсуждаем, заменит ли ИИ вашу профессию",
-      "учимся настойчиво добиваться своего от страховой",
-      "делимся идеями, куда поехать в отпуск",
-    ],
-    scheduleLabel: "Варианты занятий:",
-    schedule: [
-      "Уровень B1/B2: среда 18:00 или воскресенье 14:00 (по Хельсинки)",
-      "Уровень B2/C1: вторник 13:00 или воскресенье 12:00 (по Хельсинки)",
-    ],
-  },
-  {
-    title: "THE CLUB · Рабочий спринт",
-    price: "€60",
-    priceUnit: "/ 4 встречи",
-    format: "Группа до 6 человек",
-    details: [
-      "Курс: 8 недель",
-      "Группа: до 6 человек",
-      "Формат: онлайн, 1 встреча в неделю, 90 минут",
-      "Цель: регулярная практика, новая лексика и сообщество людей, с которыми можно говорить о работе и карьере",
-    ],
-    description:
-      "Продуманная программа с темами, выбранными под ваши рабочие ситуации. Вы научитесь и отполируете навыки:",
-    topics: [
-      "уверенно участвовать в созвонах: вступать в разговор, задавать вопросы, подводить итоги",
-      "поддерживать small talk с коллегами без неловких пауз",
-      "быстро и уверенно отвечать на неожиданные вопросы",
-      "вежливо не соглашаться и отстаивать свою позицию",
-      "коротко и интересно рассказывать о своей работе",
-    ],
-    schedule: [
-      "Уровень B2: понедельник 13:00 или вторник 17:00 (по Хельсинки)",
+    heading: "ИНДИВИДУАЛЬНО",
+    offers: [
+      {
+        title: "THE PLAN · Focus",
+        price: "€45",
+        priceUnit: "/ 60 мин",
+        details: [
+          "Готовимся к конкретной ситуации: собеседованию, презентации, конференции или встрече с клиентом.",
+          "Изучаю ваш контекст и материалы, разрабатываю задания и сценарии репетиций.",
+          "Репетируем, разбираем трудности и отрабатываем ответы на вопросы.",
+          "Срок: обычно до 3–4 месяцев, под вашу задачу и дедлайн.",
+        ],
+      },
+      {
+        title: "THE PLAN · Regular",
+        price: "€30",
+        priceUnit: "/ 60 мин",
+        details: [
+          "Последовательно работаем с разными ситуациями: рабочие обсуждения, путешествия и повседневные бытовые задачи.",
+          "Расширяем словарный запас и разбираем грамматику для этих ситуаций.",
+          "Тренируем понимание речи на слух и учимся ясно выражать свои мысли.",
+          "Срок: ориентир — около года, в зависимости от ваших целей и уровня.",
+        ],
+      },
     ],
   },
 ];
@@ -192,43 +233,52 @@ export default function EnglishProductSelectorPage() {
               href="/english/club"
               className="flex flex-1 flex-col rounded-[24px] bg-english-lilac p-9 text-english-aubergine transition hover:bg-white"
             >
-              <div className="mb-5 font-mono text-[11px] uppercase tracking-[0.14em] text-english-muted">
-                Набор в сентябрьские группы открыт
-              </div>
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
                 THE SPARK
               </h2>
               <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
                 Для младших учеников: 13–16 лет
               </span>
-              <div className="mt-6 grid gap-4">
-                {youngerLearnerOffers.map((offer) => (
-                  <div key={offer.title}>
-                    <div className="flex flex-wrap items-baseline justify-between gap-3">
-                      <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
-                        {offer.title}
-                      </span>
-                      <span className="whitespace-nowrap font-body text-[18px] font-bold">
-                        {offer.price}
-                        <span className="ml-1 font-body text-[13px] font-normal text-english-muted">
-                          {offer.priceUnit}
-                        </span>
-                      </span>
+              <div className="mt-6 grid gap-6">
+                {youngerLearnerSections.map((section, index) => (
+                  <div
+                    key={section.heading}
+                    className={`grid gap-4${index > 0 ? " border-t border-english-aubergine/10 pt-6" : ""}`}
+                  >
+                    <div className="font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-english-aubergine">
+                      {section.heading}
                     </div>
-                    <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
-                      {offer.format}
-                    </span>
-                    <div className="mt-2 grid gap-1">
-                      {offer.details.map((line) => (
-                        <div
-                          key={line}
-                          className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
-                        >
-                          {subBulletDot}
-                          {line}
+                    {section.offers.map((offer) => (
+                      <div key={offer.title}>
+                        <div className="flex flex-wrap items-baseline justify-between gap-3">
+                          <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
+                            {offer.title}
+                          </span>
+                          <span className="whitespace-nowrap font-body text-[18px] font-bold">
+                            {offer.price}
+                            <span className="ml-1 font-body text-[13px] font-normal text-english-muted">
+                              {offer.priceUnit}
+                            </span>
+                          </span>
                         </div>
-                      ))}
-                    </div>
+                        {offer.format && (
+                          <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
+                            {offer.format}
+                          </span>
+                        )}
+                        <div className="mt-2 grid gap-1">
+                          {offer.details.map((line) => (
+                            <div
+                              key={line}
+                              className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
+                            >
+                              {subBulletDot}
+                              {line}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -255,74 +305,107 @@ export default function EnglishProductSelectorPage() {
               href="/english/plan"
               className="flex flex-1 flex-col rounded-[24px] bg-english-lilac p-9 text-english-aubergine transition hover:bg-white"
             >
-              <div className="mb-5 font-mono text-[11px] uppercase tracking-[0.14em] text-english-muted">
-                Запись открыта
-              </div>
               <h2 className="font-heading text-[32px] leading-[1.04] tracking-[-0.03em] sm:text-[40px]">
                 THE STAKES
               </h2>
               <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
                 Для старших учеников: 17 – ∞ лет
               </span>
-              <div className="mt-6 grid gap-4">
-                {olderLearnerOffers.map((offer) => (
-                  <div key={offer.title}>
-                    <div className="flex flex-wrap items-baseline justify-between gap-3">
-                      <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
-                        {offer.title}
-                      </span>
-                      <span className="whitespace-nowrap font-body text-[18px] font-bold">
-                        {offer.price}
-                        <span className="ml-1 font-body text-[13px] font-normal text-english-muted">
-                          {offer.priceUnit}
-                        </span>
-                      </span>
+              <div className="mt-6 grid gap-6">
+                {olderLearnerSections.map((section, index) => (
+                  <div
+                    key={section.heading}
+                    className={`grid gap-4${index > 0 ? " border-t border-english-aubergine/10 pt-6" : ""}`}
+                  >
+                    <div className="font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-english-aubergine">
+                      {section.heading}
                     </div>
-                    <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
-                      {offer.format}
-                    </span>
-                    <div className="mt-2 grid gap-1">
-                      {offer.details.map((line) => {
-                        const label = line.match(/^(Формат|Цель|Курс|Группа):/);
-
-                        return label ? (
-                          <p key={line} className="font-body text-[14px] text-english-muted">
-                            <strong className="font-bold">{label[1]}</strong>
-                            {line.slice(label[1].length)}
-                          </p>
-                        ) : (
-                          <div
-                            key={line}
-                            className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
-                          >
-                            {subBulletDot}
-                            {line}
-                          </div>
-                        );
-                      })}
-                    </div>
-                    {offer.description && (
-                      <p className="mt-3 font-body text-[14px] text-english-muted">
-                        {offer.description}
-                      </p>
-                    )}
-                    {offer.topics && (
-                      <ul className="mt-2 list-disc space-y-1 pl-4 font-body text-[14px] text-english-muted marker:text-english-muted">
-                        {offer.topics.map((topic) => (
-                          <li key={topic}>{topic}</li>
-                        ))}
-                      </ul>
-                    )}
-                    {offer.schedule && (
-                      <div className="mt-3 grid gap-2 font-body text-[14px] text-english-muted">
-                        {offer.scheduleLabel && (
-                          <p className="font-semibold">{offer.scheduleLabel}</p>
+                    {section.offers.map((offer) => (
+                      <div key={offer.title}>
+                        <div className="flex flex-wrap items-baseline justify-between gap-3">
+                          <span className="inline-block rounded-full bg-english-chartreuse px-3 py-1 font-body text-[15.5px] font-semibold text-english-aubergine">
+                            {offer.title}
+                          </span>
+                          <span className="whitespace-nowrap font-body text-[18px] font-bold">
+                            {offer.price}
+                            <span className="ml-1 font-body text-[13px] font-normal text-english-muted">
+                              {offer.priceUnit}
+                            </span>
+                          </span>
+                        </div>
+                        {offer.format && (
+                          <span className="mt-2 block font-body text-[13px] font-semibold text-english-muted">
+                            {offer.format}
+                          </span>
                         )}
-                        {offer.schedule.map((slot) => (
-                          <p key={slot}>{slot}</p>
-                        ))}
+                        <div className="mt-2 grid gap-1">
+                          {offer.details.map((line) => {
+                            const label = line.match(/^(Формат|Цель|Курс|Группа):/);
+
+                            return label ? (
+                              <p key={line} className="font-body text-[14px] text-english-muted">
+                                <strong className="font-bold">{label[1]}</strong>
+                                {line.slice(label[1].length)}
+                              </p>
+                            ) : (
+                              <div
+                                key={line}
+                                className="flex items-baseline gap-2 font-body text-[14px] text-english-muted"
+                              >
+                                {subBulletDot}
+                                {line}
+                              </div>
+                            );
+                          })}
+                        </div>
+                        {offer.description && (
+                          <p className="mt-3 font-body text-[14px] text-english-muted">
+                            {offer.description}
+                          </p>
+                        )}
+                        {offer.topics && (
+                          <ul className="mt-2 list-disc space-y-1 pl-4 font-body text-[14px] text-english-muted marker:text-english-muted">
+                            {offer.topics.map((topic) => (
+                              <li key={topic}>{topic}</li>
+                            ))}
+                          </ul>
+                        )}
+                        {offer.scheduleOptions && (
+                          <div className="mt-3 grid gap-2.5">
+                            <span className="inline-block w-fit rounded-full bg-english-aubergine px-3 py-1 font-body text-[13px] font-bold text-english-chartreuse">
+                              Запись открыта!
+                            </span>
+                            {offer.scheduleOptions.map((option) => (
+                              <div
+                                key={option.level}
+                                className="rounded-[12px] border border-english-aubergine/[0.14] bg-white/60 px-3.5 py-3"
+                              >
+                                <p className="font-body text-[12.5px] font-bold uppercase tracking-[0.06em] text-english-aubergine">
+                                  {option.level}
+                                </p>
+                                <p className="mt-1.5 font-body text-[14px] leading-[1.45] text-english-muted">
+                                  <strong className="font-bold text-english-aubergine">
+                                    Первая встреча:
+                                  </strong>{" "}
+                                  {option.firstMeeting}
+                                  {option.alternative && (
+                                    <>
+                                      <br />
+                                      {option.alternative}
+                                    </>
+                                  )}
+                                </p>
+                              </div>
+                            ))}
+                            {offer.scheduleNote && (
+                              <p className="font-body text-[12.5px] text-english-muted">
+                                {offer.scheduleNote}
+                              </p>
+                            )}
+                          </div>
+                        )}
                       </div>
-                    )}
+                    ))}
                   </div>
                 ))}
               </div>
